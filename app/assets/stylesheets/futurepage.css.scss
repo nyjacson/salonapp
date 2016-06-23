@@ -1,0 +1,129 @@
+#contents-tokushu1{
+    #contentsWrapper{
+        max-width: 950px;
+        margin: 0 auto;
+        li{
+            margin-bottom: 5px;
+        }
+        .layout-top{
+            padding-top: 20px;
+            background: url(/assets/bk-floral.svg) no-repeat;
+            background-size: 950px auto;
+            height: 100px;
+            h1{
+            font-size: 20px;
+            text-align: center;
+            margin-top: 0;
+            }
+        }
+        .container{
+            max-width: 950px;
+            background-color: #ffffff;
+            border: solid #ECCE72 3px;
+            margin-bottom:20px;
+
+            .contents-salonComment{
+                padding-top: 10px;
+                p{
+                    margin-top: 10px;
+                }
+            }
+            h3{
+                margin-top: 15px;
+                font-size: 18px;
+            }
+            .layout-button{
+                text-align: center;;
+                margin: 10px auto 20px;
+            }
+        } //container
+
+    }
+    .layout-title{
+        margin-top: 10px;
+        margin-bottom: 5px;
+        img{
+            display: inline-block;
+            vertical-align:middle;
+            height: 40px;
+        }
+        h1{
+            display: inline-block;
+            font-size: 22px;
+            margin: 0;
+            line-height: 40px;
+            vertical-align:middle;
+            padding-top: 5px;
+            box-sizing: border-box;
+        }
+    }
+
+}
+#contents-tokushu2{
+    padding-top: 20px;
+    background: #ffffff;
+    max-width: 950px;
+    margin: 0 auto;
+    #contentsWrapper{
+        padding-bottom: 20px;
+
+        h2{
+            font-size: 20px;
+        }
+        .layout-top{
+            h1{
+            font-size: 20px;
+            text-align: center;
+            margin-top: 0;
+            margin-bottom: 15px;
+            }
+        }
+        .container{
+            max-width: 950px;
+            margin-bottom:20px;
+            padding: 0 30px;
+            .imgWrapper-1{
+                img{
+                    max-width: 300px;
+                    margin: 0 auto;
+                }
+            }
+            .contents-salonComment{
+                p{
+                    line-height: 1.5em;
+                }
+            }
+            h3{
+                font-size: 18px;
+            }
+            .layout-button{
+                text-align: center;;
+                margin: 20px auto 10px;
+            }
+        } //container
+        section{
+            margin-bottom: 20px;
+        }
+        h4{
+            font-size: 16px;
+        }
+
+    }
+    .layout-title{
+        margin-bottom: 10px;
+        img{
+            display: inline-block;
+            vertical-align:middle;
+            height: 40px;
+        }
+        h1{
+            display: inline-block;
+            font-size: 22px;
+            margin: 0;
+            line-height: 26px;
+            vertical-align:middle;
+            //box-sizing: border-box;
+        }
+    }
+
+}

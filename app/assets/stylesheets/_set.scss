@@ -1,0 +1,91 @@
+$base: #FF86A6;
+$sub: #55ACE1;
+$green: #00C509;
+$gray-text: #777777;
+$border: #e7e7e7;
+$gray-bk: #f8f8f8;
+$gray-selected: #e7e7e7;
+$text: #333333;
+$dark-gray: #777777;
+$op-button: transparentize($dark-gray, 0.8);
+$op-h-button: transparentize($dark-gray, 0.3);
+
+a{
+    color: $text;
+    transition: all 0.2s linear;
+    &:hover{
+        color: $text;
+    }
+}
+.textPink{
+    color: $base;
+}
+.textBlue{
+    color: $sub;
+}
+.textGreen{
+    color: $green;
+}
+.textBold{
+    font-weight: bold;
+}
+.textMainTitle{
+    font-size: 16px;
+    text-align: center;
+    margin-top: 0;
+}
+.textSubTitle{
+    font-size: 16px;
+    margin: 0;
+    margin-bottom: 10px;
+    border-left: 5px solid $base;
+    padding-left: 5px;
+}
+h1, h2, h3, h4{
+    margin-top: 10px;
+}
+p{
+    font-size: 14px;
+    .textStrong{
+        font-size: 20px;
+    }
+}
+ul{
+    padding-left: 0;
+    list-style: none;
+}
+body{
+    background: #eeeeee;
+}
+.line{
+    border-bottom: solid 1px $base;
+    padding-bottom: 3px;
+}
+.line-gray{
+    border-bottom: solid 1px $border;
+    padding-bottom: 3px;
+}
+.fingar{
+    background: url("/assets/fingar-arrow.svg") no-repeat;
+    padding-left: 20px;
+}
+.check{
+    background: url("/assets/checkbox.svg") no-repeat;
+    padding-left: 20px;
+}
+.hr{
+    border-bottom: dotted 1px $dark-gray;
+    width: 95%;
+    margin: 10px auto 30px;
+}
+.hr-light{
+    border-bottom: dotted 1px $border;
+    margin:5px auto 10px;
+}
+.top-margin{
+    margin-top: 10px;
+    box-sizing: border-box;
+}
+.center{
+    margin: 0 auto;
+}

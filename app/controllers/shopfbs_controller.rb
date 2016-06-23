@@ -1,0 +1,2 @@
+class ShopfbsController < ApplicationController
+end

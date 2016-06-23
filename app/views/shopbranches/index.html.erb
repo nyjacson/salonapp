@@ -1,0 +1,13 @@
+<div class="container">
+<section>
+    <p>支店情報管理</p>
+    <div class="row">
+        <% @shopbranch.each do |branch| %>
+        <div class="col-sm-3"><%= link_to branch.shopname, branch %></div>
+        <div class="col-sm-3"><%= branch.branchname %></div>
+        <div class="col-sm-6"><%= branch.address %></div>
+        <% end %>
+    </div>
+    <!-- .row -->
+</section>
+</div>

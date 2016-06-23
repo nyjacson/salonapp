@@ -1,0 +1,152 @@
+<% provide(:title, "Top") %>
+<div class="layout-top-image"></div>
+<div class="container-fluid layout-top-mainWrapper">
+    <section>
+        <h1>全国の脱毛サロンを検索する</h1>
+        <div class="row">
+            <div class="col-sm-4">
+                <div class="layout-searchtypeWrapper">
+                    <div class="layout-titleArea">
+                        <h2 class="line">こだわりの条件から探す</h2>
+                    </div>
+                    <ul>
+                        <li>
+                            <a href="">とにかく安く・早く脱毛したい</a>
+                        </li>
+                        <li><%= link_to '有名・老舗店から探す', static_pages_toku2_path %></li>
+                        <li>
+                            <a href="">医療系サロンから探す</a>
+                        </li>
+                        <li><%= link_to '話題のサロンから探す', static_pages_toku1_path %></li>
+                        <li><%= link_to '脱毛したい部位から探す', '#' %></li>
+                    </ul>
+                </div>
+                <!-- .layout-searchType -->
+            </div>
+            <div class="col-sm-4">
+                <div class="layout-titleArea">
+                    <h2 class="line">地図から探す</h2>
+                </div>
+                <div class="layout-mapWrapper"></div>
+                <div class="ele-areanameWrapper" id="ele-map-all">
+                    <ul>
+                        <li id="hokkaido"><span>北海道</span></li>
+                        <li id="tohoku"><span>東北</span></li>
+                    </ul>
+                    <ul>
+                        <li id="chubu"><span>中部</span></li>
+                        <li id="kanto"><span>関東</span></li>
+                    </ul>
+                    <ul>
+                        <li id="chugoku"><span>中国</span></li>
+                        <li id="kanto"><span>関西</span></li>
+                    </ul>
+                    <ul>
+                        <li id="kyushu"><span>九州</span></li>
+                        <li id="shikoku"><span>四国</span></li>
+                    </ul>
+                </div>
+                <%= render 'static_pages/cityname' %>
+            </div>
+            <div class="col-sm-4">
+                <div class="layout-contentslistWrapper">
+                    <div class="layout-titleArea">
+                        <h2 class="line">初めての脱毛まずはここから</h2>
+                    </div>
+                    <ul>
+                        <li class="check"><%= link_to '脱毛サロンとは', '#' %></li>
+                        <li class="check"><%= link_to '脱毛サロンを上手に選ぼう', '#' %></li>
+                        <li class="check"><%= link_to '脱毛って痛いの？', '#' %></li>
+                        <li class="check"><%= link_to '医療脱毛 vs エステ脱毛', '#' %></li>
+                        <li class="check"><%= link_to '脱毛前後のお手入れ', '#' %></li>
+                        <li class="check"><%= link_to 'シェービング代＆キャンセル料について', '#' %></li>
+                        <li class="check"><%= link_to '全身脱毛と部位脱毛の違い', '#' %></li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+        <!-- .row -->
+    </section>
+    <div class="second-contentsWrapper">
+        <div class="row">
+            <div class="col-sm-6 ">
+                <section>
+                    <h1 class="line">脱毛あれこれ特集</h1>
+                    <row>
+                        <div class="col-sm-4">
+                            サムネイルPIC
+                        </div>
+                        <div class="col-sm-8">
+                            テキスト
+                        </div>
+                        <div class="col-sm-4">
+                            サムネイルPIC
+                        </div>
+                        <div class="col-sm-8">
+                            テキスト
+                        </div>
+                        <div class="col-sm-4">
+                            サムネイルPIC
+                        </div>
+                        <div class="col-sm-8">
+                            テキスト
+                        </div>
+                    </row>
+                </section>
+            </div>
+            <div class="col-sm-6">
+                <section>
+                    <h1 class="line">おすすめ記事</h1>
+                    <row>
+                        <div class="col-sm-4">
+                            サムネイルPIC
+                        </div>
+                        <div class="col-sm-8">
+                            テキスト
+                        </div>
+                        <div class="col-sm-4">
+                            サムネイルPIC
+                        </div>
+                        <div class="col-sm-8">
+                            テキスト
+                        </div>
+                        <div class="col-sm-4">
+                            サムネイルPIC
+                        </div>
+                        <div class="col-sm-8">
+                            テキスト
+                        </div>
+                    </row>
+                </section>
+            </div>
+        </div>
+        <!-- row -->
+    </div>
+    <!-- .second-contentsWrapper -->
+    <div class="third-contentsWrapper">
+        <section>
+            <h1 class="line">提携サロン</h1>
+            <div class="row">
+                <% @shopinfo.each do |s| %>
+                <div class="col-sm-2"><%= link_to s.shopname, s %></div>
+                <div class="col-sm-10"><%= s.recommend %></div>
+                <% end %>
+            </div>
+            <!-- .row -->
+        </section>
+        <section>
+            <h1 class="line">支店紹介</h1>
+            <div class="row">
+                <% @shopbranch.each do |s| %>
+                <div class="col-sm-3"><%= link_to s.shopname, s %></div>
+                <div class="col-sm-3"><%= s.branchname %></div>
+                <div class="col-sm-6"><%= s.address %></div>
+                <% end %>
+            </div>
+            <!-- .row -->
+        </section>
+    </div>
+    <!-- .third-contentsWrapper -->
+</div>
+<!-- .container-fluid -->

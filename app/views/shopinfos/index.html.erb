@@ -1,0 +1,12 @@
+<div class="container">
+        <h2>サロン情報管理</h2>
+            <% @shopinfo.each do |s| %>
+                <div class="row">
+                <div class="col-sm-2"><%= link_to s.shopname, s %></div>
+                <div class="col-sm-8"><%= s.recommend %></div>
+                <div class="col-sm-1 btn btn-default btn-sm"><%= link_to "Edit", edit_shopinfo_path(s) %></div>
+                <div class="col-sm-1 btn btn-default btn-sm"><%= link_to "Delete",s, method: :delete, data: {confirm: "削除しますか？"} %></div>
+                </div>
+            <% end %>
+        <p class="btn btn-default form-control"><%= link_to "データを追加する", new_shopinfo_path %></p>
+</div>
