@@ -6,9 +6,16 @@ class ShopbranchesController < ApplicationController
         @shopbranch = Shopbranch.find(params[:id])
     end
     def new
-        @shopbranch = Shopbranch.new(branch_params)
+        @shopbranch = Shopbranch.new
     end
     def create
+        @shopbranch = Shopbranch.new(branch_params)
+            if @shopbranch.save
+                flash[:success] = "successfully created!"
+                redirect_to @shopbranch
+            else
+                render action: 'new'
+            end
     end
     def edit
         @shopbranch = Shopbranch.find(params[:id])

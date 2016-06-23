@@ -1,51 +1,58 @@
-
 <div class="container ">
     <p>サロン情報登録フォーム</p>
     <div class="col-md-6 col-md-offset-3">
-<%= form_for (@shopinfo) do |f| %>
-<%= render 'shared/error_messages' %>
+        <%= form_for (@shopinfo) do |f| %>
+        <%= render 'shared/error_messages' %>
 
-<div class="form-grop">
-<%= f.label :shopname %>
-<%= f.text_field :shopname, class: 'form-control' %>
-</div>
-<div class="form-grop">
-<%= f.label :company %>
-<%= f.text_field :company, class: 'form-control' %>
-</div>
-<div class="form-grop">
-<%= f.label :affili %>
-<%= f.number_field :affili, class: 'form-control' %>
-</div>
-<div class="form-grop">
-<%= f.label :ranking %>
-<%= f.number_field :ranking, class: 'form-control' %>
-</div>
-<div class="form-grop">
-<%= f.label :recommend %>
-<%= f.text_field :recommend, class: 'form-control' %>
-</div>
-<div class="form-grop">
-<%= f.label :shoptype %>
-<%= f.text_field :shoptype, class: 'form-control' %>
-</div>
-<div class="form-grop">
-<%= f.label :treattype %>
-<%= f.text_field :treattype, class: 'form-control' %>
-</div>
-<div class="form-grop">
-<%= f.label :body %>
-<%= f.text_field :body, class: 'form-control' %>
-</div>
-<div class="form-grop">
-<%= f.label :machine %>
-<%= f.text_field :machine, class: 'form-control' %>
-</div>
-<div class="form-grop">
-<%= f.label :campaign %>
-<%= f.text_field :campaign, class: 'form-control' %>
-</div>
-<%= f.submit "店舗登録", class: "btn btn-default form-control" %>
-<% end %>
-</div>
+        <div class="form-grop">
+            <%= f.label :shopname %>
+            <%= f.text_field :shopname, class: 'form-control' %>
+        </div>
+        <div class="form-grop">
+            <%= f.label :company %>
+            <%= f.text_field :company, class: 'form-control' %>
+        </div>
+        <div class="form-grop">
+            <%= f.label :affili %>
+            <%= f.text_area :affili, class: 'form-control',rows: "3" %>
+        </div>
+        <div class="form-grop">
+            <%= f.label :ranking %>
+            <%= f.number_field :ranking, class: 'form-control' %>
+        </div>
+        <div class="form-grop">
+            <%= f.label :recommend %>
+            <%= f.text_area :recommend, class: 'form-control',rows: "5" %>
+        </div>
+        <div class="form-grop">
+            <%= f.label :shoptype %>
+            <%= f.text_field :shoptype, class: 'form-control' %>
+        </div>
+        <div class="form-grop">
+            <%= f.label :treattype %>
+            <%= f.text_field :treattype, class: 'form-control' %>
+        </div>
+        <div class="form-grop">
+            <%= f.label :body %>
+            <%= f.text_field :body, class: 'form-control' %>
+        </div>
+        <div class="form-grop">
+            <%= f.label :machine %>
+            <%= f.text_field :machine, class: 'form-control' %>
+        </div>
+        <div class="form-grop">
+            <%= f.label :campaign %>
+            <%= f.text_area :campaign, class: 'form-control',rows: "5" %>
+        </div>
+        <div class="form-grop">
+            <%= f.label :pic1 %>
+            <%= f.text_field :pic1, class: 'form-control' %>
+        </div>
+        <div class="form-grop">
+            <%= f.label :pic2 %>
+            <%= f.text_field :pic2, class: 'form-control' %>
+        </div><br>
+        <%= f.submit "店舗登録", class: "btn btn-default form-control" %>
+        <% end %><br>
+    </div>
 </div>
