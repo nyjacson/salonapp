@@ -13,14 +13,23 @@
                 <h2 class="textSubTitle line">おすすめポイント</h2>
                 <p><%= @shopinfo.recommend %></p>
                 <h3 class="textSubTitle line">口コミ・評価</h3>
-                <h4>総合評価</h4>
-                <p><%= @shopinfo.ranking.round(2) %></p>
-                <p><a href="">口コミを見る</a></p>
+                <p>総合評価 <%= @shopinfo.ranking.round(2) %> <%= customer_rank(@shopinfo.ranking) %></p>
+                <% @shopinfo.shopfbs.first(1).each do |f| %>
+                <h5>カスタマーレビュー</h5>
+
+                <p>評価：<%= f.fbrank %> <%= customer_rank(f.fbrank) %><br> 投稿者：<%= f.auther %>　投稿日：<%= f.updated_at.strftime('%Y/%m/%d') %></p>
+                <h5><%= f.fbtitle %></h5>
+                <p><%= f.fbcomment %></p>
+                <% end %>
+
+                <p><a href="">もっと見る(全<%= @shopinfo.shopfbs.count %>件)</a></p>
             </div>
             <!-- col-sm-6 left -->
 
             <div class="col-sm-6">
+                <h3 class="textSubTitle line">ショップデータ</h3>
                 <div class="row">
+
                     <div class="col-sm-6">
                     <h3 class="check">ショップタイプ</h3>
                     <p><%= @shopinfo.shoptype %></p>
