@@ -11,8 +11,14 @@ class CreateShopinfos < ActiveRecord::Migration
         t.string :body
         t.string :machine
         t.text :campaign
+        t.string :price1
+        t.string :price2
+        t.string :price3
         t.string :pic1
         t.string :pic2
+        t.string :pic3
+        t.string :pic4
+        t.string :pic5
         t.timestamps null: false
     end
     add_index :shopinfos, :shopname, unique: true

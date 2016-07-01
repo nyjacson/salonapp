@@ -6,6 +6,12 @@ gem 'rails', '4.2.6'
 gem 'bootstrap-sass',       '3.2.0.0'
 # Use sqlite3 as the database for Active Record
 
+#modeling tool
+gem "railroady"
+#rake diagram:all
+gem "rails-erd"
+#rake erd
+
 #gem 'sqlite3'
 # 本番ではpostgressを使用する
 

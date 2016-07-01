@@ -1,1 +1,68 @@
-<%= @shopinfo.shopname %>
+<section class="layout-shopinfos-show">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <h1><%= @shopinfo.shopname %></h1>
+                <%= image_tag @shopinfo.pic1, width: "100%" %>
+            </div>
+
+        </div>
+        <!-- row -->
+        <div class="row">
+            <div class="col-sm-6">
+                <h2 class="textSubTitle line">おすすめポイント</h2>
+                <p><%= @shopinfo.recommend %></p>
+                <h3 class="textSubTitle line">口コミ・評価</h3>
+                <h4>総合評価</h4>
+                <p><%= @shopinfo.ranking.round(2) %></p>
+                <p><a href="">口コミを見る</a></p>
+            </div>
+            <!-- col-sm-6 left -->
+
+            <div class="col-sm-6">
+                <div class="row">
+                    <div class="col-sm-6">
+                    <h3 class="check">ショップタイプ</h3>
+                    <p><%= @shopinfo.shoptype %></p>
+                    <h3 class="check">脱毛方式</h3>
+                    <p><%= @shopinfo.treattype %></p>
+                    </div>
+                    <div class="col-sm-6">
+                    <h3 class="check">脱毛機器</h3>
+                    <p><%= @shopinfo.machine %></p>
+                    <h3 class="check">運営会社</h3>
+                    <p><%= @shopinfo.company %></p>
+                    </div>
+                </div>
+                <h3 class="check">キャンペーン</h3>
+                <p><%= @shopinfo.campaign %></p>
+
+                <h3 class="check">施術価格</h3>
+                <ul>
+                    <li><%= @shopinfo.price1 %></li>
+                    <li><%= @shopinfo.price2 %></li>
+                    <li><%= @shopinfo.price3 %></li>
+                </ul>
+
+            </div>
+            <!-- col-sm-6 right -->
+        </div>
+        <!-- row -->
+        <div class="row">
+
+            <div class="col-sm-12">
+                <h2 class="textSubTitle line">店舗情報</h2>
+                <ul>
+                    <% @shopinfo.shopbranches.each do |b| %>
+                    <li><%= link_to b.branchname, b %></li>
+                    <li><%= b.address %></li>
+                    <% end %>
+                </ul>
+            </div>
+
+        </div>
+        <!-- row -->
+    </div>
+    <!-- container -->
+</section>
+<!-- layout-shopinfos-show -->

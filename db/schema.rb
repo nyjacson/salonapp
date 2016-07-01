@@ -59,11 +59,13 @@ ActiveRecord::Schema.define(version: 20160620110745) do
 
   create_table "shopfbs", force: :cascade do |t|
     t.string   "shopinfo_id", null: false
+    t.string   "fbshopname"
+    t.string   "fbtitle",     null: false
     t.text     "fbcomment",   null: false
     t.string   "auther"
     t.integer  "fbrank",      null: false
     t.string   "ages",        null: false
-    t.string   "sex"
+    t.string   "jobs"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
   end
@@ -81,8 +83,14 @@ ActiveRecord::Schema.define(version: 20160620110745) do
     t.string   "body"
     t.string   "machine"
     t.text     "campaign"
+    t.string   "price1"
+    t.string   "price2"
+    t.string   "price3"
     t.string   "pic1"
     t.string   "pic2"
+    t.string   "pic3"
+    t.string   "pic4"
+    t.string   "pic5"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

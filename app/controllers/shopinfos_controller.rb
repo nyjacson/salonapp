@@ -27,7 +27,7 @@ class ShopinfosController < ApplicationController
 
     private
         def shop_params
-            params.require(:shopinfo).permit(:shopname, :company, :affili, :ranking, :recommend, :shoptype, :treattype, :body, :machine, :campaign,:pic1,:pic2)
+            params.require(:shopinfo).permit(:shopname, :company, :affili, :ranking, :recommend, :shoptype, :treattype, :body, :machine, :campaign,:pic1,:pic2,:pic3,:pic4,:pic5,:price1,:price2,:price3)
         end
 
 end
