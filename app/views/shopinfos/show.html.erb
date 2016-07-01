@@ -15,10 +15,10 @@
                 <h3 class="textSubTitle line">口コミ・評価</h3>
                 <p>総合評価 <%= @shopinfo.ranking.round(2) %> <%= customer_rank(@shopinfo.ranking) %></p>
                 <% @shopinfo.shopfbs.first(1).each do |f| %>
-                <h5>カスタマーレビュー</h5>
+                <h5 class="glaytitle bold">カスタマーレビュー</h5>
 
-                <p>評価：<%= f.fbrank %> <%= customer_rank(f.fbrank) %><br> 投稿者：<%= f.auther %>　投稿日：<%= f.updated_at.strftime('%Y/%m/%d') %></p>
-                <h5><%= f.fbtitle %></h5>
+                <p>投稿者：<%= f.auther %>　投稿日：<%= f.updated_at.strftime('%Y/%m/%d') %><br>おすすめ度：<%= f.fbrank %> <%= customer_rank(f.fbrank) %></p>
+                <p>投稿タイトル：<span class="bold"><%= f.fbtitle %></span></p>
                 <p><%= f.fbcomment %></p>
                 <% end %>
 

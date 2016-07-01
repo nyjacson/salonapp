@@ -10,7 +10,7 @@ module ApplicationHelper
 
     def customer_rank(rb_rank)
         if rb_rank == 5
-            image_tag('/assets/star-5.svg')
+            image_tag('/assets/star-5.svg', class: "ele-rankStar")
         elsif rb_rank == 4.5
             image_tag('/assets/star-4-half.svg')
         elsif rb_rank == 4
