@@ -12,21 +12,21 @@ module ApplicationHelper
         if rb_rank == 5
             image_tag('/assets/star-5.svg', class: "ele-rankStar")
         elsif rb_rank == 4.5
-            image_tag('/assets/star-4-half.svg')
+            image_tag('/assets/star-4-half.svg', class: "ele-rankStar")
         elsif rb_rank == 4
-            image_tag('/assets/star-4.svg')
+            image_tag('/assets/star-4.svg', class: "ele-rankStar")
         elsif rb_rank == 3.5
-            image_tag('/assets/star-3-half.svg')
+            image_tag('/assets/star-3-half.svg', class: "ele-rankStar")
         elsif rb_rank == 3
-            image_tag('/assets/star-3.svg')
+            image_tag('/assets/star-3.svg', class: "ele-rankStar")
         elsif rb_rank == 2.5
-            image_tag('/assets/star-2-half.svg')
+            image_tag('/assets/star-2-half.svg', class: "ele-rankStar")
         elsif rb_rank == 2
-            image_tag('/assets/star-2.svg')
+            image_tag('/assets/star-2.svg', class: "ele-rankStar")
         elsif rb_rank == 1.5
-            image_tag('/assets/star-1-half.svg')
+            image_tag('/assets/star-1-half.svg', class: "ele-rankStar")
         elsif rb_rank == 1
-            image_tag('/assets/star-1.svg')
+            image_tag('/assets/star-1.svg', class: "ele-rankStar")
         end
     end
 end

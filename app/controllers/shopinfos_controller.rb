@@ -4,6 +4,7 @@ class ShopinfosController < ApplicationController
     end
     def show
         @shopinfo = Shopinfo.find(params[:id])
+        @shopfbs = Shopfb.find(params[:id])
     end
     def new
         @shopinfo = Shopinfo.new

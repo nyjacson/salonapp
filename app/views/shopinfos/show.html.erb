@@ -13,7 +13,7 @@
                 <h2 class="textSubTitle line">おすすめポイント</h2>
                 <p><%= @shopinfo.recommend %></p>
                 <h3 class="textSubTitle line">口コミ・評価</h3>
-                <p>総合評価 <%= @shopinfo.ranking.round(2) %> <%= customer_rank(@shopinfo.ranking) %></p>
+                <p>総合評価 <%= @shopinfo.ranking.round(2) %> <%= customer_rank(@shopinfo.ranking) %> (<%= link_to @shopinfo.shopfbs.count, @shopfbs %>)</p>
                 <% @shopinfo.shopfbs.first(1).each do |f| %>
                 <h5 class="glaytitle bold">カスタマーレビュー</h5>
 
@@ -22,7 +22,8 @@
                 <p><%= f.fbcomment %></p>
                 <% end %>
 
-                <p><a href="">もっと見る(全<%= @shopinfo.shopfbs.count %>件)</a></p>
+                <p><%= link_to "全てのレビューを見る", @shopfbs %>(<%= @shopinfo.shopfbs.count %>件)</p>
+
             </div>
             <!-- col-sm-6 left -->
 
@@ -60,7 +61,7 @@
         <div class="row">
 
             <div class="col-sm-12">
-                <h2 class="textSubTitle line">店舗情報</h2>
+                <h2 class="textSubTitle line"><%= @shopinfo.shopname %>の店舗情報</h2>
                 <ul>
                     <% @shopinfo.shopbranches.each do |b| %>
                     <li><%= link_to b.branchname, b %></li>

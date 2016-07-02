@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   get 'static_pages/toku1'
   get 'static_pages/toku2'
   get 'search/tokyo1'
+  resources :shopfbs
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
