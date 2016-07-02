@@ -158,13 +158,29 @@
     border: $border solid 1px;
     height: 50px;
 }
+/////shopbranch
+.layout-shopbranch-show{
+    .container{
+        background: #ffffff;
+        max-width: 950px;
+    }
+}
+
 ////shopfb
 .layout-feedback-show{
     .container{
         background: #ffffff;
+        max-width: 950px;
         .layout-post{
             margin-top: 10px;
             margin-bottom: 20px;
         }
+    }
+}
+////article
+.layout-article-show,.layout-article-index{
+    .container{
+        background: #ffffff;
+        max-width: 950px;
     }
 }

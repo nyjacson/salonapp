@@ -19,6 +19,8 @@ class CreateShopinfos < ActiveRecord::Migration
         t.string :pic3
         t.string :pic4
         t.string :pic5
+        t.text :recommend2
+        t.text :recommend3
         t.timestamps null: false
     end
     add_index :shopinfos, :shopname, unique: true

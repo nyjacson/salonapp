@@ -91,6 +91,8 @@ ActiveRecord::Schema.define(version: 20160620110745) do
     t.string   "pic3"
     t.string   "pic4"
     t.string   "pic5"
+    t.text     "recommend2"
+    t.text     "recommend3"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

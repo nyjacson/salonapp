@@ -1,0 +1,17 @@
+<section class="layout-article-index">
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <h2>記事管理画面</h2>
+
+                <% @article.each do |a| %>
+                <p>記事タイトル：<%= link_to a.title, a %><br>カテゴリー：<%= a.category %><br>最終更新：<%= a.updated_at %><br>
+                    <%= link_to "編集", "#" %> | <%= link_to "削除", "#" %>
+                </p>
+                <% end %>
+
+            </div>
+        </div>
+    </div>
+</section>

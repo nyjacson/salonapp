@@ -54,13 +54,9 @@
                         <h2 class="line">初めての脱毛まずはここから</h2>
                     </div>
                     <ul>
-                        <li class="check"><%= link_to '脱毛サロンとは', '#' %></li>
-                        <li class="check"><%= link_to '脱毛サロンを上手に選ぼう', '#' %></li>
-                        <li class="check"><%= link_to '脱毛って痛いの？', '#' %></li>
-                        <li class="check"><%= link_to '医療脱毛 vs エステ脱毛', '#' %></li>
-                        <li class="check"><%= link_to '脱毛前後のお手入れ', '#' %></li>
-                        <li class="check"><%= link_to 'シェービング代＆キャンセル料について', '#' %></li>
-                        <li class="check"><%= link_to '全身脱毛と部位脱毛の違い', '#' %></li>
+                        <% @article_1.each do |a| %>
+                        <li class="check"><%= link_to a.title, a %></li>
+                        <% end %>
                     </ul>
                 </div>
             </div>
