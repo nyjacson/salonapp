@@ -24,4 +24,13 @@ jQuery(function($) {
 
     });
 
+    $("#gmap3_1").gmap3({  // 地図の表示 ... （3）
+          latitude: 35.6988,
+          longitude: 139.7747,
+          zoom: 8,
+          navigationControl: true,
+          mapTypeControl: true,
+          scaleControl: true
+      });
+
 });

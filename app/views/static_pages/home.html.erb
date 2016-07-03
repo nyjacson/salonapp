@@ -125,13 +125,15 @@
             <h1 class="line">提携サロン</h1>
             <div class="row">
                 <% @shopinfo.each do |s| %>
+                <p>
                 <div class="col-sm-2"><%= link_to s.shopname, s %></div>
-                <div class="col-sm-10"><%= s.recommend %></div>
+                <div class="col-sm-10"><%= simple_format(s.recommend) %></div>
+            </p>
                 <% end %>
             </div>
             <!-- .row -->
         </section>
-        <section>
+        <!-- <section>
             <h1 class="line">支店紹介</h1>
             <div class="row">
                 <% @shopbranch.each do |s| %>
@@ -140,8 +142,7 @@
                 <div class="col-sm-6"><%= s.address %></div>
                 <% end %>
             </div>
-            <!-- .row -->
-        </section>
+        </section> -->
     </div>
     <!-- .third-contentsWrapper -->
 </div>

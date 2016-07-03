@@ -163,6 +163,33 @@
     .container{
         background: #ffffff;
         max-width: 950px;
+.layout-tableWrapper{
+    border: 2px solid #d6ceb4;
+    width: 100%;
+    th{
+        width: 20%;
+        background-color: #eeece4;
+        border-top: dotted 1px #ffffff;
+        vertical-align: top;
+        padding: 5px;
+    }
+    td{
+        padding: 5px;
+        width: 80%;
+            border-top: dotted 1px #e0dccc;
+    }
+    @media (max-width: 768px){
+        th{
+            width: 100%;
+            display: block;
+        }
+        td{
+            width: 100%;
+            display: block;
+        }
+    }
+}
+
     }
 }
 

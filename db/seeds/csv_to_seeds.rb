@@ -21,5 +21,7 @@ CSV.foreach('shoplist.csv') do |row|
  print ",:pic3 => " + %Q["#{row[15]}"]
  print ",:pic4 => " + %Q["#{row[16]}"]
  print ",:pic5 => " + %Q["#{row[17]}"]
+ print ",:recommend2 => " + %Q["#{row[18]}"]
+ print ",:recommend3 => " + %Q["#{row[19]}"]
  print ")\n"
 end

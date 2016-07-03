@@ -2,10 +2,60 @@
     <div class="container">
         <div class="row">
             <div class="col-sm-12">
-                <%= @shopbranch.branchname %> <%= @shopbranch.address %>
+                <h1><%= @shopbranch.shopinfo.shopname %> <%= @shopbranch.branchname %>のご紹介</h1>
+                <%= simple_format(@shopbranch.shopinfo.recommend2) %>
+                <table class="layout-tableWrapper">
+                    <tr>
+                        <th>店名</th>
+                        <td><%= @shopbranch.shopinfo.shopname %> <%= @shopbranch.branchname %></td>
+                    </tr>
+                    <tr>
+                        <th>住所</th>
+                        <td><%= @shopbranch.address %></td>
+                    </tr>
+                    <tr>
+                        <th>最寄駅</th>
+                        <td><%= @shopbranch.station %>駅</td>
+                    </tr>
+                    <tr>
+                        <th>アクセス</th>
+                        <td><%= simple_format(@shopbranch.access) %></td>
+                    </tr>
+                    <tr>
+                        <th>営業時間</th>
+                        <td>
+                            平日：<%= @shopbranch.starthour %>~<%= @shopbranch.endhour %>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>定休日</th>
+                        <td><%= @shopbranch.holiday %></td>
+                    </tr>
+
+                    <tr>
+                        <th>地図</th>
+                        <td>
+                            <div class="layout-map-embed">
+                            	<div id="ele-gmap" style="width:640px;height:480px"></div>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+
             </div>
         </div>
     </div>
 
 
 </section>
+<script type="text/javascript">
+jQuery(function($) {
+    $("#ele-gmap").gmap3({
+          address: "東京都渋谷区",
+          zoom: 16,
+          navigationControl: true,
+          mapTypeControl: true,
+          scaleControl: true
+      });
+});
+</script>
