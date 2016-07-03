@@ -12,20 +12,59 @@
     <div id="navbar" class="collapse navbar-collapse">
       <ul class="nav navbar-nav">
         <li class="active"><%= link_to 'トップ', static_pages_home_path %></li>
-        <li><a href="#about">サロン名で探す</a></li>
-        <li><a href="#contact">エリアから探す</a></li>
         <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">関連記事 <span class="caret"></span></a>
+            <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">サロン名で探す</a>
+            <ul class="dropdown-menu" role="menu">
+                <li><%= link_to 'ミュゼプラチナム', shopinfo_path(1) %></li>
+                <li><%= link_to '銀座カラー', shopinfo_path(2) %></li>
+                <li><%= link_to '脱毛ラボ', shopinfo_path(3) %></li>
+                <li class="divider"></li>
+                <li><%= link_to 'シースリー', shopinfo_path(4) %></li>
+                <li><%= link_to 'エターナルラビリンス', shopinfo_path(5) %></li>
+                <li><%= link_to 'キレイモ', shopinfo_path(6) %></li>
+                <li class="divider"></li>
+                <li><%= link_to 'エステティックTBC', shopinfo_path(7) %></li>
+                <li><%= link_to 'ラ・ヴォーグ', shopinfo_path(8) %></li>
+                <li><%= link_to 'エピレ', shopinfo_path(9) %></li>
+                <li><%= link_to 'ラットタット', shopinfo_path(10) %></li>
+            </ul>
+        </li>
+        <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">エリアから探す</a>
+            <ul class="dropdown-menu" role="menu">
+                <li class="dropdown-header">人気エリア</li>
+                <li class="divider"></li>
+                <li><%= link_to '銀座', shopinfo_path(1) %></li>
+                <li><%= link_to '新宿', shopinfo_path(2) %></li>
+                <li><%= link_to '渋谷', shopinfo_path(3) %></li>
+                <li><%= link_to '池袋', shopinfo_path(3) %></li>
+                <li class="divider"></li>
+                <li class="dropdown-header">エリアから探す</li>
+                <li class="divider"></li>
+                <li><%= link_to '北海道', shopinfo_path(4) %></li>
+                <li><%= link_to '東北', shopinfo_path(5) %></li>
+                <li><%= link_to '関東', shopinfo_path(6) %></li>
+                <li><%= link_to '中部', shopinfo_path(7) %></li>
+                <li><%= link_to '関西', shopinfo_path(8) %></li>
+                <li><%= link_to '中国', shopinfo_path(9) %></li>
+                <li><%= link_to '四国', shopinfo_path(10) %></li>
+                <li><%= link_to '九州', shopinfo_path(7) %></li>
+                <li class="divider"></li>
+            </ul>
+        </li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">人気の記事<span class="caret"></span></a>
           <ul class="dropdown-menu" role="menu">
-            <li><a href="#">Action</a></li>
-            <li><a href="#">Another action</a></li>
-            <li><a href="#">Something else here</a></li>
+            <li><a href="#">初めての脱毛特集</a></li>
+            <li><a href="#">脱毛あれこれ特集</a></li>
+            <li><a href="#">おすすめ記事</a></li>
             <li class="divider"></li>
             <li class="dropdown-header">Nav header</li>
             <li><a href="#">Separated link</a></li>
             <li><a href="#">One more separated link</a></li>
           </ul>
         </li>
+        <li><a href="">システム管理</a></li>
       </ul>
     </div><!--/.nav-collapse -->
   </div>

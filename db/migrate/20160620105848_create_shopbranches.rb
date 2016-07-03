@@ -11,8 +11,8 @@ class CreateShopbranches < ActiveRecord::Migration
         t.string :e_starthour
         t.string :e_endhour
         t.string :holiday
-        t.integer :latitude
-        t.integer :longitude
+        t.float :latitude
+        t.float :longitude
         t.string :train
         t.string :station
         t.string :train2

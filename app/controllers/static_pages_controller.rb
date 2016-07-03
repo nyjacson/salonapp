@@ -8,4 +8,7 @@ class StaticPagesController < ApplicationController
   end
   def toku2
   end
+  def admin
+
+  end
 end

@@ -1,212 +1,221 @@
 @import "set";
-
-.layout-main-contentsWrapper{
+.layout-main-contentsWrapper {
     margin-top: 50px;
-    .layout-top-image{
+    .layout-top-image {
         //background: url(/assets/top-bk.jpg) no-repeat;
         //background-size: 950px auto;
         //background-position: center -400px;
         //height: 150px;
     }
 }
-.layout-top-mainWrapper{
-
+.layout-top-mainWrapper {
     background: #ffffff;
     max-width: 950px;
     padding-bottom: 100px;
     //text-align: center;
-    h1{
+    h1 {
         font-size: 18px;
         margin-bottom: 20px;
     }
-    .layout-titleArea{
-        h2{
+    .layout-titleArea {
+        h2 {
             font-size: 16px;
-            margin: 0;
-            margin-bottom: 10px;
+            margin: 0 0 10px;
             border-left: 5px solid $base;
             padding-left: 5px;
         }
-
     }
-    .layout-mapWrapper{
+    .layout-mapWrapper {
         text-align: center;
         background: url("/assets/MAP.svg") no-repeat;
         background-position: center;
         background-size: 200px auto;
-        height:220px;
+        height: 220px;
         margin-bottom: 20px;
         position: relative;
         background-color: #efefef;
     }
-    .ele-areanameWrapper{
+    .ele-areanameWrapper {
         position: absolute;
         top: 45px;
         left: 10px;
         overflow: hidden;
-        ul{
+        ul {
             display: table;
             table-layout: fixed;
             width: 100%;
             padding: 0;
         }
-        li{
-            padding: 0 30px 10px 30px;
+        li {
+            padding: 0 30px 10px;
             display: table-cell;
-            &:nth-child(even){
+            &:nth-child(even) {
                 text-align: right;
             }
-            a{
+            a {
                 display: inline-block;
                 background: $op-button;
                 padding: 5px 10px;
                 border-radius: 3px;
-                &:hover{
+                &:hover {
                     background: $op-h-button;
                 }
             }
-            span{
+            span {
                 display: inline-block;
                 background: $op-button;
                 padding: 5px 10px;
                 border-radius: 3px;
-                &:hover{
+                &:hover {
                     background: $op-h-button;
                 }
             }
         }
-    } //ele-areanameWrapper
-    #ele-map-all{
+    }
+    //ele-areanameWrapper
+    #ele-map-all {
         display: block;
     }
-    #ele-map-kanto{
+    #ele-map-kanto {
         display: none;
     }
-    #ele-map-tokyo{
+    #ele-map-tokyo {
         display: none;
     }
-    .layout-searchtypeWrapper{
+    .layout-searchtypeWrapper {
         margin-bottom: 20px;
-        ul{
+        ul {
             list-style-type: none;
-            font-size: 16px;
+            font-size: 14px;
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            li{
-                text-align: center;
+            li {
+                text-align: left;
                 height: 40px;
                 line-height: 40px;
                 margin-bottom: 5px;
                 transition: all 0.2s;
-                &:hover{
+                &:hover {
                     background: $sub;
                 }
-                a{
+                a {
                     width: 100%;
                     border: 1px solid $border;
                     display: inline-block;
                     transition: all 0.2s;
-                    &:hover{
+                    padding-left: 20px;
+                    &:hover {
                         text-decoration: none;
                         color: #ffffff;
                     }
                 }
             }
-
         }
     }
-    .layout-contentslistWrapper{
+    .layout-contentslistWrapper {
         margin-bottom: 20px;
         height: 220px;
-        ul{
+        ul {
             list-style: none;
-            padding: 0;
-            padding-left: 10px;
-            li{
+            padding: 0 0 0 10px;
+            li {
                 margin-bottom: 5px;
             }
         }
-
-    } //layout-contentslistWrapper
-} //layout-top-mainWrapper
-.second-contentsWrapper{
-    h1{
+    }
+    //layout-contentslistWrapper
+}
+//layout-top-mainWrapper
+.second-contentsWrapper {
+    h1 {
         border-left: 5px solid $base;
         padding-left: 5px;
         font-size: 16px;
         margin-bottom: 10px;
     }
-    margin-bottom:20px;
-
+    margin-bottom: 20px;
 }
-.third-contentsWrapper{
-    h1{
+.third-contentsWrapper {
+    h1 {
         border-left: 5px solid $base;
         padding-left: 5px;
         font-size: 16px;
         margin-bottom: 10px;
     }
-    margin-bottom:20px;
-
+    margin-bottom: 20px;
 }
-.layout-header{
-    box-shadow:0 2px 3px rgba(100, 100, 100, 0.5);
+.layout-header {
+    box-shadow: 0 2px 3px rgba(100, 100, 100, 0.5);
 }
-.layout-footer{
+.layout-footer {
     background: $gray-bk;
     border: $border solid 1px;
     height: 50px;
 }
 /////shopbranch
-.layout-shopbranch-show{
-    .container{
+.layout-shopbranch-show {
+    .container {
         background: #ffffff;
         max-width: 950px;
-.layout-tableWrapper{
-    border: 2px solid #d6ceb4;
-    width: 100%;
-    th{
-        width: 20%;
-        background-color: #eeece4;
-        border-top: dotted 1px #ffffff;
-        vertical-align: top;
-        padding: 5px;
-    }
-    td{
-        padding: 5px;
-        width: 80%;
-            border-top: dotted 1px #e0dccc;
-    }
-    @media (max-width: 768px){
-        th{
-            width: 100%;
-            display: block;
+        padding-bottom: 20px;
+        h1{
+            margin-top: 20px;
+            margin-bottom: 20px;
         }
-        td{
+        img {
             width: 100%;
-            display: block;
+            height: auto;
+        }
+        .layout-tableWrapper {
+            border: 2px solid #d6ceb4;
+            width: 100%;
+            .layout-map-embed{
+                #ele-gmap{
+                    width: 100%;
+                    height: 300px;
+                }
+            }
+            th {
+                width: 20%;
+                background-color: #eeece4;
+                border-top: dotted 1px #ffffff;
+                vertical-align: top;
+                padding: 5px;
+            }
+            td {
+                padding: 5px;
+                width: 80%;
+                border-top: dotted 1px #e0dccc;
+            }
+            @media (max-width: 768px) {
+                th {
+                    width: 100%;
+                    display: block;
+                }
+                td {
+                    width: 100%;
+                    display: block;
+                }
+            }
         }
     }
 }
-
-    }
-}
-
 ////shopfb
-.layout-feedback-show{
-    .container{
+.layout-feedback-show {
+    .container {
         background: #ffffff;
         max-width: 950px;
-        .layout-post{
+        .layout-post {
             margin-top: 10px;
             margin-bottom: 20px;
         }
     }
 }
 ////article
-.layout-article-show,.layout-article-index{
-    .container{
+.layout-article-index,
+.layout-article-show {
+    .container {
         background: #ffffff;
         max-width: 950px;
     }

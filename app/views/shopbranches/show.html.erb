@@ -5,38 +5,38 @@
                 <h1><%= @shopbranch.shopinfo.shopname %> <%= @shopbranch.branchname %>のご紹介</h1>
                 <%= simple_format(@shopbranch.shopinfo.recommend2) %>
                 <table class="layout-tableWrapper">
-                    <tr>
-                        <th>店名</th>
-                        <td><%= @shopbranch.shopinfo.shopname %> <%= @shopbranch.branchname %></td>
+                    <tr class="row">
+                        <th class="col-sm-4">店名</th>
+                        <td class="col-sm-8"><%= @shopbranch.shopinfo.shopname %> <%= @shopbranch.branchname %></td>
                     </tr>
-                    <tr>
-                        <th>住所</th>
-                        <td><%= @shopbranch.address %></td>
+                    <tr class="row">
+                        <th class="col-sm-4">住所</th>
+                        <td class="col-sm-8"><%= @shopbranch.address %></td>
                     </tr>
-                    <tr>
-                        <th>最寄駅</th>
-                        <td><%= @shopbranch.station %>駅</td>
+                    <tr class="row">
+                        <th class="col-sm-4">最寄駅</th>
+                        <td class="col-sm-8"><%= @shopbranch.station %>駅</td>
                     </tr>
-                    <tr>
-                        <th>アクセス</th>
-                        <td><%= simple_format(@shopbranch.access) %></td>
+                    <tr class="row">
+                        <th class="col-sm-4">アクセス</th>
+                        <td class="col-sm-8"><%= simple_format(@shopbranch.access) %></td>
                     </tr>
-                    <tr>
-                        <th>営業時間</th>
-                        <td>
+                    <tr class="row">
+                        <th class="col-sm-4">営業時間</th>
+                        <td class="col-sm-8">
                             平日：<%= @shopbranch.starthour %>~<%= @shopbranch.endhour %>
                         </td>
                     </tr>
-                    <tr>
-                        <th>定休日</th>
-                        <td><%= @shopbranch.holiday %></td>
+                    <tr class="row">
+                        <th class="col-sm-4">定休日</th>
+                        <td class="col-sm-8"><%= @shopbranch.holiday %></td>
                     </tr>
 
-                    <tr>
-                        <th>地図</th>
-                        <td>
+                    <tr class="row">
+                        <th class="col-sm-4">地図</th>
+                        <td class="col-sm-8">
                             <div class="layout-map-embed">
-                            	<div id="ele-gmap" style="width:640px;height:480px"></div>
+                            	<div id="ele-gmap"></div>
                             </div>
                         </td>
                     </tr>
@@ -50,12 +50,24 @@
 </section>
 <script type="text/javascript">
 jQuery(function($) {
-    $("#ele-gmap").gmap3({
-          address: "東京都渋谷区",
-          zoom: 16,
+        var lat = <%= @shopbranch.latitude %>;
+        var lon = <%= @shopbranch.longitude %>;
+        $("#ele-gmap").gmap3({
+        latitude: lat,
+        longitude: lon,
+          zoom: 17,
           navigationControl: true,
           mapTypeControl: true,
-          scaleControl: true
+          scaleControl: true,
+          markers: [
+              {
+                latitude: lat,
+                longitude: lon,
+                title: 'サロン',
+                openInfo: true
+            }
+          ]
+
       });
 });
 </script>
