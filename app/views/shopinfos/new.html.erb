@@ -1,9 +1,8 @@
 <div class="container ">
-    <p>サロン情報登録フォーム</p>
+    <h1>サロン情報登録フォーム</h1>
     <div class="col-md-6 col-md-offset-3">
         <%= form_for (@shopinfo) do |f| %>
         <%= render 'shared/error_messages' %>
-
         <div class="form-grop">
             <%= f.label :shopname %>
             <%= f.text_field :shopname, class: 'form-control' %>
@@ -23,6 +22,14 @@
         <div class="form-grop">
             <%= f.label :recommend %>
             <%= f.text_area :recommend, class: 'form-control',rows: "5" %>
+        </div>
+        <div class="form-grop">
+            <%= f.label :recommend2 %>
+            <%= f.text_area :recommend2, class: 'form-control',rows: "5" %>
+        </div>
+        <div class="form-grop">
+            <%= f.label :recommend3 %>
+            <%= f.text_area :recommend3, class: 'form-control',rows: "5" %>
         </div>
         <div class="form-grop">
             <%= f.label :shoptype %>
@@ -45,6 +52,18 @@
             <%= f.text_area :campaign, class: 'form-control',rows: "5" %>
         </div>
         <div class="form-grop">
+            <%= f.label :price1 %>
+            <%= f.text_field :price1, class: 'form-control' %>
+        </div>
+        <div class="form-grop">
+            <%= f.label :price2 %>
+            <%= f.text_field :price2, class: 'form-control' %>
+        </div>
+        <div class="form-grop">
+            <%= f.label :price3 %>
+            <%= f.text_field :price3, class: 'form-control' %>
+        </div>
+        <div class="form-grop">
             <%= f.label :pic1 %>
             <%= f.text_field :pic1, class: 'form-control' %>
         </div>
@@ -63,18 +82,6 @@
         <div class="form-grop">
             <%= f.label :pic5 %>
             <%= f.text_field :pic5, class: 'form-control' %>
-        </div>
-        <div class="form-grop">
-            <%= f.label :price1 %>
-            <%= f.text_field :price1, class: 'form-control' %>
-        </div>
-        <div class="form-grop">
-            <%= f.label :price2 %>
-            <%= f.text_field :price2, class: 'form-control' %>
-        </div>
-        <div class="form-grop">
-            <%= f.label :price3 %>
-            <%= f.text_field :price3, class: 'form-control' %>
         </div>
         <br>
         <%= f.submit "店舗登録", class: "btn btn-default form-control" %>
