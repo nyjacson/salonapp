@@ -1,0 +1,15 @@
+<% provide(:title, "脱毛サロンカスタマーレビュー管理") %>
+<div class="layout-static-admin">
+<div class="container">
+        <h1>カスタマーレビュー管理</h1>
+            <% @shopfb.each do |f| %>
+                <div class="row">
+                <div class="col-sm-2"><%= link_to f.fbtitle, f %></div>
+                <div class="col-sm-8"><%= f.fbcomment %></div>
+                <div class="col-sm-1 btn btn-default btn-sm"><%= link_to "Edit", edit_shopfb_path(f) %></div>
+                <div class="col-sm-1 btn btn-default btn-sm"><%= link_to "Delete",f, method: :delete, data: {confirm: "削除しますか？"} %></div>
+                </div>
+            <% end %>
+        <p class="btn btn-default form-control"><%= link_to "データを追加する", new_shopfb_path %></p>
+</div>
+</div>

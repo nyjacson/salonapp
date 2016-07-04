@@ -1,3 +1,5 @@
+<% provide(:title, "脱毛サロン情報管理") %>
+<div class="layout-static-admin">
 <div class="container">
         <h2>サロン情報管理</h2>
             <% @shopinfo.each do |s| %>
@@ -9,4 +11,5 @@
                 </div>
             <% end %>
         <p class="btn btn-default form-control"><%= link_to "データを追加する", new_shopinfo_path %></p>
+</div>
 </div>

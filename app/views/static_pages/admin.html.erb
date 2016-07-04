@@ -1,2 +1,14 @@
 <% provide(:title, "Admin") %>
-<div class="layout-static-admin"></div>
+<div class="layout-static-admin">
+    <section class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <h1>管理画面</h1>
+                <p><%= link_to 'サロン情報管理',shopinfos_path  %></p>
+                <p><%= link_to 'サロン支店情報管理',shopbranches_path  %></p>
+                <p><%= link_to '記事管理',articles_path  %></p>
+                <p><%= link_to 'カスタマーレビュー管理',shopfbs_path  %></p>
+            </div>
+        </div>
+    </section>
+</div>
