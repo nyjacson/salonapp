@@ -18,6 +18,15 @@ class ShopinfosController < ApplicationController
                 render action: 'new'
             end
     end
+    def update
+        @shopinfo = Shopinfo.find(params[:id])
+        if @shopinfo.update_attributes(shop_params)
+            flash[:success] = "Shopinfo updated"
+            redirect_to @shopinfo
+        else
+            render action: 'edit'
+        end
+    end
     def edit
         @shopinfo = Shopinfo.find(params[:id])
     end

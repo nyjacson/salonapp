@@ -1,5 +1,6 @@
-<h1>サロン情報編集フォーム</h1>
+
 <div class="container ">
+    <h1>サロン情報編集フォーム</h1>
     <div class="col-md-6 col-md-offset-3">
         <%= form_for (@shopinfo) do |f| %>
         <%= render 'shared/error_messages' %>
@@ -21,11 +22,11 @@
         </div>
         <div class="form-grop">
             <%= f.label :recommend %>
-            <%= f.text_area :recommend, class: 'form-control',rows: "5" %>
+            <%= f.text_area :recommend, class: 'form-control',rows: "10" %>
         </div>
         <div class="form-grop">
             <%= f.label :recommend2 %>
-            <%= f.text_area :recommend2, class: 'form-control',rows: "5" %>
+            <%= f.text_area :recommend2, class: 'form-control',rows: "10" %>
         </div>
         <div class="form-grop">
             <%= f.label :recommend3 %>
@@ -53,15 +54,15 @@
         </div>
         <div class="form-grop">
             <%= f.label :price1 %>
-            <%= f.text_field :price1, class: 'form-control' %>
+            <%= f.text_area :price1, class: 'form-control',rows: "5" %>
         </div>
         <div class="form-grop">
             <%= f.label :price2 %>
-            <%= f.text_field :price2, class: 'form-control' %>
+            <%= f.text_area :price2, class: 'form-control',rows: "5" %>
         </div>
         <div class="form-grop">
             <%= f.label :price3 %>
-            <%= f.text_field :price3, class: 'form-control' %>
+            <%= f.text_area :price3, class: 'form-control',rows: "5" %>
         </div>
         <div class="form-grop">
             <%= f.label :pic1 %>

@@ -16,10 +16,11 @@
 
             </div>
             <div class="col-sm-2">
-            <div class="btn btn-default btn-sm"><%= link_to "Edit", edit_shopfb_path(a) %></div><div class="btn btn-default btn-sm"><%= link_to "Delete",a, method: :delete, data: {confirm: "削除しますか？"}  %></div>
+            <div class="btn btn-default btn-sm"><%= link_to "Edit", edit_article_path(a) %></div><div class="btn btn-default btn-sm"><%= link_to "Delete",a, method: :delete, data: {confirm: "削除しますか？"}  %></div>
             </div>
         </div>
         <!-- layout-articleWrapper -->
         <% end %>
+        <p class="btn btn-default form-control"><%= link_to "データを追加する", new_article_path %></p>
     </div>
 </section>

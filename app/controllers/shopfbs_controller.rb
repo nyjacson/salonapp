@@ -21,6 +21,15 @@ class ShopfbsController < ApplicationController
                 render action: 'new'
             end
     end
+    def update
+        @shopfb = Shopfb.find(params[:id])
+        if @shopfb.update_attributes(feedback_params)
+            flash[:success] = "Feedback was updated"
+            redirect_to @shopfb
+        else
+            render action: 'edit'
+        end
+    end
     private
         def feedback_params
             params.require(:shopfb).permit(:shopinfo_id, :fbshopname, :fbtitle, :fbcomment, :auther, :fbrank, :ages, :jobs )

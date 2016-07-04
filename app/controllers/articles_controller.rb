@@ -20,6 +20,15 @@ class ArticlesController < ApplicationController
                 render action: 'new'
             end
     end
+    def update
+        @article = Article.find(params[:id])
+        if @article.update_attributes(article_params)
+            flash[:success] = "Article was updated"
+            redirect_to @article
+        else
+            render action: 'edit'
+        end
+    end
     private
         def article_params
             params.require(:article).permit(:title, :article, :category, :picthum, :timestamps)
