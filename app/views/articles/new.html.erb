@@ -1,0 +1,30 @@
+<div class="container ">
+    <h1>記事追加フォーム</h1>
+    <div class="col-md-6 col-md-offset-3">
+        <%= form_for (@article) do |f| %>
+        <div class="form-grop">
+            <%= f.label :title %>
+            <%= f.text_field :title, class: 'form-control' %>
+        </div>
+        <div class="form-grop">
+            <%= f.label :article %>
+            <%= f.text_area :article, class: 'form-control', rows: "10"  %>
+        </div>
+        <div class="form-grop">
+            <%= f.label :category %>
+            <%= f.text_field :category, class: 'form-control' %>
+        </div>
+        <div class="form-grop">
+            <%= f.label :picthum %>
+            <%= f.text_field :picthum, class: 'form-control' %>
+        </div>
+        <div class="form-grop">
+            <%= f.label :timestamps %>
+            <%= f.text_field :timestamps, class: 'form-control' %>
+        </div>
+        <br>
+        <%= f.submit "情報更新", class: "btn btn-primary" %>
+        <% end %>
+        <br>
+    </div>
+</div>

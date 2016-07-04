@@ -16,7 +16,7 @@
 
             </div>
             <div class="col-sm-2">
-            <div class="btn btn-default btn-sm"><%= link_to "編集", "#" %></div><div class="btn btn-default btn-sm"><%= link_to "削除", "#" %></div>
+            <div class="btn btn-default btn-sm"><%= link_to "Edit", edit_shopfb_path(a) %></div><div class="btn btn-default btn-sm"><%= link_to "Delete",a, method: :delete, data: {confirm: "削除しますか？"}  %></div>
             </div>
         </div>
         <!-- layout-articleWrapper -->

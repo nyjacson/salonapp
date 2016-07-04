@@ -1,0 +1,44 @@
+<div class="container ">
+    <h3>カスタマーレビュー編集フォーム</h3>
+    <div class="col-md-6 col-md-offset-3">
+        <%= form_for (@shopfb) do |f| %>
+
+
+        <div class="form-grop">
+            <%= f.label :shopinfo_id %>
+            <%= f.text_field :shopinfo_id, class: 'form-control' %>
+        </div>
+        <div class="form-grop">
+            <%= f.label :fbshopname %>
+            <%= f.text_field :fbshopname, class: 'form-control' %>
+        </div>
+        <div class="form-grop">
+            <%= f.label :fbtitle %>
+            <%= f.text_field :fbtitle, class: 'form-control' %>
+        </div>
+        <div class="form-grop">
+            <%= f.label :fbcomment %>
+            <%= f.text_area :fbcomment, class: 'form-control', rows: "7" %>
+        </div>
+        <div class="form-grop">
+            <%= f.label :auther %>
+            <%= f.text_field :auther, class: 'form-control' %>
+        </div>
+        <div class="form-grop">
+            <%= f.label :fbrank %>
+            <%= f.number_field :fbrank, class: 'form-control' %>
+        </div>
+        <div class="form-grop">
+            <%= f.label :ages %>
+            <%= f.text_field :ages, class: 'form-control' %>
+        </div>
+        <div class="form-grop">
+            <%= f.label :jobs %>
+            <%= f.text_field :jobs, class: 'form-control' %>
+        </div>
+        <br>
+        <%= f.submit "情報更新", class: "btn btn-primary" %>
+        <% end %>
+        <br>
+    </div>
+</div>
