@@ -9,6 +9,10 @@ Rails.application.routes.draw do
   get 'static_pages/admin'
   get 'search/tokyo1'
   get 'search/tokyo2'
+  get 'search/ginza'
+  get 'search/shinjuku'
+  get 'search/shibuya'
+  get 'search/ikebukuro'
   resources :shopfbs
   resources :articles
 
