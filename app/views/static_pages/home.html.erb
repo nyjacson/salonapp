@@ -46,7 +46,7 @@
                         <li id="shikoku"><span>四国</span></li>
                     </ul>
                 </div>
-                <%= render 'static_pages/cityname' %>
+                <%= render 'static_pages/kantocityname' %>
             </div>
             <div class="col-sm-4">
                 <div class="layout-contentslistWrapper">
@@ -66,19 +66,19 @@
     </section>
     <div class="second-contentsWrapper">
         <div class="row">
-            <div class="col-sm-6 ">
+            <div class="col-sm-4 ">
                 <section>
                     <h1 class="line">おすすめ記事・キャンペーン特集</h1>
                     <row>
                         <ul>
-                            <% @article_2.each do |a| %>
+                            <% @article_3.each do |a| %>
                             <li class="check"><%= link_to a.title, a %></li>
                             <% end %>
                         </ul>
                     </row>
                 </section>
             </div>
-            <div class="col-sm-6">
+            <div class="col-sm-8">
                 <section>
                     <h1 class="line">脱毛あれこれ特集</h1>
                     <row>

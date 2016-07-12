@@ -1,28 +1,39 @@
 jQuery(function($) {
-    var all = $("#ele-map-all")
-    var kanto = $("#ele-map-all #kanto")
-    var hokkaido = $("#ele-map-all #hokkaido")
-    var tohoku = $("#ele-map-all #tohoku")
-    var chubu = $("#ele-map-all #chubu")
-    var chugoku = $("#ele-map-all #chugoku")
-    var kansai = $("#ele-map-all #kansai")
-    var kyushu = $("#ele-map-all #kyushu")
-    var shikoku = $("#ele-map-all #shikoku")
-    var tokyo = $("#ele-map-kanto #tokyo")
+    function topImage(){
+        var all = $("#ele-map-all")
+        var kanto = $("#kanto")
+        var hokkaido = $("#hokkaido")
+        var tohoku = $("#tohoku")
+        var chubu = $("#chubu")
+        var chugoku = $("#chugoku")
+        var kansai = $("#kansai")
+        var kyushu = $("#kyushu")
+        var shikoku = $("#shikoku")
+        var tokyo = $("#tokyo")
+        var back = $(".backTop")
 
-    var kantoArea = $("#ele-map-kanto")
-    var tokyo = $("#tokyo")
-    var tokyoArea = $("#ele-map-tokyo")
-    kanto.on('click', function(){
-        all.fadeOut();
-        kantoArea.fadeIn();
+        var allArea = $(".ele-areanameWrapper")
+        var kantoArea = $("#ele-map-kanto")
+        var tokyoArea = $("#ele-map-tokyo")
 
-    });
-    tokyo.on('click', function(){
-        kantoArea.fadeOut();
-        tokyoArea.fadeIn();
+        back.on('click', function(){
+            allArea.hide();
+            all.show();
+        });
+        kanto.on('click', function(){
+            all.hide();
+            kantoArea.show();
+        });
+        tokyo.on('click', function(){
+            kantoArea.hide();
+            tokyoArea.show();
+        });
 
-    });
+    }
+    topImage();
+
+
+
 
     $("#gmap3_1").gmap3({  // 地図の表示 ... （3）
           latitude: 35.6988,
