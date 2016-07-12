@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   get 'static_pages/toku2'
   get 'static_pages/admin'
   get 'search/tokyo1'
+  get 'search/tokyo2'
   resources :shopfbs
   resources :articles
 
