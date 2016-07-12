@@ -16,11 +16,13 @@
 
             </div>
             <div class="col-sm-2">
-            <div class="btn btn-default btn-sm"><%= link_to "Edit", edit_article_path(a) %></div><div class="btn btn-default btn-sm"><%= link_to "Delete",a, method: :delete, data: {confirm: "削除しますか？"}  %></div>
+            <%= link_to "Edit", edit_article_path(a),class: "btn btn-default btn-sm" %>
+            <%= link_to "Delete",a, method: :delete, data: {confirm: "削除しますか？"},class: "btn btn-default btn-sm"  %>
             </div>
         </div>
         <!-- layout-articleWrapper -->
         <% end %>
-        <p class="btn btn-default form-control"><%= link_to "データを追加する", new_article_path %></p>
+        <%= link_to "データを追加する", new_article_path, class: "btn btn-primary" %>
+        <%= link_to '戻る', static_pages_admin_path ,class: "btn btn-warning"%>
     </div>
 </section>

@@ -4,6 +4,9 @@
             <div class="col-sm-12">
                 <h1><%= @article.title %></h1>
                 <p><%= simple_format(@article.article) %></p>
+                <br>
+                <%= link_to "Edit", edit_article_path(@article), class: "btn btn-primary"  %>
+                <%= link_to '戻る', :back ,class: "btn btn-warning"%><br><br>
             </div>
         </div>
     </div>
