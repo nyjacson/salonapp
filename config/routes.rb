@@ -13,6 +13,16 @@ Rails.application.routes.draw do
   get 'search/shinjuku'
   get 'search/shibuya'
   get 'search/ikebukuro'
+
+  get 'search/hokkaido'
+  get 'search/tohoku'
+  get 'search/kanto'
+  get 'search/chubu'
+  get 'search/kansai'
+  get 'search/chugoku'
+  get 'search/shikoku'
+  get 'search/kyushu'
+
   resources :shopfbs
   resources :articles
 
