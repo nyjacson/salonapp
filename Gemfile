@@ -11,7 +11,8 @@ gem "railroady"
 #rake diagram:all
 gem "rails-erd"
 #rake erd
-
+gem "will_paginate"
+gem 'bootstrap-will_paginate'
 #gem 'sqlite3'
 # 本番ではpostgressを使用する
 

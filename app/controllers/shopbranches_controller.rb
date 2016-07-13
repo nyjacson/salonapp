@@ -1,8 +1,9 @@
 class ShopbranchesController < ApplicationController
     def index
-        @shopbranch = Shopbranch.all
+        @shopbranch = Shopbranch.paginate(page: params[:page],per_page: 15)
     end
     def show
+
         @shopbranch = Shopbranch.find(params[:id])
     end
     def new

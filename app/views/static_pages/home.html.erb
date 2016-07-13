@@ -30,20 +30,36 @@
                 <div class="layout-mapWrapper"></div>
                 <div class="ele-areanameWrapper" id="ele-map-all">
                     <ul>
-                        <li id="hokkaido"><span>北海道</span></li>
-                        <li id="tohoku"><span>東北</span></li>
+                        <li id="hokkaido">
+                            <span>北海道</span>
+                        </li>
+                        <li id="tohoku">
+                            <span>東北</span>
+                        </li>
                     </ul>
                     <ul>
-                        <li id="chubu"><span>中部</span></li>
-                        <li id="kanto"><span>関東</span></li>
+                        <li id="chubu">
+                            <span>中部</span>
+                        </li>
+                        <li id="kanto">
+                            <span>関東</span>
+                        </li>
                     </ul>
                     <ul>
-                        <li id="chugoku"><span>中国</span></li>
-                        <li id="kanto"><span>関西</span></li>
+                        <li id="chugoku">
+                            <span>中国</span>
+                        </li>
+                        <li id="kanto">
+                            <span>関西</span>
+                        </li>
                     </ul>
                     <ul>
-                        <li id="kyushu"><span>九州</span></li>
-                        <li id="shikoku"><span>四国</span></li>
+                        <li id="kyushu">
+                            <span>九州</span>
+                        </li>
+                        <li id="shikoku">
+                            <span>四国</span>
+                        </li>
                     </ul>
                 </div>
                 <%= render 'static_pages/kantocityname' %>
@@ -84,7 +100,10 @@
                     <row>
                         <ul>
                             <% @article_2.each do |a| %>
-                            <li class="check"><%= link_to a.title, a %></li>
+                            <div class="row">
+                                <li class="col-sm-9"><%= link_to a.title, a %></li>
+                                <li class="col-sm-3"><img src="<%= image_path a.picthum%>" alt="" class="pic-thum"></li>
+                            </div>
                             <% end %>
                         </ul>
                     </row>
@@ -100,9 +119,9 @@
             <div class="row">
                 <% @shopinfo.each do |s| %>
                 <p>
-                <div class="col-sm-2"><%= link_to s.shopname, s %></div>
-                <div class="col-sm-10"><%= simple_format(s.recommend) %></div>
-            </p>
+                    <div class="col-sm-2"><%= link_to s.shopname, s %></div>
+                    <div class="col-sm-10"><%= simple_format(s.recommend) %></div>
+                </p>
                 <% end %>
             </div>
             <!-- .row -->

@@ -1,6 +1,6 @@
 class ShopinfosController < ApplicationController
     def index
-        @shopinfo = Shopinfo.all
+        @shopinfo = Shopinfo.paginate(page: params[:page],per_page: 15)
     end
     def show
         @shopinfo = Shopinfo.find(params[:id])

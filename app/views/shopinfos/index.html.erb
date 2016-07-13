@@ -14,5 +14,6 @@
             <% end %>
         <%= link_to "データを追加する", new_shopinfo_path,class: "btn btn-primary" %>
         <%= link_to '戻る', static_pages_admin_path ,class: "btn btn-warning"%>
+        <%= will_paginate @shopinfo %>
 </div>
 </div>
