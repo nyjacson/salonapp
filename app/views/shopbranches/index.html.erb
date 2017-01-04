@@ -19,5 +19,11 @@
         <%= link_to '戻る', static_pages_admin_path ,class: "btn btn-warning"%>
     </section>
     <%= will_paginate @shopbranch %>
+    <!-- # import excel/csv ## -->
+    <%= form_tag import_shopbranches_path, multipart: true do %>
+      <p><%= file_field_tag :file %></p>
+      <p><%= submit_tag "インポート",class: "btn btn-default btn-sm" %></p>
+    <% end %>
+    <!-- # import excel/csv End ## -->
 </div>
 </div>

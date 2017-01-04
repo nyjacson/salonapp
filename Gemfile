@@ -13,9 +13,13 @@ gem "rails-erd"
 #rake erd
 gem "will_paginate"
 gem 'bootstrap-will_paginate'
+
+#data export/import
+gem 'roo'
+gem 'roo-xls'
+
 #gem 'sqlite3'
 # 本番ではpostgressを使用する
-
 group :development, :test do
   gem 'sqlite3'
 end

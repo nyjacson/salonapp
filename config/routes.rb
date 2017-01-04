@@ -2,7 +2,11 @@ Rails.application.routes.draw do
   root 'static_pages#home'
   get 'shopinfos/index'
   resources :shopinfos
-  resources :shopbranches
+  resources :shopbranches do
+      collection do
+          post :import
+      end
+  end
   get 'static_pages/home'
   get 'static_pages/toku1'
   get 'static_pages/toku2'
