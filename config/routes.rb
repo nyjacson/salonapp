@@ -27,7 +27,11 @@ Rails.application.routes.draw do
   get 'search/shikoku'
   get 'search/kyushu'
 
-  resources :shopfbs
+  resources :shopfbs do
+      collection do
+          post :import
+      end
+  end
   resources :articles
 
   # The priority is based upon order of creation: first created -> highest priority.

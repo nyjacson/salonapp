@@ -124,8 +124,20 @@ img.pic-thum{
     text-indent: 1em;
 }
 
+.c-flex{
+    display: flex;
+}
+.c-table{
+    display: table;
+}
+.c-table-row{
+    display: table-row;
+}
+.c-table-cell{
+    display: table-cell;
+}
 
-//base mixins
+//mixins area
 /* font */
 @mixin ex-large-font{
 	font-size: 22px;

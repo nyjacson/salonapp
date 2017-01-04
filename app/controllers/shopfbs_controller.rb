@@ -1,6 +1,11 @@
 class ShopfbsController < ApplicationController
     def index
         @shopfb = Shopfb.all
+
+        respond_to do |format|
+         format.html
+         format.csv { send_data @shopfb.to_csv }
+        end
     end
     def show
         @shopinfo = Shopinfo.find(params[:id])
@@ -30,6 +35,13 @@ class ShopfbsController < ApplicationController
             render action: 'edit'
         end
     end
+    # import excel/csv ##
+    def import
+        Shopfb.import(params[:file])
+        redirect_to shopfbs_path, notice: "レビューを追加しました"
+    end
+    # import excel/csv end ##
+
     private
         def feedback_params
             params.require(:shopfb).permit(:shopinfo_id, :fbshopname, :fbtitle, :fbcomment, :auther, :fbrank, :ages, :jobs )
