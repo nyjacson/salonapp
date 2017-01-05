@@ -1,7 +1,11 @@
 Rails.application.routes.draw do
   root 'static_pages#home'
-  get 'shopinfos/index'
-  resources :shopinfos
+  #get 'shopinfos/index'
+  resources :shopinfos do
+      collection do
+          post :import
+      end
+  end
   resources :shopbranches do
       collection do
           post :import
@@ -17,7 +21,6 @@ Rails.application.routes.draw do
   get 'search/shinjuku'
   get 'search/shibuya'
   get 'search/ikebukuro'
-
   get 'search/hokkaido'
   get 'search/tohoku'
   get 'search/kanto'
@@ -32,7 +35,11 @@ Rails.application.routes.draw do
           post :import
       end
   end
-  resources :articles
+  resources :articles do
+      collection do
+          post :import
+      end
+  end
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

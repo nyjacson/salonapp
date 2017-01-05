@@ -17,37 +17,37 @@ class Shopfb < ActiveRecord::Base
           # 保存する
           product.save!
         end
-      end
+    end
 
-      def self.open_spreadsheet(file)
+    def self.open_spreadsheet(file)
         case File.extname(file.original_filename)
         when '.csv'  then Roo::Spreadsheet.open(file.path, extension: :csv)
         when '.xlsx' then Roo::Spreadsheet.open(file.path, extension: :xlsx)
         when '.ods'  then Roo::Spreadsheet.open(file.path, extension: :ods)
         else raise "Unknown file type: #{file.original_filename}"
         end
-      end
+    end
 
     def self.updatable_attributes
         ["shopinfo_id", "fbshopname", "fbtitle", "fbcomment", "auther", "fbrank", "ages", "jobs"]
     end
     # import excel/csv end ##
     # export csv ##
-     def self.to_csv
+    def self.to_csv
        CSV.generate do |csv|
          csv << csv_column_names
          all.each do |product|
            csv << product.csv_column_values
          end
        end
-     end
+    end
 
-     def self.csv_column_names
+    def self.csv_column_names
          ["id", "shopinfo_id", "fbshopname", "fbtitle", "fbcomment", "auther", "fbrank", "ages", "jobs"]
-     end
+    end
 
-     def csv_column_values
+    def csv_column_values
          [id, shopinfo_id, fbshopname, fbtitle, fbcomment, auther, fbrank, ages, jobs]
-     end
-     # export csv end ##
+    end
+    # export csv end ##
 end

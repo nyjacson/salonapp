@@ -1,6 +1,10 @@
 class ArticlesController < ApplicationController
     def index
         @article = Article.all
+        respond_to do |format|
+         format.html
+         format.csv { send_data @article.to_csv }
+        end
     end
     def show
         @article = Article.find(params[:id])
@@ -29,6 +33,14 @@ class ArticlesController < ApplicationController
             render action: 'edit'
         end
     end
+
+    # import excel/csv ##
+    def import
+        Article.import(params[:file])
+        redirect_to articles_path, notice: "記事を追加しました"
+    end
+    # import excel/csv end ##
+
     private
         def article_params
             params.require(:article).permit(:title, :article, :category, :picthum, :timestamps)

@@ -1,6 +1,11 @@
 class ShopinfosController < ApplicationController
     def index
         @shopinfo = Shopinfo.paginate(page: params[:page],per_page: 15)
+        @shopinfo_csv = Shopinfo.all
+        respond_to do |format|
+         format.html
+         format.csv { send_data @shopinfo_csv.to_csv }
+        end
     end
     def show
         @shopinfo = Shopinfo.find(params[:id])
@@ -34,6 +39,12 @@ class ShopinfosController < ApplicationController
         Shopinfo.find(params[:id]).destroy
         redirect_to shopinfos_path
     end
+    # import excel/csv ##
+    def import
+        Shopinfo.import(params[:file])
+        redirect_to shopinfos_path, notice: "インポート完了"
+    end
+    # import excel/csv end ##
 
     private
         def shop_params

@@ -1,10 +1,10 @@
 class ShopbranchesController < ApplicationController
     def index
         @shopbranch = Shopbranch.paginate(page: params[:page],per_page: 15)
-
+        @shopbranch_csv = Shopbranch.all
         respond_to do |format|
          format.html
-         format.csv { send_data @shopbranch.to_csv }
+         format.csv { send_data @shopbranch_csv.to_csv }
         end
     end
     def show
