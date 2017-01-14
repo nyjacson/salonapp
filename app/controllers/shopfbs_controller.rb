@@ -1,4 +1,6 @@
+
 class ShopfbsController < ApplicationController
+    require 'dbexport'
     def index
         @shopfb = Shopfb.all
 
@@ -46,5 +48,4 @@ class ShopfbsController < ApplicationController
         def feedback_params
             params.require(:shopfb).permit(:shopinfo_id, :fbshopname, :fbtitle, :fbcomment, :auther, :fbrank, :ages, :jobs )
         end
-
 end

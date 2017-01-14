@@ -1,2 +1,27 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+.m-table-res{
+    display: table;
+    width: 100%;
+    @include mq-sp{
+        display: block;
+    }
+}
+.m-table-cell-res{
+    display: table-cell;
+    @include mq-sp{
+        display: block;
+    }
+}
+.m-table-row-res{
+    display: table-row;
+    @include mq-sp{
+        display: block;
+    }
+}
+
+.m-flex {
+    display: -webkit-flex; /* Safari */
+    display: flex;
+}

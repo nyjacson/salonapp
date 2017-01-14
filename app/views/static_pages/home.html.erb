@@ -67,14 +67,24 @@
             <div class="col-sm-4">
                 <div class="layout-contentslistWrapper">
                     <div class="layout-titleArea">
-                        <h2 class="line">初めての脱毛まずはここから</h2>
+                        <h2 class="line">キャンペーン・特集</h2>
                     </div>
                     <ul>
-                        <% @article_1.each do |a| %>
+                        <% @article_3.each do |a| %>
                         <li class="check"><%= link_to a.title, a %></li>
                         <% end %>
                     </ul>
                 </div>
+                <!-- <div class="layout-contentslistWrapper">
+                    <div class="layout-titleArea">
+                        <h2 class="line">初めての脱毛まずはここから</h2>
+                    </div>
+                    <ul>
+                        <% @article_1.shuffle.first(8).each do |a| %>
+                        <li class="check"><%= link_to a.title, a %></li>
+                        <% end %>
+                    </ul>
+                </div> -->
             </div>
 
         </div>
@@ -83,7 +93,7 @@
     <div class="second-contentsWrapper">
         <div class="row">
             <div class="col-sm-4 ">
-                <section>
+                <!-- <section>
                     <h1 class="line">おすすめ記事・キャンペーン特集</h1>
                     <row>
                         <ul>
@@ -92,21 +102,32 @@
                             <% end %>
                         </ul>
                     </row>
+                </section> -->
+                <section class="layout-contentslistWrapper">
+                    <div class="layout-titleArea">
+                        <h2 class="line">初めての脱毛まずはここから</h2>
+                    </div>
+                    <ul>
+                        <% @article_1.shuffle.first(8).each do |a| %>
+                        <li class="check"><%= link_to a.title, a %></li>
+                        <% end %>
+                    </ul>
                 </section>
             </div>
             <div class="col-sm-8">
                 <section>
                     <h1 class="line">脱毛あれこれ特集</h1>
-                    <row>
-                        <ul>
+                        <ul class="ItemArticle">
                             <% @article_2.each do |a| %>
-                            <div class="row">
-                                <li class="col-sm-9"><%= link_to a.title, a %></li>
-                                <li class="col-sm-3"><img src="<%= image_path a.picthum%>" alt="" class="pic-thum"></li>
+                            <div class="m-flex">
+                                <li class="ItemArticle__flex1"><span style="background-image:url(<%= image_path a.picthum%>);" class="ItemArticle__pic"></span></li>
+                                <li class="ItemArticle__flex2">
+                                    <%= link_to a.title, a %>
+                                    <p class="ItemArticle__contents"><%= a.article %></p>
+                                </li>
                             </div>
                             <% end %>
                         </ul>
-                    </row>
                 </section>
             </div>
         </div>

@@ -1,8 +1,4 @@
-
-class Shopfb < ActiveRecord::Base
-    belongs_to :shopinfo
-
-    # import excel/csv ##
+module importexport
     def self.import(file)
         spreadsheet = open_spreadsheet(file)
         header = spreadsheet.row(1)
@@ -28,27 +24,4 @@ class Shopfb < ActiveRecord::Base
         else raise "Unknown file type: #{file.original_filename}"
         end
     end
-
-    def self.updatable_attributes
-        ["shopinfo_id", "fbshopname", "fbtitle", "fbcomment", "auther", "fbrank", "ages", "jobs"]
-    end
-    # import excel/csv end ##
-    # export csv ##
-    def self.to_csv
-       CSV.generate do |csv|
-         csv << csv_column_names
-         all.each do |product|
-           csv << product.csv_column_values
-         end
-       end
-    end
-
-    def self.csv_column_names
-         ["id", "shopinfo_id", "fbshopname", "fbtitle", "fbcomment", "auther", "fbrank", "ages", "jobs"]
-    end
-
-    def csv_column_values
-         [id, shopinfo_id, fbshopname, fbtitle, fbcomment, auther, fbrank, ages, jobs]
-    end
-    # export csv end ##
 end
