@@ -32,3 +32,36 @@
         padding-top: 5px;
     }
 }
+.Salons{
+    width: 100%;
+    .m-flex{
+        -webkit-flex-wrap: wrap;
+        flex-wrap: wrap;
+        width: 100%;
+        box-sizing: border-box;
+        &__items{
+            width: 33.3%;
+            padding: 0px 10px;
+            @include mq-sp{
+                padding: 0px 5px;
+                width: 50%;
+            };
+        }
+    }
+    &__name{
+        font-size: 16px;
+        font-weight: bold;
+        margin-bottom: 5px;
+    }
+    &__company{
+        margin-bottom: 5px;
+    }
+    &__text{
+        font-size: 13px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        border-bottom: solid 1px $border;
+        padding-bottom: 10px;
+    }
+}

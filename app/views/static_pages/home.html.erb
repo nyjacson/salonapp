@@ -71,7 +71,10 @@
                     </div>
                     <ul>
                         <% @article_3.each do |a| %>
-                        <li class="check"><%= link_to a.title, a %></li>
+                        <li class="check">
+                            <%= link_to a.title, a %>
+                            <p class="js-ellipsis"><%= a.article %></p>
+                        </li>
                         <% end %>
                     </ul>
                 </div>
@@ -104,9 +107,7 @@
                     </row>
                 </section> -->
                 <section class="layout-contentslistWrapper">
-                    <div class="layout-titleArea">
-                        <h2 class="line">初めての脱毛まずはここから</h2>
-                    </div>
+                        <h1 class="line">初めての脱毛まずはここから</h1>
                     <ul>
                         <% @article_1.shuffle.first(8).each do |a| %>
                         <li class="check"><%= link_to a.title, a %></li>
@@ -135,28 +136,27 @@
     </div>
     <!-- .second-contentsWrapper -->
     <div class="third-contentsWrapper">
-        <section>
+        <section class="Salons">
             <h1 class="line">提携サロン</h1>
-            <div class="row">
+            <!-- <div class="row">
                 <% @shopinfo.each do |s| %>
                 <p>
                     <div class="col-sm-2"><%= link_to s.shopname, s %></div>
                     <div class="col-sm-10"><%= simple_format(s.recommend) %></div>
                 </p>
                 <% end %>
-            </div>
-            <!-- .row -->
-        </section>
-        <!-- <section>
-            <h1 class="line">支店紹介</h1>
-            <div class="row">
-                <% @shopbranch.each do |s| %>
-                <div class="col-sm-3"><%= link_to s.shopname, s %></div>
-                <div class="col-sm-3"><%= s.branchname %></div>
-                <div class="col-sm-6"><%= s.address %></div>
+            </div> -->
+            <div class="m-flex">
+                <% @shopinfo.each do |s| %>
+                <div class="m-flex__items">
+                    <div class="Salons__name"><%= link_to s.shopname, s %></div>
+                    <div class="Salons__company"><%= s.company %></div>
+                    <p class="Salons__text"><%= s.recommend %></p>
+                </div>
                 <% end %>
             </div>
-        </section> -->
+        </section>
+
     </div>
     <!-- .third-contentsWrapper -->
 </div>
