@@ -9,6 +9,9 @@ class ShopbranchesController < ApplicationController
     end
     def show
         @shopbranch = Shopbranch.find(params[:id])
+
+        @shopinfo = Shopinfo.find(params[:id])
+        @shopfbs = Shopfb.find(params[:id])
     end
     def new
         @shopbranch = Shopbranch.new

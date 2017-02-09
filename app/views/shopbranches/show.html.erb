@@ -2,52 +2,100 @@
     <div class="container">
         <div class="row">
             <div class="col-sm-12">
-                <h1><%= @shopbranch.shopinfo.shopname %> <%= @shopbranch.branchname %>のご紹介</h1>
-                <%= simple_format(@shopbranch.shopinfo.recommend2) %>
-                <table class="layout-tableWrapper">
-                    <tr class="row">
-                        <th class="col-sm-4">店名</th>
-                        <td class="col-sm-8"><%= @shopbranch.shopinfo.shopname %> <%= @shopbranch.branchname %></td>
-                    </tr>
-                    <tr class="row">
-                        <th class="col-sm-4">住所</th>
-                        <td class="col-sm-8"><%= @shopbranch.address %></td>
-                    </tr>
-                    <tr class="row">
-                        <th class="col-sm-4">最寄駅</th>
-                        <td class="col-sm-8"><%= @shopbranch.station %>駅</td>
-                    </tr>
-                    <tr class="row">
-                        <th class="col-sm-4">アクセス</th>
-                        <td class="col-sm-8"><%= simple_format(@shopbranch.access) %></td>
-                    </tr>
-                    <tr class="row">
-                        <th class="col-sm-4">営業時間</th>
-                        <td class="col-sm-8">
-                            平日：<%= @shopbranch.starthour %>~<%= @shopbranch.endhour %>
-                        </td>
-                    </tr>
-                    <tr class="row">
-                        <th class="col-sm-4">定休日</th>
-                        <td class="col-sm-8"><%= @shopbranch.holiday %></td>
-                    </tr>
-
-                    <tr class="row">
-                        <th class="col-sm-4">地図</th>
-                        <td class="col-sm-8">
-                            <div class="layout-map-embed">
-                            	<div id="ele-gmap"></div>
+                <h1><%= @shopbranch.branchname %> / <%= @shopbranch.shopinfo.shopname %> <%= link_to @shopinfo.shopname, @shopinfo %></h1>
+                <!-- <%= simple_format(@shopbranch.shopinfo.recommend2) %> -->
+            </div>
+        </div>
+        <div class="row Brunch">
+            <div class="col-sm-6 Brunch__leftcol">
+                <div class="Brunch__data">
+                    <h2 class="line">支店データ</h2>
+                    <div class="Brunch__data--table">
+                        <div class="Brunch__data--table-row">
+                            <div class="Brunch__data--table-cell">
+                                店名
                             </div>
-                        </td>
-                    </tr>
-                </table>
+                            <div class="Brunch__data--table-cell">
+                                <p><%= @shopbranch.shopinfo.shopname %> <%= @shopbranch.branchname %></p>
+                            </div>
+                        </div>
+                        <!-- row -->
+                        <div class="Brunch__data--table-row">
+                            <div class="Brunch__data--table-cell">
+                                住所
+                            </div>
+                            <div class="Brunch__data--table-cell">
+                                <p><%= @shopbranch.address %></p>
+                            </div>
+                        </div>
+                        <!-- row -->
+                        <div class="Brunch__data--table-row">
+                            <div class="Brunch__data--table-cell">
+                                最寄駅
+                            </div>
+                            <div class="Brunch__data--table-cell">
+                                <p><%= @shopbranch.station %>駅</p>
+                            </div>
+                        </div>
+                        <!-- row -->
+                        <div class="Brunch__data--table-row">
+                            <div class="Brunch__data--table-cell">
+                                アクセス
+                            </div>
+                            <div class="Brunch__data--table-cell">
+                                <p><%= simple_format(@shopbranch.access) %></p>
+                            </div>
+                        </div>
+                        <!-- row -->
+                        <div class="Brunch__data--table-row">
+                            <div class="Brunch__data--table-cell">
+                                営業時間
+                            </div>
+                            <div class="Brunch__data--table-cell">
+                                <p>平日：<%= @shopbranch.starthour %>~<%= @shopbranch.endhour %></p>
+                            </div>
+                        </div>
+                        <!-- row -->
+                        <div class="Brunch__data--table-row">
+                            <div class="Brunch__data--table-cell">
+                                定休日
+                            </div>
+                            <div class="Brunch__data--table-cell">
+                                <p><%= @shopbranch.holiday %></p>
+                            </div>
+                        </div>
+                        <!-- row -->
+                    </div>
+                </div>
+                <!-- Brunch__data -->
+            </div>
+            <div class="col-sm-6 Brunch__rightcol">
+                <div class="Shopinfo__voice">
+                    <h2 class="line">口コミ・評価</h2>
+                    <h3>総合評価 <%= @shopinfo.ranking.round(2) %> <%= customer_rank(@shopinfo.ranking) %> (<%= link_to @shopinfo.shopfbs.count, @shopfbs %>)</h3>
 
+                    <% @shopinfo.shopfbs.first(1).each do |f| %>
+                    <div class="Shopinfo__voice--item">
+                        <p>投稿者：<%= f.auther %>　投稿日：<%= f.updated_at.strftime('%Y/%m/%d') %><br>おすすめ度：<%= f.fbrank %> <%= customer_rank(f.fbrank) %></p>
+                        <p class="Shopinfo__voice--item-title">投稿タイトル：<span class="bold"><%= f.fbtitle %></span></p>
+                        <p class="textindent"><%= f.fbcomment %></p>
+                    </div>
+                    <% end %>
+
+                    <p><%= link_to "全てのレビューを見る", @shopfbs %>(<%= @shopinfo.shopfbs.count %>件)</p>
+                </div>
+            </div>
+        </div>
+        <div class="row BrunchMap">
+            <div class="col-sm-12">
+                <h2 class="line">位置情報</h2>
+                <div id="ele-gmap"></div>
             </div>
         </div>
     </div>
-
-
+    <!-- container -->
 </section>
+<!-- layout-shopbranch-show -->
 <script type="text/javascript">
 jQuery(function($) {
         var lat = <%= @shopbranch.latitude %>;

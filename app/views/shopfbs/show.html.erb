@@ -3,18 +3,19 @@
         <div class="row">
             <div class="col-sm-12">
                 <h1><%= link_to @shopinfo.shopname, @shopinfo %></h1>
-                <p>総合評価 <%= @shopinfo.ranking.round(2) %> <%= customer_rank(@shopinfo.ranking) %></p>
-                <p class="glaytitle"><%= @shopfb.count %>件のカスタマーレビュー</p>
+                <h2>総合評価 <%= @shopinfo.ranking.round(2) %> <%= customer_rank(@shopinfo.ranking) %></h2>
+                <h3>レビュー <%= @shopfb.count %>件</h3>
                     <% @shopfb.each do |f| %>
-                    <div class="layout-post">
-                    <p>おすすめ度：<%= f.fbrank %> <%= customer_rank(f.fbrank) %><br>
-                        投稿者：<%= f.auther %>　投稿日：<%= f.updated_at.strftime('%Y/%m/%d') %><br>
-                        年齢：<%= f.ages %>　職業：<%= f.jobs %>
-                    </p>
-                    <p>投稿タイトル：<span class="bold"><%= f.fbtitle %></span><br>
-                    <%= f.fbcomment %></p>
+                    <div class="Voice">
+                        <h4 class="Voice__rank">評価：<%= f.fbrank %> <%= customer_rank(f.fbrank) %></h4>
+                        <p class="Voice__info">
+                            投稿者：<%= f.auther %>　投稿日：<%= f.updated_at.strftime('%Y/%m/%d') %><br>
+                            年齢：<%= f.ages %>　職業：<%= f.jobs %>
+                        </p>
+                        <h4><%= f.fbtitle %></h4>
+                        <p><%= f.fbcomment %></p>
                     </div>
-                    <!-- layout-post -->
+                    <!-- Voice-->
                     <% end %>
             </div>
         </div>
