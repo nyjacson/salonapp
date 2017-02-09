@@ -2,74 +2,88 @@
     <div class="container">
         <div class="row">
             <div class="col-sm-12">
-                <h1><%= @shopinfo.shopname %></h1>
                 <%= image_tag @shopinfo.pic1, width: "100%" %>
             </div>
 
         </div>
         <!-- row -->
-        <div class="row">
-            <div class="col-sm-6">
-                <h2 class="textSubTitle line">おすすめポイント</h2>
-                <p><%= @shopinfo.recommend %></p>
-                <h3 class="textSubTitle line">口コミ・評価</h3>
-                <p>総合評価 <%= @shopinfo.ranking.round(2) %> <%= customer_rank(@shopinfo.ranking) %> (<%= link_to @shopinfo.shopfbs.count, @shopfbs %>)</p>
-                <% @shopinfo.shopfbs.first(1).each do |f| %>
-                <h5 class="glaytitle bold">カスタマーレビュー</h5>
+        <div class="row Shopinfo">
+            <div class="col-sm-12">
+                <h1><%= @shopinfo.shopname %></h1>
+            </div>
+            <div class="col-sm-6 Shopinfo__leftcol">
+                <div class="Shopinfo__recommend">
+                    <h2 class="line">おすすめポイント</h2>
+                    <p class="textindent"><%= @shopinfo.recommend %></p>
+                </div>
+                <div class="Shopinfo__datas">
+                    <h2 class="line">ショップデータ</h2>
+                    <div class="Shopinfo__datas--flex">
+                        <div class="Shopinfo__datas--flex-item">
+                            <h3 class="check">ショップタイプ</h3>
+                            <p><%= @shopinfo.shoptype %></p>
+                        </div>
+                        <div class="Shopinfo__datas--flex-item">
+                            <h3 class="check">脱毛方式</h3>
+                            <p><%= @shopinfo.treattype %></p>
+                        </div>
+                        <!-- <div class="Shopinfo__datas--flex-item">
+                            <h3 class="check">脱毛機器</h3>
+                            <p><%= @shopinfo.machine %></p>
+                        </div> -->
+                        <div class="Shopinfo__datas--flex-item">
+                            <h3 class="check">運営会社</h3>
+                            <p><%= @shopinfo.company %></p>
+                        </div>
+                        <div class="Shopinfo__datas--flex-item">
+                            <h3 class="check">キャンペーン</h3>
+                            <p><%= @shopinfo.campaign %></p>
+                        </div>
+                        <div class="Shopinfo__datas--flex-item">
+                            <h3 class="check">施術価格</h3>
+                            <p><%= @shopinfo.price1 %></p>
+                        </div>
+                    </div>
 
-                <p>投稿者：<%= f.auther %>　投稿日：<%= f.updated_at.strftime('%Y/%m/%d') %><br>おすすめ度：<%= f.fbrank %> <%= customer_rank(f.fbrank) %></p>
-                <p>投稿タイトル：<span class="bold"><%= f.fbtitle %></span></p>
-                <p><%= f.fbcomment %></p>
-                <% end %>
+                </div>
 
-                <p><%= link_to "全てのレビューを見る", @shopfbs %>(<%= @shopinfo.shopfbs.count %>件)</p>
+
 
             </div>
             <!-- col-sm-6 left -->
 
-            <div class="col-sm-6">
-                <h3 class="textSubTitle line">ショップデータ</h3>
-                <div class="row">
+            <div class="col-sm-6 Shopinfo__rightcol">
+                <div class="Shopinfo__voice">
+                    <h2 class="line">口コミ・評価</h2>
+                    <h3>総合評価 <%= @shopinfo.ranking.round(2) %> <%= customer_rank(@shopinfo.ranking) %> (<%= link_to @shopinfo.shopfbs.count, @shopfbs %>)</h3>
 
-                    <div class="col-sm-6">
-                    <h3 class="check">ショップタイプ</h3>
-                    <p><%= @shopinfo.shoptype %></p>
-                    <h3 class="check">脱毛方式</h3>
-                    <p><%= @shopinfo.treattype %></p>
+                    <% @shopinfo.shopfbs.first(2).each do |f| %>
+                    <div class="Shopinfo__voice--item">
+                        <p>投稿者：<%= f.auther %>　投稿日：<%= f.updated_at.strftime('%Y/%m/%d') %><br>おすすめ度：<%= f.fbrank %> <%= customer_rank(f.fbrank) %></p>
+                        <p class="Shopinfo__voice--item-title">投稿タイトル：<span class="bold"><%= f.fbtitle %></span></p>
+                        <p class="textindent"><%= f.fbcomment %></p>
                     </div>
-                    <div class="col-sm-6">
-                    <h3 class="check">脱毛機器</h3>
-                    <p><%= @shopinfo.machine %></p>
-                    <h3 class="check">運営会社</h3>
-                    <p><%= @shopinfo.company %></p>
-                    </div>
+                    <% end %>
+
+                    <p><%= link_to "全てのレビューを見る", @shopfbs %>(<%= @shopinfo.shopfbs.count %>件)</p>
                 </div>
-                <h3 class="check">キャンペーン</h3>
-                <p><%= @shopinfo.campaign %></p>
-
-                <h3 class="check">施術価格</h3>
-                <ul>
-                    <li><%= @shopinfo.price1 %></li>
-                    <li><%= @shopinfo.price2 %></li>
-                    <li><%= @shopinfo.price3 %></li>
-                </ul>
 
             </div>
             <!-- col-sm-6 right -->
         </div>
         <!-- row -->
-        <div class="row">
-
+        <div class="row BrunchList">
             <div class="col-sm-12">
-                <h2 class="textSubTitle line"><%= @shopinfo.shopname %>の店舗情報</h2>
-                <ul>
+                <h2 class="line"><%= @shopinfo.shopname %>の店舗情報</h2>
+                <div class="BrunchList__flex">
                     <% @shopinfo.shopbranches.each do |b| %>
-                    <li><%= link_to b.branchname, b %></li>
-                    <li><%= b.address %></li>
+                    <div class="BrunchList__flex--item">
+                        <h3><%= link_to b.branchname, b %></h3>
+                        <p><%= b.address %></p>
+                    </div>
                     <% end %>
-                </ul>
+                </div>
             </div>
-
         </div>
         <!-- row -->
     </div>

@@ -1,176 +1,63 @@
-$base: #FF86A6;
-$sub: #55ACE1;
+$primary: #F06292;
+$link-color: #E91E63;
+$link-color2: #333333;
+$accent: #0091EA;
+$bk-color:#FCE4EC;
+$error: #D50000;
 $green: #00C509;
-$gray-text: #777777;
-$border: #e7e7e7;
-$gray-bk: #f8f8f8;
-$gray-selected: #e7e7e7;
-$text: #333333;
-$dark-gray: #777777;
-$op-button: transparentize($dark-gray, 0.8);
-$op-h-button: transparentize($dark-gray, 0.3);
-$link-color: #247bbd;
+$primary-text: #333333;
+$secondary-text: #6D6D6D;
+$disabled-text: #cccccc;
+$border: #cccccc;
 
-a{
-    color: $text;
-    transition: all 0.2s linear;
-    text-decoration: underline;
-    &:hover{
-        color: $text;
-    }
-}
-h1, h2, h3, h4{
-    margin-top: 10px;
-}
-h1{
-    font-size: 18px;
-    font-weight: bold;
-}
-h2,h3{
-    font-size: 16px;
-    font-weight: bold;
-}
-h4{
-    font-size: 15px;
-}
-p{
-    font-size: 14px;
-    .textStrong{
-        font-size: 20px;
-    }
-}
+$bk-dark-gray: #E0E0E0;
+$bk-middle-gray: #F5F5F5;
+$bk-light-gray: #FAFAFA;
+$bk-white: #ffffff;
 
-ul{
-    padding-left: 0;
-    list-style: none;
-}
-body{
-    background: #eeeeee;
-}
+$op-button: transparentize($bk-dark-gray, 0);
+$op-h-button: transparentize($bk-dark-gray, 0.4);
 
-//Components Area
-.textPink{
-    color: $base;
-}
-.textBlue{
-    color: $sub;
-}
-.textGreen{
-    color: $green;
-}
-.textBold{
-    font-weight: bold;
-}
-.textMainTitle{
-    font-size: 16px;
-    text-align: center;
-    margin-top: 0;
-}
-.textSubTitle{
-    font-size: 16px;
-    margin: 0;
-    margin-bottom: 10px;
-    border-left: 5px solid $base;
-    padding-left: 5px;
-}
-
-.line{
-    border-bottom: solid 1px $base;
-    padding-bottom: 3px;
-}
-.line-gray{
-    border-bottom: solid 1px $border;
-    padding-bottom: 3px;
-}
-.fingar{
-    background: url("/assets/fingar-arrow.svg") no-repeat;
-    padding-left: 20px;
-}
-.check{
-    background: url("/assets/checkbox.svg") no-repeat;
-    padding-left: 20px;
-}
-.hr{
-    border-bottom: dotted 1px $dark-gray;
-    width: 95%;
-    margin: 10px auto 30px;
-}
-.hr-light{
-    border-bottom: dotted 1px $border;
-    margin:5px auto 10px;
-}
-.top-margin{
-    margin-top: 10px;
-    box-sizing: border-box;
-}
-.center{
-    margin: 0 auto;
-}
-.glaytitle{
-    background: #eeeeee;
-    padding: 2px;
-}
-.bold{
-    font-weight: bold;
-}
-img.pic-thum{
-        width: 100px;
-        height: auto;
-}
-.link{
-    color: $link-color;
-}
-.indent{
-    text-indent: 1em;
-}
-
-.c-flex{
-    display: flex;
-}
-.c-table{
-    display: table;
-}
-.c-table-row{
-    display: table-row;
-}
-.c-table-cell{
-    display: table-cell;
-}
 
 //mixins area
 /* font */
-@mixin ex-large-font{
-	font-size: 22px;
-	font-size: 2.2rem;
+@mixin XL-font{
+	font-size: 34px;
+    line-height: 1.2;
 }
-@mixin largest-font{
-	font-size: 18px;
-	font-size: 1.8rem;
-}
-
-@mixin larger-font{
-	font-size: 17px;
-	font-size: 1.7rem;
+@mixin LL-font{
+	font-size: 24px;
+    line-height: 1.2
 }
 
-@mixin large-font{
-	font-size: 15px;
-	font-size: 1.5rem;
+@mixin L-font{
+	font-size: 20px;
+    line-height: 1.2
 }
 
-@mixin normal-font{
+@mixin M-font{
+	font-size: 16px;
+    line-height: 1.2
+}
+
+@mixin MB-font{
+	font-size: 16px;
+    font-weight: bold;
+    line-height: 1.2;
+}
+
+@mixin S-font{
 	font-size: 14px;
-	font-size: 1.4rem;
+    line-height: 1.5
 }
 
-@mixin small-font{
-	font-size: 13px;
-	font-size: 1.3rem;
+@mixin XS-font{
+	font-size: 12px;
+    line-height: 1.5
 }
 
-@mixin smallest-font{
-	font-size: 11px;
-	font-size: 1.1rem;
+@mixin line-height-reset {
+    line-height: 0;
 }
 
 @mixin caption-font{
@@ -206,4 +93,8 @@ img.pic-thum{
 	overflow: hidden;
 	white-space: nowrap;
 	text-overflow: ellipsis;
+}
+
+@mixin transition{
+    transition: all 0.1s linear;
 }

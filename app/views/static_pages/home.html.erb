@@ -65,7 +65,7 @@
                 <%= render 'static_pages/kantocityname' %>
             </div>
             <div class="col-sm-4">
-                <div class="layout-contentslistWrapper">
+                <!-- <div class="layout-contentslistWrapper">
                     <div class="layout-titleArea">
                         <h2 class="line">キャンペーン・特集</h2>
                     </div>
@@ -77,8 +77,8 @@
                         </li>
                         <% end %>
                     </ul>
-                </div>
-                <!-- <div class="layout-contentslistWrapper">
+                </div> -->
+                <div class="layout-contentslistWrapper">
                     <div class="layout-titleArea">
                         <h2 class="line">初めての脱毛まずはここから</h2>
                     </div>
@@ -87,7 +87,7 @@
                         <li class="check"><%= link_to a.title, a %></li>
                         <% end %>
                     </ul>
-                </div> -->
+                </div>
             </div>
 
         </div>
@@ -95,9 +95,9 @@
     </section>
     <div class="second-contentsWrapper">
         <div class="row">
-            <div class="col-sm-4 ">
+            <!-- <div class="col-sm-4 "> -->
                 <!-- <section>
-                    <h1 class="line">おすすめ記事・キャンペーン特集</h1>
+                    <h2 class="line">おすすめ記事・キャンペーン特集</h2>
                     <row>
                         <ul>
                             <% @article_3.each do |a| %>
@@ -106,24 +106,24 @@
                         </ul>
                     </row>
                 </section> -->
-                <section class="layout-contentslistWrapper">
-                        <h1 class="line">初めての脱毛まずはここから</h1>
+                <!-- <section class="layout-contentslistWrapper">
+                        <h2 class="line">初めての脱毛まずはここから</h2>
                     <ul>
                         <% @article_1.shuffle.first(8).each do |a| %>
                         <li class="check"><%= link_to a.title, a %></li>
                         <% end %>
                     </ul>
-                </section>
-            </div>
-            <div class="col-sm-8">
+                </section> -->
+            <!-- </div> -->
+            <div class="col-sm-12">
                 <section>
-                    <h1 class="line">脱毛あれこれ特集</h1>
+                    <h2 class="line">脱毛あれこれ特集</h2>
                         <ul class="ItemArticle">
                             <% @article_2.each do |a| %>
-                            <div class="m-flex">
-                                <li class="ItemArticle__flex1"><span style="background-image:url(<%= image_path a.picthum%>);" class="ItemArticle__pic"></span></li>
-                                <li class="ItemArticle__flex2">
-                                    <%= link_to a.title, a %>
+                            <div class="ItemArticle__flex">
+                                <li class="ItemArticle__flex--item1"><span style="background-image:url(<%= image_path a.picthum%>);" class="ItemArticle__pic"></span></li>
+                                <li class="ItemArticle__flex--item2">
+                                    <div class="ItemArticle__title"><%= link_to a.title, a %></div>
                                     <p class="ItemArticle__contents"><%= a.article %></p>
                                 </li>
                             </div>
@@ -137,7 +137,7 @@
     <!-- .second-contentsWrapper -->
     <div class="third-contentsWrapper">
         <section class="Salons">
-            <h1 class="line">提携サロン</h1>
+            <h2 class="line">提携サロンリスト</h2>
             <!-- <div class="row">
                 <% @shopinfo.each do |s| %>
                 <p>
@@ -146,12 +146,22 @@
                 </p>
                 <% end %>
             </div> -->
-            <div class="m-flex">
+            <div class="Salons__flex">
                 <% @shopinfo.each do |s| %>
-                <div class="m-flex__items">
-                    <div class="Salons__name"><%= link_to s.shopname, s %></div>
-                    <div class="Salons__company"><%= s.company %></div>
-                    <p class="Salons__text"><%= s.recommend %></p>
+                <div class="Salons__flex--items">
+                    <div class="Salons__contents--flex">
+                        <div class="Salons__contents--flex-item1">
+                            <div class="Salons__contents--flex-pic">
+
+                            </div>
+                        </div>
+                        <div class="Salons__contents--flex-item2">
+                            <div class="Salons__name"><%= link_to s.shopname, s %></div>
+                            <div class="Salons__company"><%= s.company %></div>
+                            <p class="Salons__text"><%= s.recommend %></p>
+                        </div>
+
+                    </div>
                 </div>
                 <% end %>
             </div>

@@ -1,67 +1,83 @@
 .ItemArticle{
-    padding: 0 20px 20px 20px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
     @include mq-sp{
         padding: 0px;
     }
     &__pic{
         box-sizing: border-box;
-        width: 60px;
-        height: 60px;
-        background-size: 60px 60px;
-        display: inline-block;;
-    }
-    .m-flex{
-        margin: 0 auto;
-        padding: 10px 0px;
-        border-bottom: solid 1px $border;
-        box-sizing: border-box;
+        width: 80px;
         height: 80px;
+        background-size: 80px 80px;
+        display: block;
     }
-    &__flex1{
-        width: 60px
+    &__flex{
+        background: $bk-light-gray;
+        display: flex;
+        margin-bottom: 20px;
+        padding: 10px 10px;
+        flex-direction: row;
+        width: 32%;
+        // justify-content: space-between;
+        &--item1{
+            // flex-basis: 115px;
+        }
+        &--item2{
+            padding-left: 10px;
+        }
     }
-    &__flex2{
-        padding-left: 20px;
-        width: 80%;
-
+    &__title{
+        @include M-font;
+        margin-bottom: 5px;
     }
     &__contents{
-        overflow: hidden;
-        white-space: nowrap;
-        text-overflow: ellipsis;
-        padding-top: 5px;
+        // @include ellipsis;
     }
 }
 .Salons{
     width: 100%;
-    .m-flex{
+    .Salons__flex{
+        display: flex;
         -webkit-flex-wrap: wrap;
         flex-wrap: wrap;
-        width: 100%;
-        box-sizing: border-box;
-        &__items{
-            width: 33.3%;
-            padding: 0px 10px;
+        flex-direction: row;
+        justify-content: space-around;
+        &--items{
+            padding: 15px 15px;
+            margin-bottom: 15px;
+            width: 48%;
             @include mq-sp{
                 padding: 0px 5px;
                 width: 50%;
             };
+            border: solid 1px $border;
+
         }
     }
     &__name{
-        font-size: 16px;
-        font-weight: bold;
         margin-bottom: 5px;
+        @include L-font;
     }
     &__company{
         margin-bottom: 5px;
+        @include M-font;
     }
     &__text{
-        font-size: 13px;
-        overflow: hidden;
-        white-space: nowrap;
-        text-overflow: ellipsis;
-        border-bottom: solid 1px $border;
-        padding-bottom: 10px;
+        @include ellipsis;
+    }
+    &__contents--flex{
+        display: flex;
+        &-item1{
+            width: 20%;
+        }
+        &-item2{
+            width: 80%;
+
+        }
+        &-pic{
+
+        }
     }
 }

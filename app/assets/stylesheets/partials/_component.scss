@@ -1,0 +1,133 @@
+@import "partials/_set.scss";
+
+//Components Area
+.textPink{
+    color: $link-color;
+}
+.textBlue{
+    color: $accent;
+}
+.textGreen{
+    color: $green;
+}
+.textBold{
+    font-weight: bold;
+}
+.textMainTitle{
+    font-size: 16px;
+    text-align: center;
+    margin-top: 0;
+}
+.textSubTitle{
+    font-size: 16px;
+    margin: 0;
+    margin-bottom: 10px;
+    border-left: 5px solid $primary;
+    padding-left: 5px;
+}
+
+.textindent {
+    text-indent: 1em;
+}
+
+.line{
+    border-bottom: solid 1px $primary;
+    padding-bottom: 3px;
+}
+.line-gray{
+    border-bottom: solid 1px $border;
+    padding-bottom: 3px;
+}
+.fingar{
+    background: url("/assets/fingar-arrow.svg") no-repeat;
+    padding-left: 20px;
+}
+.check{
+    background: url("/assets/checkbox.svg") no-repeat;
+    padding-left: 20px;
+}
+.hr{
+    border-bottom: dotted 1px $bk-dark-gray;
+    width: 95%;
+    margin: 10px auto 30px;
+}
+.hr-light{
+    border-bottom: dotted 1px $border;
+    margin:5px auto 10px;
+}
+.top-margin{
+    margin-top: 10px;
+    box-sizing: border-box;
+}
+.center{
+    margin: 0 auto;
+}
+.glaytitle{
+    background: #eeeeee;
+    padding: 2px;
+}
+.bold{
+    font-weight: bold;
+}
+img.pic-thum{
+        width: 100px;
+        height: auto;
+}
+.link{
+    color: $link-color;
+}
+.indent{
+    text-indent: 1em;
+}
+
+.c-flex{
+    display: flex;
+}
+.c-table{
+    display: table;
+}
+.c-table-row{
+    display: table-row;
+}
+.c-table-cell{
+    display: table-cell;
+}
+
+.m-table-res{
+    display: table;
+    width: 100%;
+    @include mq-sp{
+        display: block;
+    }
+}
+.m-table-cell-res{
+    display: table-cell;
+    @include mq-sp{
+        display: block;
+    }
+}
+.m-table-row-res{
+    display: table-row;
+    @include mq-sp{
+        display: block;
+    }
+}
+
+.ellip {
+  display: block;
+  height: 100%;
+}
+
+.ellip-line {
+  display: inline-block;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  word-wrap: normal;
+}
+
+.ellip,
+.ellip-line {
+  position: relative;
+  overflow: hidden;
+  max-width: 100%;
+}
