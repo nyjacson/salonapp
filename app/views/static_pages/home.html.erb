@@ -27,40 +27,7 @@
                 <div class="layout-titleArea">
                     <h2 class="line">地図から探す</h2>
                 </div>
-                <div class="layout-mapWrapper"></div>
-                <div class="ele-areanameWrapper" id="ele-map-all">
-                    <ul>
-                        <li id="hokkaido">
-                            <span>北海道</span>
-                        </li>
-                        <li id="tohoku">
-                            <span>東北</span>
-                        </li>
-                    </ul>
-                    <ul>
-                        <li id="chubu">
-                            <span>中部</span>
-                        </li>
-                        <li id="kanto">
-                            <span>関東</span>
-                        </li>
-                    </ul>
-                    <ul>
-                        <li id="chugoku">
-                            <span>中国</span>
-                        </li>
-                        <li id="kanto">
-                            <span>関西</span>
-                        </li>
-                    </ul>
-                    <ul>
-                        <li id="kyushu">
-                            <span>九州</span>
-                        </li>
-                        <li id="shikoku">
-                            <span>四国</span>
-                        </li>
-                    </ul>
+                <div class="layout-mapWrapper">
                 </div>
                 <%= render 'static_pages/kantocityname' %>
             </div>
@@ -152,7 +119,7 @@
                     <div class="Salons__contents--flex">
                         <div class="Salons__contents--flex-item1">
                             <div class="Salons__contents--flex-pic">
-
+                                <span style="background-image:url(<%= image_path s.pic5%>);" class="ItemArticle__pic"></span>
                             </div>
                         </div>
                         <div class="Salons__contents--flex-item2">

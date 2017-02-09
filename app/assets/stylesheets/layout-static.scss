@@ -40,8 +40,8 @@
     }
     .ele-areanameWrapper {
         position: absolute;
-        top: 50px;
-        left: 10px;
+        top: 60px;
+        left: 0px;
         overflow: hidden;
         ul {
             display: table;
@@ -50,7 +50,7 @@
             padding: 0;
         }
         li {
-            padding: 0 30px 10px;
+            padding: 0 30px 20px;
             display: table-cell;
             &:nth-child(even) {
                 text-align: right;
@@ -81,9 +81,8 @@
         margin-bottom: 20px;
         ul {
             list-style-type: none;
-            font-size: 14px;
             margin: 0;
-            padding: 0;
+            padding: 0 10px;
             box-sizing: border-box;
             li {
                 text-align: left;
@@ -92,13 +91,13 @@
                 margin-bottom: 5px;
                 transition: all 0.2s;
                 &:hover {
-                    background: derken($primary, 10%);
+                    background: $bk-middle-gray;
                 }
                 a {
                     width: 100%;
                     border: 1px solid $border;
+                    // border-radius: 3px;
                     display: inline-block;
-                    transition: all 0.2s;
                     padding-left: 20px;
                     &:hover {
                         text-decoration: none;
