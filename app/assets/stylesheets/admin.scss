@@ -1,0 +1,22 @@
+//// admin
+.layout-static-admin{
+    .container{
+        h1{
+            margin-bottom: 30px;
+        }
+        background: #ffffff;
+        max-width: 950px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        .layout-articleWrapper,.layout-salonlistWrapper,.layout-branchWrapper{
+            margin-bottom: 10px;
+            padding-bottom: 10px;
+            border-bottom: dotted 1px;
+        }
+        .layout-fbWrapper{
+            margin-bottom: 10px;
+            padding-bottom: 10px;
+            border-bottom: dotted 1px;
+        }
+    }
+}

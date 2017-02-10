@@ -1,0 +1,19 @@
+/// search list page
+///
+.layout-search-list{
+    .container{
+        background: #ffffff;
+        max-width: 950px;
+        padding-top: 10px;
+        padding-bottom: 20px;
+        h1{
+            margin-bottom: 20px;
+        }
+        .layout-listitem{
+            margin: 10px 20px;
+            border-bottom: dotted #777777 1px;
+            padding-bottom: 15px;
+        }
+    }
+
+}

@@ -15,6 +15,7 @@
     .container{
         max-width: 1024px;
     }
+
 }
 
 .Shopinfo {
@@ -66,18 +67,4 @@
             }
         }
     }
-}
-
-.BrunchList{
-    margin-bottom: 20px;
-    &__flex {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-around;
-        &--item{
-            width: 30%;
-            margin-bottom: 15px;
-        }
-    }
-
 }

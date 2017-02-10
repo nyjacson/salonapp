@@ -1,0 +1,86 @@
+/////shopbranch
+.layout-shopbranch-show {
+    .container {
+        padding-top: 20px;
+        background: #ffffff;
+        max-width: 1024px;
+        padding-bottom: 20px;
+        h1{
+            margin-bottom: 20px;
+        }
+        // img {
+        //     width: 100%;
+        //     height: auto;
+        // }
+    }
+    .Brunch {
+        margin-bottom: 30px;
+        h2 {
+            margin-bottom: 10px;
+        }
+        &__leftcol {
+            padding-right: 20px;
+        }
+        &__rightcol {
+            padding-left: 20px;
+        }
+        &__data{
+
+            &--table{
+                display: table;
+                width: 100%;
+                border-spacing: 2px 2px;
+                &-row{
+                    display: table-row;
+                    height: 30px;
+                    background: $bk-middle-gray;
+                }
+                &-cell{
+                    display: table-cell;
+                    vertical-align: middle;
+                    &:first-child {
+                        text-align: center;
+                        font-weight: bold;
+                        width: 30%;
+                    }
+                    p{
+                        padding: 0 10px;
+                    }
+
+                }
+            }
+
+        }
+
+        .Shopinfo__voice {
+            margin-bottom: 20px;
+            h3 {
+                margin-bottom: 10px;
+            }
+            &--item {
+                border: solid 1px $border;
+                padding: 10px;
+                margin-bottom: 10px;
+                background: $bk-middle-gray;
+                &-title {
+                    padding-bottom: 5px;
+                    border-bottom: solid 1px $border;
+                    margin-bottom: 5px;
+                }
+            }
+        }
+
+
+    }
+    .BrunchMap{
+        margin-bottom: 20px;
+        h2 {
+            margin-bottom: 10px;
+        }
+        #ele-gmap{
+            width: 100%;
+            height: 300px;
+        }
+    }
+
+}

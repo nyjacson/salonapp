@@ -2,7 +2,7 @@
     <div class="container">
         <div class="row">
             <div class="col-sm-12">
-                <h1><%= @shopbranch.branchname %> / <%= @shopbranch.shopinfo.shopname %> </h1>
+                <h1><%= @shopbranch.branchname %> / <%= link_to @shopbranch.shopinfo.shopname, @shopinfo %> </h1>
                 <!-- <%= simple_format(@shopbranch.shopinfo.recommend2) %> -->
             </div>
         </div>
@@ -92,20 +92,10 @@
                 <div id="ele-gmap"></div>
             </div>
         </div>
-        <div class="row BrunchList">
-            <div class="col-sm-12">
-                <h2 class="line"><%= @shopinfo.shopname %>の店舗情報</h2>
-                <div class="BrunchList__flex">
-                    <% @shopinfo.shopbranches.each do |b| %>
-                    <div class="BrunchList__flex--item">
-                        <h3><%= link_to b.branchname, [@shopinfo, b] %></h3>
-                        <p><%= b.address %></p>
-                    </div>
-                    <% end %>
-                </div>
-            </div>
-        </div>
-        <!-- row -->
+        <%= render 'layouts/buttonCenter' %>
+
+        <%= render 'layouts/branchList' %>
+
     </div>
     <!-- container -->
 </section>

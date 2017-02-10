@@ -18,3 +18,25 @@
         border-spacing: 0px 5px;
     }
 }
+
+// _branchList.html.erb
+.BranchList{
+    margin-bottom: 20px;
+    h2 {
+        margin-bottom: 10px;
+    }
+    &__flex {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        &--item{
+            width: 30%;
+            margin-bottom: 15px;
+        }
+    }
+}
+
+.ButtonCenter-wrapper {
+    text-align: center;
+    margin-bottom: 30px;
+}

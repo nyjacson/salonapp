@@ -1,0 +1,14 @@
+<div class="row BranchList">
+    <div class="col-sm-12">
+        <h2 class="line"><%= @shopinfo.shopname %>の店舗情報</h2>
+        <div class="BranchList__flex">
+            <% @shopinfo.shopbranches.each do |b| %>
+            <div class="BranchList__flex--item">
+                <h3><%= link_to b.branchname, [@shopinfo, b] %></h3>
+                <p><%= b.address %></p>
+            </div>
+            <% end %>
+        </div>
+    </div>
+</div>
+<!-- row -->

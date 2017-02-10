@@ -72,25 +72,12 @@
             <!-- col-sm-6 right -->
         </div>
         <!-- row -->
-        <div class="row">
-            <a href="#">
-                <input type="button" class="m-button" value="このサロンを予約">
-            </a>
-        </div>
-        <div class="row BrunchList">
-            <div class="col-sm-12">
-                <h2 class="line"><%= @shopinfo.shopname %>の店舗情報</h2>
-                <div class="BrunchList__flex">
-                    <% @shopinfo.shopbranches.each do |b| %>
-                    <div class="BrunchList__flex--item">
-                        <h3><%= link_to b.branchname, [@shopinfo, b] %></h3>
-                        <p><%= b.address %></p>
-                    </div>
-                    <% end %>
-                </div>
-            </div>
+        <div class="row col-sm-12 ButtonCenter-wrapper">
+            <%= render 'layouts/buttonCenter' %>
         </div>
         <!-- row -->
+        <%= render 'layouts/branchList' %>
+
     </div>
     <!-- container -->
 </section>
