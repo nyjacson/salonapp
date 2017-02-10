@@ -5,12 +5,17 @@ Rails.application.routes.draw do
       collection do
           post :import
       end
-  end
-  resources :shopbranches do
-      collection do
-          post :import
+      resources :shopbranches do
+          collection do
+              post :import
+          end
       end
   end
+  # resources :shopbranches do
+  #     collection do
+  #         post :import
+  #     end
+  # end
   get 'static_pages/home'
   get 'static_pages/toku1'
   get 'static_pages/toku2'

@@ -83,7 +83,7 @@
                 <div class="BrunchList__flex">
                     <% @shopinfo.shopbranches.each do |b| %>
                     <div class="BrunchList__flex--item">
-                        <h3><%= link_to b.branchname, b %></h3>
+                        <h3><%= link_to b.branchname, [@shopinfo, b] %></h3>
                         <p><%= b.address %></p>
                     </div>
                     <% end %>
