@@ -103,35 +103,8 @@
     </div>
     <!-- .second-contentsWrapper -->
     <div class="third-contentsWrapper">
-        <section class="Salons">
-            <h2 class="line">提携サロンリスト</h2>
-            <!-- <div class="row">
-                <% @shopinfo.each do |s| %>
-                <p>
-                    <div class="col-sm-2"><%= link_to s.shopname, s %></div>
-                    <div class="col-sm-10"><%= simple_format(s.recommend) %></div>
-                </p>
-                <% end %>
-            </div> -->
-            <div class="Salons__flex">
-                <% @shopinfo.each do |s| %>
-                <div class="Salons__flex--items">
-                    <div class="Salons__contents--flex">
-                        <div class="Salons__contents--flex-item1">
-                            <div class="Salons__contents--flex-pic" style="background-image:url(<%= image_path s.pic5%>);">
-                            </div>
-                        </div>
-                        <div class="Salons__contents--flex-item2">
-                            <div class="Salons__name"><%= link_to s.shopname, s %></div>
-                            <div class="Salons__company"><%= s.company %></div>
-                            <p class="Salons__text"><%= s.recommend %></p>
-                        </div>
-
-                    </div>
-                </div>
-                <% end %>
-            </div>
-        </section>
+        
+        <%= render 'layouts/salons' %>
 
     </div>
     <!-- .third-contentsWrapper -->

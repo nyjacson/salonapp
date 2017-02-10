@@ -1,11 +1,13 @@
-<% @area.each do |s| %>
-<div class="layout-listitem">
-    <div class="row">
-        <div class="col-sm-2"><%= s.shopname %></div>
-        <div class="col-sm-2"><%= link_to s.branchname, shopinfo_shopbranch_path(s.shopinfo_id, s) %></div>
-        <div class="col-sm-6"><%= s.address %></div>
-        <div class="col-sm-2"><%= link_to "店舗詳細", shopinfo_shopbranch_path(s.shopinfo_id, s) ,class: "btn btn-default btn-sm" %></div>
+<div class="List__table">
+    <% @area.each do |s| %>
+    <div class="layout-listitem List__table-row">
+            <div class="List__table-cell">
+                <div class="search__logo"  style="background-image:url(<%= image_path s.shopinfo.pic5 %>);"></div>
+            </div>
+            <div class="List__table-cell"><p><%= s.shopname %></p></div>
+            <div class="List__table-cell"><p><%= link_to s.branchname, shopinfo_shopbranch_path(s.shopinfo_id, s) %></p></div>
+            <div class="List__table-cell"><p><%= s.address %></p></div>
+            <div class="List__table-cell"><%= link_to "店舗詳細", shopinfo_shopbranch_path(s.shopinfo_id, s) ,class: "c-button-a" %></div>
     </div>
-    <!-- .row -->
+    <% end %>
 </div>
-<% end %>

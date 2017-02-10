@@ -1,0 +1,22 @@
+<section class="Salons">
+    <h2 class="line">提携サロンリスト</h2>
+
+    <div class="Salons__flex">
+        <% @shopinfo.each do |s| %>
+        <div class="Salons__flex--items">
+            <div class="Salons__contents--flex">
+                <div class="Salons__contents--flex-item1">
+                    <div class="Salons__contents--flex-pic" style="background-image:url(<%= image_path s.pic5%>);">
+                    </div>
+                </div>
+                <div class="Salons__contents--flex-item2">
+                    <div class="Salons__name"><%= link_to s.shopname, s %></div>
+                    <div class="Salons__company"><%= s.company %></div>
+                    <p class="Salons__text"><%= s.recommend %></p>
+                </div>
+
+            </div>
+        </div>
+        <% end %>
+    </div>
+</section>

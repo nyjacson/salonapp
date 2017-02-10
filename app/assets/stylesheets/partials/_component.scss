@@ -131,6 +131,26 @@ img.pic-thum{
         background: derken($primary, 10%);
     }
 }
+.c-button-a {
+    display: block;
+    height: 45px;
+    background: $primary;
+    color: #ffffff;
+    @include S-font;
+    line-height: 45px;
+    border-radius: 3px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin: 0 auto;
+    @include transition;
+    &:hover{
+        background: lighten($primary, 10%);
+        text-decoration: none;
+    }
+    &:active{
+        background: derken($primary, 10%);
+    }
+}
 
 .ellip {
   display: block;

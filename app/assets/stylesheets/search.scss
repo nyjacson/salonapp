@@ -4,8 +4,8 @@
     .container{
         background: #ffffff;
         max-width: 950px;
-        padding-top: 10px;
-        padding-bottom: 20px;
+        padding-top: 30px;
+        padding-bottom: 30px;
         h1{
             margin-bottom: 20px;
         }
@@ -13,7 +13,52 @@
             margin: 10px 20px;
             border-bottom: dotted #777777 1px;
             padding-bottom: 15px;
+            .search__logo {
+                border-radius: 50%;
+                width: 60px;
+                height: 60px;
+                background-size: 60px 60px;
+                margin: 0 auto;
+            }
         }
+    }
+    .List__table {
+        display: table;
+        // border-collapse: separate;
+        border-spacing: 0px 10px;
+        width: 100%;
+        &-row {
+            display: table-row;
+            &:nth-child(even){
+                background: $bk-light-gray;
+            }
+            &:nth-child(odd){
+                background: $bk-middle-gray;
+            }
+        }
+        &-cell{
+            display: table-cell;
+            vertical-align: middle;
+            &:first-child {
+                width: 80px;
+                text-align: center;
+                height: 80px;
+            }
+            &:nth-child(2) {
+                width: 150px;
+            }
+            &:last-child {
+                width: 140px;
+                text-align: center;
+                .c-button-a {
+                    width: 100px;
+                }
+            }
+            p{
+                padding: 10px;
+            }
+        }
+
     }
 
 }
