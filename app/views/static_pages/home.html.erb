@@ -86,7 +86,7 @@
                 <section>
                     <h2 class="line">脱毛あれこれ特集</h2>
                         <ul class="ItemArticle">
-                            <% @article_2.each do |a| %>
+                            <% @article_2.shuffle.each do |a| %>
                             <div class="ItemArticle__flex">
                                 <li class="ItemArticle__flex--item1"><span style="background-image:url(<%= image_path a.picthum%>);" class="ItemArticle__pic"></span></li>
                                 <li class="ItemArticle__flex--item2">
@@ -103,7 +103,7 @@
     </div>
     <!-- .second-contentsWrapper -->
     <div class="third-contentsWrapper">
-        
+
         <%= render 'layouts/salons' %>
 
     </div>

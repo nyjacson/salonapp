@@ -22,9 +22,15 @@
     padding-top: 20px;
     &__leftcol{
         padding-right: 20px;
+        @include mq-sp{
+            padding-right: 10px;
+        };
     }
     &__rightcol {
         padding-left: 20px;
+        @include mq-sp{
+            padding-left: 10px;
+        };
     }
     &__recommend {
         margin-bottom: 20px;

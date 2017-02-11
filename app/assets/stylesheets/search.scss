@@ -8,6 +8,9 @@
         padding-bottom: 30px;
         h1{
             margin-bottom: 20px;
+            @include mq-sp{
+                margin-bottom: 0px;
+            };
         }
         .layout-listitem{
             margin: 10px 20px;
@@ -21,6 +24,9 @@
                 margin: 0 auto;
             }
         }
+    }
+    .List {
+        margin-bottom: 40px;
     }
     .List__table {
         display: table;
@@ -46,6 +52,14 @@
             }
             &:nth-child(2) {
                 width: 150px;
+                @include mq-sp{
+                    width: 90px;
+                };
+            }
+            &:nth-child(4){
+                @include mq-sp{
+                    display: none;
+                };
             }
             &:last-child {
                 width: 140px;
@@ -53,6 +67,9 @@
                 .c-button-a {
                     width: 100px;
                 }
+                @include mq-sp{
+                    display: none;
+                };
             }
             p{
                 padding: 10px;

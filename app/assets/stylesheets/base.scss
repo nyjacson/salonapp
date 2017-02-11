@@ -73,22 +73,37 @@ a{
 h1{
     @include LL-font;
     color: $primary-text;
+    @include mq-sp{
+        font-size: 22px;
+    };
 }
 h2{
     @include L-font;
     color: $primary-text;
+    @include mq-sp{
+        font-size: 18px;
+    };
 }
 h3{
     @include M-font;
     color: $primary-text;
+    @include mq-sp{
+        font-size: 15px;
+    };
 }
 h4{
     @include MB-font;
     color: $primary-text;
+    @include mq-sp{
+        font-size: 15px;
+    };
 }
 p{
     @include S-font;
     color: $primary-text;
+    @include mq-sp{
+        font-size: 13px;
+    };
     .textStrong{
         font-size: 20px;
     }

@@ -37,7 +37,7 @@ $op-h-button: transparentize($bk-dark-gray, 0.4);
 
 @mixin M-font{
 	font-size: 16px;
-    line-height: 1.2
+    line-height: 1.4
 }
 
 @mixin MB-font{
@@ -97,4 +97,8 @@ $op-h-button: transparentize($bk-dark-gray, 0.4);
 
 @mixin transition{
     transition: all 0.1s linear;
+}
+
+@mixin boxshadow {
+        box-shadow: 0 2px 5px rgba(0,0,0,.26);
 }

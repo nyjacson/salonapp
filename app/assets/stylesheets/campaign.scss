@@ -1,129 +1,217 @@
-#contents-tokushu1{
-    #contentsWrapper{
-        max-width: 950px;
-        margin: 0 auto;
-        li{
-            margin-bottom: 5px;
-        }
-        .layout-top{
-            padding-top: 20px;
-            background: url(/assets/bk-floral.svg) no-repeat;
-            background-size: 950px auto;
-            height: 100px;
-            h1{
-            font-size: 20px;
-            text-align: center;
-            margin-top: 0;
-            }
-        }
-        .container{
-            max-width: 950px;
-            background-color: #ffffff;
-            border: solid #ECCE72 3px;
-            margin-bottom:20px;
-
-            .contents-salonComment{
-                padding-top: 10px;
-                p{
-                    margin-top: 10px;
-                }
-            }
-            h3{
-                margin-top: 15px;
-                // font-size: 18px;
-            }
-            .layout-button{
-                text-align: center;;
-                margin: 10px auto 20px;
-            }
-        } //container
-
-    }
-    .layout-title{
-        margin-top: 10px;
-        margin-bottom: 5px;
-        img{
-            display: inline-block;
-            vertical-align:middle;
-            height: 40px;
-        }
-        h1{
-            display: inline-block;
-            font-size: 22px;
-            margin: 0;
-            line-height: 40px;
-            vertical-align:middle;
-            padding-top: 5px;
-            box-sizing: border-box;
-        }
-    }
-
-}
-#contents-tokushu2{
-    padding-top: 20px;
-    background: #ffffff;
+.contents-tokushu1 {
     max-width: 950px;
     margin: 0 auto;
-    #contentsWrapper{
-        padding-bottom: 20px;
 
-        h2{
-            font-size: 20px;
-        }
-        .layout-top{
-            h1{
-            font-size: 20px;
-            text-align: center;
-            margin-top: 0;
-            margin-bottom: 15px;
-            }
-        }
-        .container{
-            max-width: 950px;
-            margin-bottom:20px;
-            padding: 0 30px;
-            .imgWrapper-1{
-                img{
-                    max-width: 300px;
-                    margin: 0 auto;
-                }
-            }
-            .contents-salonComment{
-                p{
-                    line-height: 1.5em;
-                }
-            }
-            h3{
-                font-size: 18px;
-            }
-            .layout-button{
-                text-align: center;;
-                margin: 20px auto 10px;
-            }
-        } //container
-        section{
-            margin-bottom: 20px;
-        }
-        h4{
-            font-size: 16px;
-        }
-
+    h1 {
+        text-align: center;
+        margin-top: 0;
     }
-    .layout-title{
+    h2 {
         margin-bottom: 10px;
-        img{
+    }
+    h3{
+        margin-bottom: 10px;
+    }
+    li {
+        margin-bottom: 10px;
+    }
+    p{
+        @include M-font;
+    }
+
+    .layout-top {
+        padding-top: 20px;
+        background: url("/assets/bk-floral.svg") no-repeat;
+        background-size: 950px auto;
+        height: 100px;
+    }
+
+    .container {
+        max-width: 950px;
+        background-color: #ffffff;
+
+        margin-bottom: 20px;
+        .layout-button {
+            text-align: center;
+            margin: 20px auto 20px;
+        }
+    }
+    .Salon {
+        padding: 10px;
+        border-bottom: solid 1px $border;
+
+        .left-item {
+            padding-top: 10px;
+            padding-bottom: 10px;
+            &--point {
+                padding-top: 15px;
+            }
+        }
+        .right-item {
+            padding-top: 10px;
+            padding-bottom: 10px;
+
+        }
+    }
+    .layout-title {
+        margin-bottom: 5px;
+
+        img {
             display: inline-block;
-            vertical-align:middle;
+            vertical-align: middle;
             height: 40px;
         }
-        h1{
+
+        h1 {
             display: inline-block;
-            font-size: 22px;
             margin: 0;
-            line-height: 26px;
-            vertical-align:middle;
-            //box-sizing: border-box;
+            line-height: 40px;
+            vertical-align: middle;
+            padding-top: 5px;
+        }
+    }
+}
+
+.Tokushu2 {
+    background: url("/assets/color-dot.svg");
+    background-attachment:fixed;
+    .container {
+        padding: 30px;
+        background: rgba(255,255,255,0.8);
+        max-width: 950px;
+        margin: 0 auto;
+        @include mq-sp{
+            padding: 10px;
+        };
+    }
+
+    h1 {
+        margin-bottom: 20px;
+    }
+
+    h2 {
+        margin-bottom: 20px;
+    }
+
+    h3 {
+        margin-bottom: 10px;
+    }
+
+    p {
+        @include M-font;
+        @include mq-sp{
+            @include S-font;
+        };
+    }
+
+    &__item1 {
+        border-bottom: solid 1px $border;
+        padding-bottom: 30px;
+        margin-bottom: 30px;
+    }
+
+    .layout-button {
+        text-align: center;
+        margin: 20px auto 10px;
+    }
+
+    .Salon1 {
+        border-bottom: solid 1px $border;
+        padding-bottom: 30px;
+        margin-bottom: 30px;
+
+        &__flex {
+            display: flex;
+            flex-direction: column-reverse;;
+
+            &--item2 {
+                padding-left: 30px;
+                @include mq-sp{
+                    padding-left: 0px;
+                    margin-bottom: 20px;
+                };
+            }
+        }
+
+        &__flex2 {
+            display: flex;
+            flex-direction: column;
+
+            &--item1 {
+                width: 50%;
+                @include mq-sp{
+                    width: 100%;
+                    margin-bottom: 20px;
+                }
+                p {
+                    background: $bk-color;
+                    padding: 5px;
+                    border-radius: 3px;
+                }
+            }
+
+            &--item2 {
+                padding-left: 30px;
+                width: 50%;
+                @include mq-sp{
+                    width: 100%;
+                    padding-left: 0px;
+                }
+            }
         }
     }
 
+    .Salon2 {
+        // padding-bottom: 30px;
+        margin-bottom: 30px;
+
+        &__flex {
+            display: flex;
+            @include mq-sp{
+                flex-direction: column;
+            };
+
+            &--item1 {
+                order: 2;
+            }
+
+            &--item2 {
+                // padding-left: 30px;
+                padding-right: 30px;
+                order: 1;
+                @include mq-sp{
+                    padding-right: 0px;
+                    margin-bottom: 20px;
+                };
+            }
+        }
+
+        &__flex2 {
+            display: flex;
+            @include mq-sp{
+                flex-direction: column;
+            };
+            &--item1 {
+                width: 50%;
+                @include mq-sp{
+                    width: 100%;
+                    margin-bottom: 20px;
+                };
+                p {
+                    background: $bk-color;
+                    padding: 5px;
+                    border-radius: 3px;
+                }
+            }
+
+            &--item2 {
+                padding-left: 30px;
+                width: 50%;
+                @include mq-sp{
+                    width: 100%;
+                    padding-left: 0px;
+                };
+            }
+        }
+    }
 }

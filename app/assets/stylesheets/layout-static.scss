@@ -84,6 +84,9 @@
             margin: 0;
             padding: 0 10px;
             box-sizing: border-box;
+            @include mq-sp{
+                padding: 0px;
+            };
             li {
                 text-align: left;
                 height: 40px;
@@ -108,7 +111,7 @@
     }
     .layout-contentslistWrapper {
         margin-bottom: 20px;
-        height: 220px;
+        // height: 220px;
         ul {
             list-style: none;
             padding: 0 0 0 10px;
@@ -131,6 +134,17 @@
 }
 .layout-footer {
     background: $bk-middle-gray;
-    border: $border solid 1px;
-    height: 50px;
+    border-top: $border solid 1px;
+    height: 70px;
+    text-align: center;
+    padding:10px;
+}
+.Footer{text-align: center;
+    &__flex{
+        margin: 0 auto 5px;
+        display: flex;
+        width: 200px;
+        justify-content: space-around;
+        align-items: center;
+    }
 }

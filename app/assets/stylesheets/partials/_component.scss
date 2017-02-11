@@ -1,43 +1,17 @@
 @import "partials/_set.scss";
 
 //Components Area
-.textPink{
-    color: $link-color;
-}
-.textBlue{
-    color: $accent;
-}
-.textGreen{
-    color: $green;
-}
-.textBold{
-    font-weight: bold;
-}
-.textMainTitle{
-    font-size: 16px;
-    text-align: center;
-    margin-top: 0;
-}
-.textSubTitle{
-    font-size: 16px;
-    margin: 0;
-    margin-bottom: 10px;
-    border-left: 5px solid $primary;
-    padding-left: 5px;
-}
+
 
 .textindent {
-    text-indent: 1em;
+    text-indent: 0.5em;
 }
 
 .line{
     border-bottom: solid 1px $primary;
     padding-bottom: 3px;
 }
-.line-gray{
-    border-bottom: solid 1px $border;
-    padding-bottom: 3px;
-}
+
 .fingar{
     background: url("/assets/fingar-arrow.svg") no-repeat;
     padding-left: 20px;
@@ -46,36 +20,16 @@
     background: url("/assets/checkbox.svg") no-repeat;
     padding-left: 20px;
 }
-.hr{
-    border-bottom: dotted 1px $bk-dark-gray;
-    width: 95%;
-    margin: 10px auto 30px;
-}
-.hr-light{
-    border-bottom: dotted 1px $border;
-    margin:5px auto 10px;
-}
-.top-margin{
-    margin-top: 10px;
-    box-sizing: border-box;
-}
+
 .center{
     margin: 0 auto;
 }
-.glaytitle{
-    background: #eeeeee;
-    padding: 2px;
-}
-.bold{
-    font-weight: bold;
-}
+
 img.pic-thum{
         width: 100px;
         height: auto;
 }
-.link{
-    color: $link-color;
-}
+
 .indent{
     text-indent: 1em;
 }
@@ -152,11 +106,6 @@ img.pic-thum{
     }
 }
 
-.ellip {
-  display: block;
-  height: 100%;
-}
-
 .ellip-line {
   display: inline-block;
   text-overflow: ellipsis;
@@ -169,4 +118,29 @@ img.pic-thum{
   position: relative;
   overflow: hidden;
   max-width: 100%;
+}
+
+.c-Data {
+    &__table{
+        display: table;
+        width: 100%;
+        border-spacing: 2px 2px;
+        &--row{
+            display: table-row;
+            min-height: 30px;
+            background: $bk-middle-gray;
+        }
+        &--cell{
+            display: table-cell;
+            vertical-align: middle;
+            padding: 3px 5px;
+            &:first-child{
+                width: 30%;
+            }
+            &:last-child{
+                width: 70%;
+            }
+
+        }
+    }
 }

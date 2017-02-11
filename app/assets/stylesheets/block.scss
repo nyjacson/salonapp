@@ -7,19 +7,28 @@
         padding: 0px;
     }
     &__pic{
-        box-sizing: border-box;
         width: 80px;
         height: 80px;
         background-size: 80px 80px;
         display: block;
+        @include mq-sp{
+            width: 60px;
+            height: 60px;
+            background-size: 60px 60px;
+        };
     }
     &__flex{
         background: $bk-light-gray;
+        border: solid 1px $border;
         display: flex;
         margin-bottom: 20px;
         padding: 10px 10px;
         flex-direction: row;
         width: 32%;
+        @include mq-sp{
+            margin-bottom: 10px;
+            width: 100%;
+        };
         // justify-content: space-between;
         &--item1{
             // flex-basis: 115px;
@@ -37,6 +46,10 @@
     }
 }
 .Salons{
+    h2{
+        margin: 0 0 15px;
+        padding-left: 5px;
+    }
     width: 100%;
     .Salons__flex{
         display: flex;
@@ -44,15 +57,18 @@
         flex-wrap: wrap;
         flex-direction: row;
         justify-content: space-around;
+
         &--items{
-            padding: 15px 15px;
+            padding: 15px 10px;
             margin-bottom: 15px;
             width: 48%;
             @include mq-sp{
-                padding: 0px 5px;
-                width: 50%;
+                margin-bottom: 10px;
+                padding: 10px;
+                width: 100%;
             };
             border: solid 1px $border;
+            background: $bk-middle-gray;
 
         }
     }
@@ -63,24 +79,53 @@
     &__company{
         margin-bottom: 5px;
         @include M-font;
+        @include ellipsis;
     }
     &__text{
         @include ellipsis;
     }
     &__contents--flex{
         display: flex;
+        @include mq-sp{
+            align-items: center;
+        };
         &-item1{
             width: 20%;
         }
         &-item2{
-            width: 80%;
-
+            width: 75%;
+            padding-left: 10px;
         }
         &-pic{
             border-radius: 50%;
             width: 80px;
             height: 80px;
             background-size: 80px 80px;
+            @include mq-sp{
+                width: 60px;
+                height: 60px;
+                background-size: 60px 60px;
+            };
+        }
+    }
+}
+
+// _branchList.html.erb
+.BranchList{
+    margin-bottom: 20px;
+    h2 {
+        margin-bottom: 10px;
+    }
+    &__flex {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        &--item{
+            width: 30%;
+            margin-bottom: 15px;
+            @include mq-sp{
+                width: 100%;
+            };
         }
     }
 }
