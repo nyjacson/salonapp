@@ -1,5 +1,3 @@
-jQuery(function($) {
-    $(".js-ellipsis").ellipsis({
-        lines:2
-    })
+jQuery(document).ready(function($) {
+    $('.menu-link').bigSlide();
 });
