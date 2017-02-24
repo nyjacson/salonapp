@@ -129,3 +129,27 @@
         }
     }
 }
+.GlobalNav {
+    display: flex;
+    z-index: 10;
+    background: $bk-white;
+    @include mq-sp{
+        display: none;
+    }
+    li{
+        a{
+            text-decoration: none;
+            cursor: pointer;
+            height: 53px;
+            color: $primary-text;
+            line-height:  53px;
+            padding-right: 30px;
+            padding-left: 30px;
+            display: block;
+        }
+        &:first-child{
+            margin-right: auto;
+
+        }
+    }
+}
