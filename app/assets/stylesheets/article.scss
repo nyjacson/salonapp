@@ -6,3 +6,64 @@
         max-width: 950px;
     }
 }
+.Article{
+    padding-top: 20px;
+    padding-right: 30px;
+    h1 {
+        margin-bottom: 10px;
+    }
+    p {
+        margin-bottom: 30px;
+        line-height: 1.8;
+    }
+    &__subtitle{
+        @include S-font;
+        margin-bottom: 20px;
+        &--cat {
+            margin-left: 10px;
+            padding: 5px;
+            border-radius: 3px;
+            border: solid 1px $border;
+        }
+    }
+    .ItemArticle__pic {
+        width: 80px;
+        height: 80px;
+        background-size: 80px 80px;
+    }
+    &__contents {
+        border: solid 1px $border;
+        padding: 20px;
+        margin-bottom: 20px;
+        @include S-font;
+        line-height: 1.8;
+    }
+    &__controller {
+        margin-top: 20px;
+    }
+}
+.Article--side {
+    padding-top: 20px;
+    h2 {
+        font-size: 16px;
+        margin-bottom: 10px;
+        border-bottom: 1px solid $primary;
+        padding-bottom: 5px;
+    }
+    &__contents {
+        margin-bottom: 20px;
+    }
+    &__list {
+        padding: 3px 3px;
+    }
+}
+
+.Article--edit {
+    padding-top: 10px;
+    h1 {
+        margin-bottom: 20px;
+    }
+    .form-group {
+        margin-bottom: 20px;
+    }
+}

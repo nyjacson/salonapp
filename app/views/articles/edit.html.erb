@@ -1,20 +1,20 @@
-<div class="container ">
+<div class="container Article--edit">
     <h1>記事編集フォーム</h1>
     <div class="col-md-6 col-md-offset-3">
         <%= form_for (@article) do |f| %>
-        <div class="form-grop">
+        <div class="form-group">
             <%= f.label :title %>
             <%= f.text_field :title, class: 'form-control' %>
         </div>
-        <div class="form-grop">
+        <div class="form-group">
             <%= f.label :article %>
             <%= f.text_area :article, class: 'form-control', rows: "10"  %>
         </div>
-        <div class="form-grop">
+        <div class="form-group">
             <%= f.label :category %>
             <%= f.text_field :category, class: 'form-control' %>
         </div>
-        <div class="form-grop">
+        <div class="form-group">
             <%= f.label :picthum %>
             <%= f.text_field :picthum, class: 'form-control' %>
         </div>
