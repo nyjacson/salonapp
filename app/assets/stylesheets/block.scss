@@ -200,7 +200,9 @@
     }
     &--fixed{
         position: fixed;
-
+        @include mq-sp {
+            position: inherit;
+        };
     }
 }
 .GlobalNav--sp {
