@@ -13,7 +13,9 @@ class ShopbranchesController < ApplicationController
         @shopfbs = Shopfb.find(params[:shopinfo_id])
     end
     def new
-        @shopbranch = Shopbranch.new
+        @shopinfo = Shopinfo.find(params[:shopinfo_id])
+        @shopbranch = @shopinfo.shopbranches.build
+        # @shopbranch = Shopbranch.new
     end
     def create
         @shopbranch = Shopbranch.new(branch_params)

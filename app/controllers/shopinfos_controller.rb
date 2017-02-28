@@ -1,6 +1,7 @@
 class ShopinfosController < ApplicationController
     def index
         @shopinfo = Shopinfo.paginate(page: params[:page],per_page: 15)
+
         @shopinfo_csv = Shopinfo.all
         respond_to do |format|
          format.html

@@ -1,9 +1,9 @@
 
 <div class="container ">
-    <h3>支店追加フォーム</h3>
+    <h3><%= @shopinfo.shopname %>支店追加フォーム</h3>
     <div class="col-md-6 col-md-offset-3">
 
-        <%= form_for (@shopbranch) do |f| %>
+        <%= form_for [@shopinfo, @shopbranch] do |f| %>
         <%= render 'shared/error_messages_branch' %>
 
         <div class="form-grop">

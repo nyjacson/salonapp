@@ -9,6 +9,7 @@
                 <div class="col-sm-3">
                 <%= link_to "Edit", edit_shopinfo_path(s),class: "btn btn-default btn-sm" %>
                 <%= link_to "Delete",s, method: :delete, data: {confirm: "削除しますか？"},class: "btn btn-default btn-sm" %>
+                <%= link_to 'サロン支店情報管理', shopinfo_shopbranches_path(s) ,class: "btn btn-default btn-sm" %>
                 </div>
                 </div>
             <% end %>
