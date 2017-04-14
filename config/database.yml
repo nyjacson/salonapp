@@ -19,5 +19,6 @@ test:
 
 production:
   <<: *default
-  adapter: pg
+  adapter: postgresql
   database: db/production.pg
+  encoding: utf8
