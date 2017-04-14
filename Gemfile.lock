@@ -181,7 +181,7 @@ DEPENDENCIES
   geocoder
   jbuilder (~> 2.0)
   jquery-rails
-  pg (= 0.17.1)
+  pg
   railroady
   rails (= 4.2.6)
   rails-erd
