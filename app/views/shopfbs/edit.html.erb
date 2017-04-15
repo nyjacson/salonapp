@@ -1,38 +1,38 @@
-<div class="container ">
-    <h3>カスタマーレビュー編集フォーム</h3>
+<div class="container CustomerFb__edit">
+    <h1>カスタマーレビュー編集フォーム</h1>
     <div class="col-md-6 col-md-offset-3">
         <%= form_for (@shopfb) do |f| %>
 
 
-        <div class="form-grop">
+        <div class="form-group">
             <%= f.label :shopinfo_id %>
             <%= f.text_field :shopinfo_id, class: 'form-control' %>
         </div>
-        <div class="form-grop">
+        <div class="form-group">
             <%= f.label :fbshopname %>
             <%= f.text_field :fbshopname, class: 'form-control' %>
         </div>
-        <div class="form-grop">
+        <div class="form-group">
             <%= f.label :fbtitle %>
             <%= f.text_field :fbtitle, class: 'form-control' %>
         </div>
-        <div class="form-grop">
+        <div class="form-group">
             <%= f.label :fbcomment %>
             <%= f.text_area :fbcomment, class: 'form-control', rows: "7" %>
         </div>
-        <div class="form-grop">
+        <div class="form-group">
             <%= f.label :auther %>
             <%= f.text_field :auther, class: 'form-control' %>
         </div>
-        <div class="form-grop">
+        <div class="form-group">
             <%= f.label :fbrank %>
             <%= f.number_field :fbrank, class: 'form-control' %>
         </div>
-        <div class="form-grop">
+        <div class="form-group">
             <%= f.label :ages %>
             <%= f.text_field :ages, class: 'form-control' %>
         </div>
-        <div class="form-grop">
+        <div class="form-group">
             <%= f.label :jobs %>
             <%= f.text_field :jobs, class: 'form-control' %>
         </div>
