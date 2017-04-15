@@ -6,15 +6,15 @@ Article.create!([
   {title: "脱毛前後のお手入れ", article: "テスト", category: "beginner", picthum: ""},
   {title: "シェービング代&キャンセル料について", article: "テスト", category: "beginner", picthum: ""},
   {title: "全身脱毛と部位脱毛の違い", article: "テスト", category: "beginner", picthum: ""},
-  {title: "全身脱毛にかかる期間、費用は？", article: "全身脱毛が完了するまでにどのくらいの期間がかかるんでしょうか？\r\n経験者の話を聞いてみました。\r\n教えてください。\r\n\r\n私の経験ではぶらぶら\r\n", category: "something", picthum: "/assets/article/sample1.jpg"},
-  {title: "毛周期・脱毛の回数について知りたい", article: "銀座カラーコラム参照", category: "something", picthum: "/assets/article/sample1.jpg"},
-  {title: "施術までの事前準備は何をすればいいの？", article: "銀座カラー", category: "something", picthum: "/assets/article/sample1.jpg"},
-  {title: "毛穴が閉じて美肌になる？顔脱毛の魅力とは", article: "銀座カラー", category: "something", picthum: "/assets/article/sample1.jpg"},
-  {title: "脱毛に年齢制限があるって知っていますか？", article: "銀座", category: "something", picthum: "/assets/article/sample1.jpg"},
+  {title: "全身脱毛にかかる期間、費用は？", article: "全身脱毛が完了するまでにどのくらいの期間がかかるんでしょうか？\r\n経験者の話を聞いてみました。\r\n教えてください。\r\n\r\n私の経験ではぶらぶら\r\n", category: "something", picthum: "article/sample1.jpg"},
+  {title: "毛周期・脱毛の回数について知りたい", article: "銀座カラーコラム参照", category: "something", picthum: "article/sample1.jpg"},
+  {title: "施術までの事前準備は何をすればいいの？", article: "銀座カラー", category: "something", picthum: "article/sample1.jpg"},
+  {title: "毛穴が閉じて美肌になる？顔脱毛の魅力とは", article: "銀座カラー", category: "something", picthum: "article/sample1.jpg"},
+  {title: "脱毛に年齢制限があるって知っていますか？", article: "銀座", category: "something", picthum: "article/sample1.jpg"},
   {title: "銀座カラー夏のキャンペーン", article: "キャンペーン始まります。", category: "campaign", picthum: ""},
   {title: "ミュゼ つるスベ New Yearキャンペーン", article: "ミュゼからのお年玉、超お得なキャンペーンがスタートしました！\r\n全身18部位から2ヶ所どこを選んでも100円均一!!\r\nさらに人気のコース[両ワキV通い放題]もついて4ヶ所で400円!", category: "campaign", picthum: ""},
-  {title: "サンプル記事", article: "テストテスト\r\n", category: "something", picthum: "/assets/article/sample1.jpg"},
-  {title: "テスト記事", article: "テスト記事本文", category: "beginner", picthum: "/assets/article/sample1.jpg"}
+  {title: "サンプル記事", article: "テストテスト\r\n", category: "something", picthum: "article/sample1.jpg"},
+  {title: "テスト記事", article: "テスト記事本文", category: "beginner", picthum: "article/sample1.jpg"}
 ])
 Shopbranch.create!([
   {shopinfo_id: "1", shopname: "ミュゼプラチナム", branchname: "渋谷アネックス店", address: "東京都渋谷区渋谷1丁目12-7 CR-VITEビル4F", tel: nil, starthour: "11:00", endhour: "21:00", e_starthour: "", e_endhour: "", holiday: "なし", latitude: 35.6600497, longitude: 139.7038618, train: "JR線", station: "渋谷", train2: "", station2: "", train3: "", station3: "", area: "関東", prefec: "東京都", city: "渋谷区", access: "東急線・地下鉄各線 渋谷駅(11番出口)から徒歩2分<br>JR各線 渋谷駅(宮益坂出口)から徒歩3分<br>＊渋谷郵便局 隣り", sheet: "", info: ""},

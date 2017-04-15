@@ -88,7 +88,7 @@
                         <ul class="ItemArticle">
                             <% @article_2.shuffle.each do |a| %>
                             <div class="ItemArticle__flex">
-                                <li class="ItemArticle__flex--item1"><span style="background-image:url(<%= image_path a.picthum%>);" class="ItemArticle__pic"></span></li>
+                                <li class="ItemArticle__flex--item1"><span style="background-image:url(<%= asset_path a.picthum%>);" class="ItemArticle__pic"></span></li>
                                 <li class="ItemArticle__flex--item2">
                                     <div class="ItemArticle__title"><%= link_to a.title, a %></div>
                                     <p class="ItemArticle__contents"><%= strip_tags(a.article) %></p>
