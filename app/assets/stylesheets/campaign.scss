@@ -11,6 +11,7 @@
     }
     h3{
         margin-bottom: 10px;
+        color: $accent;
     }
     li {
         margin-bottom: 10px;
@@ -20,10 +21,13 @@
     }
 
     .layout-top {
-        padding-top: 20px;
+        padding-top: 30px;
         background: image-url("bk-floral.svg") no-repeat;
         background-size: 950px auto;
         height: 100px;
+        &>h1 {
+            color: $accent;
+        }
     }
 
     .container {
@@ -86,7 +90,7 @@
     }
 
     h1 {
-        margin-bottom: 20px;
+        margin-bottom: 40px;
     }
 
     h2 {
@@ -122,7 +126,9 @@
 
         &__flex {
             display: flex;
-            flex-direction: column-reverse;;
+            @include mq-sp {
+                flex-direction: column-reverse;
+            }
 
             &--item2 {
                 padding-left: 30px;
@@ -135,7 +141,9 @@
 
         &__flex2 {
             display: flex;
-            flex-direction: column;
+            @include mq-sp {
+                flex-direction: column;
+            }
 
             &--item1 {
                 width: 50%;

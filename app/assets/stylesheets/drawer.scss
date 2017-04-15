@@ -46,8 +46,9 @@
     background: $bk-middle-gray;
     border-bottom: solid 1px $bk-white;
     &--title{
-        background: $bk-white;
-        color: $accent;
+        background: $accent;
+        color: $bk-white;
+        @include L-font;
     }
   a {
     color: $primary-text;

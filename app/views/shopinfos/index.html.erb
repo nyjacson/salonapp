@@ -1,7 +1,7 @@
 <% provide(:title, "脱毛サロン情報管理") %>
 <div class="layout-static-admin">
 <div class="container">
-        <h1>サロン情報管理</h1>
+        <h1>サロン管理</h1>
             <% @shopinfo.each do |s| %>
                 <div class="row layout-salonlistWrapper">
                 <div class="col-sm-2"><p><%= link_to s.shopname, s %></p></div>
@@ -9,11 +9,11 @@
                 <div class="col-sm-3">
                 <%= link_to "Edit", edit_shopinfo_path(s),class: "btn btn-default btn-sm" %>
                 <%= link_to "Delete",s, method: :delete, data: {confirm: "削除しますか？"},class: "btn btn-default btn-sm" %>
-                <%= link_to 'サロン支店情報管理', shopinfo_shopbranches_path(s) ,class: "btn btn-default btn-sm" %>
+                <%= link_to '支店管理', shopinfo_shopbranches_path(s) ,class: "btn btn-default btn-sm" %>
                 </div>
                 </div>
             <% end %>
-        <%= link_to "データを追加する", new_shopinfo_path,class: "btn btn-primary" %>
+        <%= link_to "追加", new_shopinfo_path,class: "btn btn-primary" %>
         <%= link_to '戻る', static_pages_admin_path ,class: "btn btn-warning"%>
         <div class="CSV">
             <%= form_tag import_shopinfos_path, multipart: true do %>
