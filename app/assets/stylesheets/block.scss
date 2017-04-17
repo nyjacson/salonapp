@@ -245,3 +245,13 @@
         margin-bottom: 15px;
     }
 }
+
+.Credential {
+    text-align: right;
+    padding: 15px 20px 0px;
+    &--loggedoff{
+        margin-bottom: 40px;
+        text-align: right;
+        padding: 15px 20px 0px;
+    }
+}

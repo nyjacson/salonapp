@@ -1,4 +1,5 @@
 class ArticlesController < ApplicationController
+    before_action :authenticate_admin!
     def index
         @article = Article.all
         respond_to do |format|
