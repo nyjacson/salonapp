@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :admins
   root 'static_pages#home'
   #get 'shopinfos/index'
   resources :shopinfos do
