@@ -1,5 +1,4 @@
 class ShopinfosController < ApplicationController
-    before_action :authenticate_admin!
     def index
         @shopinfo = Shopinfo.paginate(page: params[:page],per_page: 15)
 
