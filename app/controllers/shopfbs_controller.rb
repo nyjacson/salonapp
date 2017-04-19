@@ -1,6 +1,5 @@
 
 class ShopfbsController < ApplicationController
-    before_action :authenticate_admin!
     require 'dbexport'
     def index
         @shopfb = Shopfb.all

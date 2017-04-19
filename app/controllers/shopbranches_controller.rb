@@ -1,5 +1,4 @@
 class ShopbranchesController < ApplicationController
-    before_action :authenticate_admin!
     def index
 
         @shopinfo = Shopinfo.find(params[:shopinfo_id])
@@ -40,6 +39,7 @@ class ShopbranchesController < ApplicationController
     end
     def edit
         @shopbranch = Shopbranch.find(params[:id])
+        @shopinfo = Shopinfo.find(params[:shopinfo_id])
     end
     def destroy
         Shopbranch.find(params[:id]).destroy
