@@ -20,11 +20,11 @@
     </section>
     <!-- # import/export excel/csv ## -->
     <div class="CSV">
-        <%= form_tag import_shopinfo_shopbranches_path, multipart: true do %>
-        <div class="c-table CSV__import">
-            <p class="c-table-cell CSV__label"><%= file_field_tag :file %></p>
-            <p class="c-table-cell"><%= submit_tag "Excelでインポート",class: "btn btn-default btn-sm" %></p>
-        </div>
+        <%= form_tag(import_shopinfo_shopbranches_path, :method => :post, multipart: true) do %>
+                <div class="">
+                    <%= file_field_tag :csv_file %>
+                </div>
+                <%= submit_tag "CSVインポート", class: "btn btn-default btn-sm" %>
         <% end %>
         <div class="c-table CSV__export">
             <p class="c-table-cell"><%= link_to "CSV Download", download_shopinfo_shopbranches_path(format: "csv"),class: "btn btn-default btn-sm" %></p>
