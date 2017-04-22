@@ -1,4 +1,3 @@
-
 class ShopfbsController < ApplicationController
     require 'dbexport'
     def index
