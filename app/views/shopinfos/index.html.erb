@@ -23,8 +23,7 @@
             </div>
             <% end %>
             <div class="c-table CSV__export">
-                <p class="c-table-cell CSV__label">CSVでエクスポート</p>
-                <p class="c-table-cell"><%= link_to "CSV", shopinfos_path(format: "csv"),class: "btn btn-default btn-sm" %></p>
+                <p class="c-table-cell"><%= link_to "CSV Download", download_shopinfos_path(format: "csv"),class: "btn btn-default btn-sm" %></p>
             </div>
         </div>
         <!-- CSV -->

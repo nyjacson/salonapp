@@ -2,9 +2,12 @@ class ArticlesController < ApplicationController
 
     def index
         @article = Article.all
+    end
+    def download
+        @article = Article.all
         respond_to do |format|
-         format.html
-         format.csv { send_data @article.to_csv }
+            format.html { redirect_to :action => 'download', :format => 'csv'}
+            format.csv { render :content_type => 'text/csv' }
         end
     end
     def show
