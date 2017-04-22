@@ -1,11 +1,12 @@
 class ShopinfosController < ApplicationController
     def index
         @shopinfo = Shopinfo.paginate(page: params[:page],per_page: 15)
-
-        @shopinfo_csv = Shopinfo.all
+    end
+    def download
+        @shopinfo = Shopinfo.all
         respond_to do |format|
-         format.html
-         format.csv { send_data @shopinfo_csv.to_csv }
+            format.html { redirect_to :action => 'download', :format => 'csv'}
+            format.csv { render :content_type => 'text/csv' }
         end
     end
     def show

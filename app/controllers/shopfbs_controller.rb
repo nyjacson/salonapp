@@ -1,11 +1,12 @@
 class ShopfbsController < ApplicationController
-    require 'dbexport'
     def index
         @shopfb = Shopfb.all
-
+    end
+    def download
+        @shopfb = Shopfb.all
         respond_to do |format|
-         format.html
-         format.csv { send_data @shopfb.to_csv }
+            format.html { redirect_to :action => 'download', :format => 'csv'}
+            format.csv { render :content_type => 'text/csv' }
         end
     end
     def show

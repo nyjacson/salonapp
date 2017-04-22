@@ -5,10 +5,12 @@ Rails.application.routes.draw do
   resources :shopinfos do
       collection do
           post :import
+          get 'download', to: 'shopinfos#download'
       end
       resources :shopbranches do
           collection do
               post :import
+              get 'download', to: 'shopbranches#download'
           end
       end
   end
@@ -39,11 +41,13 @@ Rails.application.routes.draw do
   resources :shopfbs do
       collection do
           post :import
+          get 'download', to: 'shopfbs#download'
       end
   end
   resources :articles do
       collection do
           post :import
+          get 'download', to: 'articles#download'
       end
   end
 
