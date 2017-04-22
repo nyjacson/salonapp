@@ -37,12 +37,14 @@ class ShopfbsController < ApplicationController
             render action: 'edit'
         end
     end
-    # import excel/csv ##
     def import
-        Shopfb.import(params[:file])
-        redirect_to shopfbs_path, notice: "レビューを追加しました"
+        if params[:csv_file].blank?
+            redirect_to(static_pages_admin_path, alert: 'インポートするCSVファイルを選択してください')
+        else
+            num = Shopfb.import(params[:csv_file])
+            redirect_to(shopfbs_path, notice: "#{num.to_s}件追加されました")
+        end
     end
-    # import excel/csv end ##
 
     private
         def feedback_params
