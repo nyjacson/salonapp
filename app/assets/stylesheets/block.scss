@@ -226,7 +226,7 @@
 .AdminPage {
     text-align: center;
     padding: 40px 10px;
-    label {
+    label,em {
         @include XS-font;
         font-weight: normal;
     }
