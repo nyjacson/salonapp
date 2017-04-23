@@ -33,6 +33,8 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem 'devise'
 
+gem 'meta-tags'
+
 gem 'seed_dump'
 #gem 'sqlite3'
 # 本番ではpostgressを使用する
