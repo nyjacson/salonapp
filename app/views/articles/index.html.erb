@@ -23,7 +23,6 @@
         <!-- layout-articleWrapper -->
         <% end %>
         <%= link_to "データを追加する", new_article_path, class: "btn btn-primary" %>
-        <%= link_to '戻る', static_pages_admin_path ,class: "btn btn-warning"%>
         <div class="CSV">
             <div class="c-table CSV__import">
                 <%= form_tag(import_articles_path, :method => :post, multipart: true) do %>

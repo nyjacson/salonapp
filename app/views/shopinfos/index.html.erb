@@ -14,7 +14,6 @@
                 </div>
             <% end %>
         <%= link_to "追加", new_shopinfo_path,class: "btn btn-primary" %>
-        <%= link_to '戻る', static_pages_admin_path ,class: "btn btn-warning"%>
         <div class="CSV">
             <div class="c-table CSV__import">
                 <%= form_tag(import_shopinfos_path, :method => :post, multipart: true) do %>
