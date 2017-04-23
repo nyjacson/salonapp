@@ -3,9 +3,6 @@
     padding-top: 50px;
     overflow-x: hidden;
     position: relative;
-    @include mq-sp{
-        padding-top: 0px;
-    }
     .layout-top-image {
         background: image-url("bk2.jpg") no-repeat;
         background-attachment: fixed;

@@ -226,24 +226,36 @@
 .AdminPage {
     text-align: center;
     padding: 40px 10px;
+    label {
+        @include XS-font;
+        font-weight: normal;
+    }
     &__contents {
         border: solid 1px #cccccc;
         text-align: left;
         margin: 0 auto;
-        width: 300px;
+        width: 320px;
         padding: 20px 10px 30px;;
+        @include mq-sp {
+            border: none;
+            width: 100%;
+            padding-top: 30px;
+        }
     }
+
     &__title {
         margin-bottom: 20px;
     }
     &__field {
         margin-bottom: 10px;
-        input {
-            width: 100%;
-        }
     }
     &__actions {
         margin-bottom: 15px;
+    }
+    &__otherlinks {
+        a {
+            @include XS-font;
+        }
     }
 }
 
@@ -291,4 +303,7 @@
 .ButtonCenter-wrapper {
     text-align: center;
     margin-bottom: 30px;
+    @include mq-sp {
+        margin-bottom: 20px;
+    }
 }
