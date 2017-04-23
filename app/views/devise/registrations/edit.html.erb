@@ -1,6 +1,6 @@
 <div class="AdminPage">
 <div class="AdminPage__contents">
-<h2 class=" AdminPage__field"><%= resource_name.to_s.humanize %>アカウント変更</h2>
+<h2 class=" AdminPage__field"><%= resource_name.to_s.humanize %>アカウントの変更</h2>
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
   <%= devise_error_messages! %>
