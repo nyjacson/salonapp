@@ -204,6 +204,7 @@
     }
     &--fixed{
         position: fixed;
+        top: 0;
         @include mq-sp {
             position: inherit;
         };
@@ -246,13 +247,26 @@
     }
 }
 
-.Credential {
+.LoggedIn {
+    padding: 10px;
     text-align: right;
-    padding: 15px 20px 0px;
-    &--loggedoff{
-        margin-bottom: 40px;
-        text-align: right;
-        padding: 15px 20px 0px;
+    background: $bk-middle-gray;
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    @include mq-sp {
+        display: block;
+        padding: 5px;
+    }
+    p {
+        margin-left: 10px;
+        @include mq-sp{
+            margin-left: 0;
+            margin-right: 5px;
+            &:nth-child(2), &:last-child{
+                display: inline-block;
+            }
+        }
     }
 }
 

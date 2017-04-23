@@ -12,6 +12,8 @@ class StaticPagesController < ApplicationController
   def toku2
   end
   def admin
-
+    if !admin_signed_in?
+      redirect_to new_admin_session_url
+    end
   end
 end
