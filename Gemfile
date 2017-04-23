@@ -35,6 +35,8 @@ gem 'devise'
 
 gem 'meta-tags'
 
+gem 'sitemap_generator'
+
 gem 'seed_dump'
 #gem 'sqlite3'
 # 本番ではpostgressを使用する
