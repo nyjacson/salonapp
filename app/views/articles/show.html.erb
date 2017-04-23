@@ -17,7 +17,7 @@
                 <div class="Article--side__contents">
                     <h2>関連記事</h2>
                     <ul>
-                        <% @articleAll.each do |a| %>
+                        <% @article_1_2.shuffle.first(15).each do |a| %>
                         <li class="Article--side__list">
                             <p><%= link_to a.title, a %></p>
                         </li>
@@ -25,9 +25,9 @@
                     </ul>
                 </div>
                 <div class="Article--side__contents">
-                    <h2>おすすめ記事</h2>
+                    <h2>お得な情報</h2>
                     <ul>
-                        <% @articleAll.each do |a| %>
+                        <% @article_3.shuffle.each do |a| %>
                         <li class="Article--side__list">
                             <p><%= link_to a.title, a %></p>
                         </li>

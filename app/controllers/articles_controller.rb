@@ -13,6 +13,8 @@ class ArticlesController < ApplicationController
     def show
         @article = Article.find(params[:id])
         @articleAll = Article.all
+        @article_1_2 = Article.find_by_sql(['select * from articles where category = :cat OR category = :cat2', {cat: 'something', cat2: 'beginner'}])
+        @article_3 = Article.find_by_sql(['select * from articles where category = :cat', {cat: 'campaign'}])
     end
     def new
         @article = Article.new
