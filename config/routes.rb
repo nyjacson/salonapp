@@ -37,6 +37,7 @@ Rails.application.routes.draw do
   get 'search/chugoku'
   get 'search/shikoku'
   get 'search/kyushu'
+  get 'admin', to: 'static_pages#admin'
 
   resources :shopfbs do
       collection do

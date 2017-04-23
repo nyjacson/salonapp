@@ -12,17 +12,17 @@
         </div>
         <div class="form-group">
             <%= f.label :category %>
+            <span>(something:脱毛あれこれ,beginner:初めての脱毛)</span>
             <%= f.text_field :category, class: 'form-control' %>
         </div>
         <div class="form-group">
             <%= f.label :picthum %>
+            <span>(assets/images/article配下に160px四方のImageを配置)</span>
             <%= f.text_field :picthum, class: 'form-control' %>
         </div>
 
         <br>
         <%= f.submit "情報更新", class: "btn btn-primary" %>
-        <!-- <div class="btn btn-warning">キャンセル</div> -->
-        <%= link_to '戻る', :back ,class: "btn btn-warning"%>
         <% end %>
         <br>
     </div>

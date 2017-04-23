@@ -23,21 +23,21 @@
         <!-- layout-articleWrapper -->
         <% end %>
         <%= link_to "データを追加する", new_article_path, class: "btn btn-primary" %>
-        <%= link_to '戻る', static_pages_admin_path ,class: "btn btn-warning"%>
-        <!-- # import/export excel/csv ## -->
         <div class="CSV">
-            <%= form_tag import_articles_path, multipart: true do %>
             <div class="c-table CSV__import">
-                <p class="c-table-cell CSV__label"><%= file_field_tag :file %></p>
-                <p class="c-table-cell"><%= submit_tag "Excelでインポート",class: "btn btn-default btn-sm" %></p>
+                <%= form_tag(import_articles_path, :method => :post, multipart: true) do %>
+                    <div class="CSV__import--select">
+                        <%= file_field_tag :csv_file %>
+                    </div>
+                    <div class="btn btn-default btn-sm">
+                        <%= submit_tag "CSVインポート", class: "" %>
+                    </div>     
+                <% end %>
             </div>
-            <% end %>
             <div class="c-table CSV__export">
                 <p class="c-table-cell"><%= link_to "CSV Download", download_articles_path(format: "csv"),class: "btn btn-default btn-sm" %></p>
             </div>
         </div>
         <!-- CSV -->
-        <!-- # import/export excel/csv End ## -->
-
     </div>
 </section>

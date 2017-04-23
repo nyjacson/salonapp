@@ -39,12 +39,14 @@ class ArticlesController < ApplicationController
         end
     end
 
-    # import excel/csv ##
     def import
-        Article.import(params[:file])
-        redirect_to articles_path, notice: "記事を追加しました"
+        if params[:csv_file].blank?
+            redirect_to(static_pages_admin_path, alert: 'インポートするCSVファイルを選択してください')
+        else
+            num = Article.import(params[:csv_file])
+            redirect_to(articles_path, notice: "#{num.to_s}件追加されました")
+        end
     end
-    # import excel/csv end ##
 
     private
         def article_params

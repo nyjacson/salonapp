@@ -45,12 +45,14 @@ class ShopbranchesController < ApplicationController
         Shopbranch.find(params[:id]).destroy
         redirect_to shopbranches_path
     end
-    # import excel/csv ##
     def import
-        Shopbranch.import(params[:file])
-        redirect_to shopbranches_path, notice: "商品を追加しました。"
+        if params[:csv_file].blank?
+            redirect_to(static_pages_admin_path, alert: 'インポートするCSVファイルを選択してください')
+        else
+            num = Shopbranch.import(params[:csv_file])
+            redirect_to(shopinfo_shopbranches_path, notice: "#{num.to_s}件追加されました")
+        end
     end
-    # import excel/csv end ##
     private
         def branch_params
             params.require(:shopbranch).permit(:shopinfo_id, :shopname, :branchname, :address, :tel, :starthour, :endhour, :e_starthour, :e_endhour, :holiday, :longitude,:latitude, :train, :station, :train2, :station2,:train3, :station3, :area, :prefec, :city,:access,:sheet,:info )

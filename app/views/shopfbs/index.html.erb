@@ -16,15 +16,16 @@
                 </div>
             <% end %>
         <%= link_to "追加", new_shopfb_path, class: "btn btn-primary" %>
-        <%= link_to '戻る', static_pages_admin_path ,class: "btn btn-warning"%>
         <div class="CSV">
             <div class="c-table CSV__import">
-            <%= form_tag(import_shopfbs_path, :method => :post, multipart: true) do %>
-                <div class="">
-                    <%= file_field_tag :csv_file %>
-                </div>
-                <%= submit_tag "CSVインポート", class: "btn btn-default btn-sm" %>
-            <% end %>
+                <%= form_tag(import_shopfbs_path, :method => :post, multipart: true) do %>
+                    <div class="CSV__import--select">
+                        <%= file_field_tag :csv_file %>
+                    </div>
+                    <div class="btn btn-default btn-sm">
+                        <%= submit_tag "CSVインポート", class: "" %>
+                    </div>
+                 <% end %>
             </div>
             <div class="c-table CSV__export">
                 <p class="c-table-cell"><%= link_to "CSV Download", download_shopfbs_path(format: "csv"),class: "btn btn-default btn-sm" %></p>

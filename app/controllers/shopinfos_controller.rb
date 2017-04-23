@@ -41,12 +41,14 @@ class ShopinfosController < ApplicationController
         Shopinfo.find(params[:id]).destroy
         redirect_to shopinfos_path
     end
-    # import excel/csv ##
     def import
-        Shopinfo.import(params[:file])
-        redirect_to shopinfos_path, notice: "インポート完了"
+        if params[:csv_file].blank?
+            redirect_to(static_pages_admin_path, alert: 'インポートするCSVファイルを選択してください')
+        else
+            num = Shopfb.import(params[:csv_file])
+            redirect_to(shopinfos_path, notice: "#{num.to_s}件追加されました")
+        end
     end
-    # import excel/csv end ##
 
     private
         def shop_params

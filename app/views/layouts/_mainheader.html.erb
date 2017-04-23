@@ -1,4 +1,13 @@
+<% if admin_signed_in? %>
+<div class="LoggedIn">    
+    <p>こんにちは <%= link_to current_admin.email, edit_admin_registration_path, :class => "navbar-link" %> さん</p>
+    <p><%= link_to 'システム管理', static_pages_admin_path %></p>
+    <p><%= link_to "ログアウト", destroy_admin_session_path, method: :delete, :class => "navbar-link" %>
+    </p>  
+</div>
+<% end %>
 <nav class="GlobalNav--wrapper">
+
       <ul class="GlobalNav">
         <li class="GlobalNav__menu"><%= link_to '美容脱毛比較.net', static_pages_home_path%></li>
         <li class="active GlobalNav__menu"><%= link_to 'トップ', static_pages_home_path %></li>
@@ -42,7 +51,6 @@
             <li><a href="#">One more separated link</a></li>
           </ul>
         </li>
-        <li class="GlobalNav__menu"><%= link_to 'システム管理', static_pages_admin_path %></li>
       </ul>
 
      <div class="Sitetitle--sp">
@@ -95,7 +103,6 @@
                     <li><a href="#">One more separated link</a></li>
                   </ul>
                 </li>
-                <li class="drawer-menu-item"><%= link_to 'システム管理', static_pages_admin_path %></li>
               </ul>
           </nav>
 

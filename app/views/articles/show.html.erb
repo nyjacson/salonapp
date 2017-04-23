@@ -3,13 +3,14 @@
         <div class="row">
             <div class="col-sm-8 Article">
                 <h1><%= @article.title %></h1>
-                <div class="Article__subtitle"><%= @article.updated_at %><span class="Article__subtitle--cat"><%= @article.category %></span></div>
+                <div class="Article__subtitle"><%= (@article.updated_at).strftime("%Y/%m/%d") %><span class="Article__subtitle--cat"><%= @article.category %></span></div>
                 <div class="Article__contents">
                     <%= sanitize(simple_format(@article.article), :tags => %w( h2 h3 br a img style)) %>
+                    <% if admin_signed_in? %>
                     <div class="Article__controller">
                         <%= link_to "Edit", edit_article_path(@article), class: "btn btn-primary" %>
-                        <%= link_to '戻る', :back ,class: "btn btn-warning"%><br>
                     </div>
+                    <% end %>
                 </div>
             </div>
             <div class="col-sm-4 Article--side">
