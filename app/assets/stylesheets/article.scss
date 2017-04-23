@@ -40,6 +40,26 @@
         border: solid 1px $border;
         padding: 20px;
         margin-bottom: 30px;
+        // spacial rule for article///////////
+        .a-bold {
+            font-weight: bold;
+        }
+        .a-h2 {
+            @include L-font;
+            font-weight: bold;
+            padding-top: 15px;
+            padding-bottom: 15px;
+            display: inline-block;
+        }
+        .a-h3 {
+            @include MB-font;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            display: inline-block;
+        }
+
+
+        // special rule for article End///////
         @include S-font;
         line-height: 2;
         @include mq-sp {
@@ -74,4 +94,10 @@
     .form-group {
         margin-bottom: 20px;
     }
+}
+.ArticleEditPage--desc {
+    padding: 10px 5px;
+    margin-bottom: 15px;
+    background: $bk-dark-gray;
+    border-radius: 3px;
 }
