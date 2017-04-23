@@ -18,10 +18,12 @@
         <div class="CSV">
             <div class="c-table CSV__import">
                 <%= form_tag(import_shopinfos_path, :method => :post, multipart: true) do %>
-                    <div class="">
+                    <div class="CSV__import--select">
                         <%= file_field_tag :csv_file %>
                     </div>
-                    <%= submit_tag "CSVインポート", class: "btn btn-default btn-sm" %>
+                    <div class="btn btn-default btn-sm">
+                        <%= submit_tag "CSVインポート", class: "" %>
+                    </div>                
                 <% end %>
             </div>
             <div class="c-table CSV__export">
