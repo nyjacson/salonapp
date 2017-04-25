@@ -37,6 +37,12 @@ Rails.application.routes.draw do
   get 'search/chugoku'
   get 'search/shikoku'
   get 'search/kyushu'
+  get 'search/chiba'
+  get 'search/kanagawa'
+  get 'search/tochigi'
+  get 'search/gunma'
+  get 'search/ibaraki'
+  get 'search/saitama'
   get 'admin', to: 'static_pages#admin'
 
   resources :shopfbs do
