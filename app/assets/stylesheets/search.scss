@@ -27,6 +27,15 @@
     }
     .List {
         margin-bottom: 40px;
+        &__empty {
+            p {
+                @include M-font;
+                margin-bottom: 10px;
+            }
+            @include M-font;
+            padding: 20px 3px;
+
+        }
     }
     .List__table {
         display: table;

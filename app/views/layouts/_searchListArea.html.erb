@@ -10,4 +10,10 @@
             <div class="List__table-cell"><%= link_to "店舗詳細", shopinfo_shopbranch_path(s.shopinfo_id, s) ,class: "c-button-a" %></div>
     </div>
     <% end %>
+    <% if @area.empty? then %>
+        <div class="List__empty">
+            <p>該当エリアにご紹介が可能なお店がありませんでした。条件を変更して再度検索して下さい。</p>
+            <%= link_to "トップページへ", root_path %>
+        </div>
+    <% end %>
 </div>
