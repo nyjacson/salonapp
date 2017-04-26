@@ -37,6 +37,9 @@ gem 'meta-tags'
 
 gem 'sitemap_generator'
 
+gem "hypernova"
+gem "browserify-rails"
+
 gem 'seed_dump'
 #gem 'sqlite3'
 # 本番ではpostgressを使用する

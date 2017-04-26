@@ -44,6 +44,7 @@ Rails.application.routes.draw do
   get 'search/ibaraki'
   get 'search/saitama'
   get 'admin', to: 'static_pages#admin'
+  get 'welcome', to: 'welcome#index'
 
   resources :shopfbs do
       collection do
