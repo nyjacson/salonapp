@@ -199,6 +199,12 @@
             margin: -11px 0 0 0;
             background-color: #ddd;
         }
+        &:last-child{
+            .dropdown-menu {
+                right: 0;
+                left: inherit;
+            }
+        }
     }
     .dropdown:hover > .dropdown-menu{
         display: block;

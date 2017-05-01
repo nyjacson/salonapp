@@ -17,7 +17,6 @@ table, caption, tbody, tfoot, thead, tr, th, td {
   padding: 0;
   border: 0;
   outline: 0;
-  font-size: 100%;
   vertical-align: baseline;
   background: transparent;
 }
@@ -76,13 +75,26 @@ h1{
     @include mq-sp{
         font-size: 22px;
     };
+     > a {
+    @include LL-font;
+    @include mq-sp{
+        font-size: 22px;
+        };    
+    }
 }
+
 h2{
     @include L-font;
     color: $primary-text;
     @include mq-sp{
         font-size: 18px;
     };
+    > a {
+    @include L-font;
+    @include mq-sp{
+        font-size: 18px;
+        };    
+    }
 }
 h3{
     @include M-font;
@@ -90,6 +102,12 @@ h3{
     @include mq-sp{
         font-size: 15px;
     };
+    > a {
+        @include M-font;
+        @include mq-sp{
+            font-size: 15px;
+        };
+    }
 }
 h4{
     @include MB-font;
@@ -97,6 +115,12 @@ h4{
     @include mq-sp{
         font-size: 15px;
     };
+    > a {
+        @include MB-font;
+        @include mq-sp{
+            font-size: 15px;
+        };
+    }
 }
 p{
     @include S-font;
@@ -107,6 +131,18 @@ p{
     .textStrong{
         font-size: 20px;
     }
+    > a {
+        @include S-font;
+        @include mq-sp{
+            font-size: 13px;
+        };
+        .textStrong{
+            font-size: 20px;
+        }
+    }
+}
+ul, li, a, span, div {
+    font-size: 14px;
 }
 
 input[type="submit"],
