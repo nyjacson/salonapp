@@ -1,5 +1,5 @@
 class ArticlesController < ApplicationController
-
+    before_action :authenticate_admin!, except: [:show]
     def index
         @article = Article.all
     end
