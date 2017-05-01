@@ -43,7 +43,8 @@
     }
     .ele-areanameWrapper {
         position: absolute;
-        top: 60px;
+        top: 55px;
+        padding-top: 5px;
         left: 0px;
         overflow: hidden;
         ul {
@@ -59,16 +60,19 @@
                 text-align: right;
             }
             span {
-                cursor: pointer;
                 display: inline-block;
                 background: $op-button;
-                padding: 7px 10px;
-                border-radius: 3px;
+                border-radius: 12px;
                 &:hover {
-                    background: $op-h-button;
+                    animation: motion-button 0.4s ease-in-out;
+                    a {
+                        text-decoration: none;
+                    }
                 }
                 a {
                     color: inherit;
+                    padding: 7px 10px;
+                    display: block;
                 }
             }
         }

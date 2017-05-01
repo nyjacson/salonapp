@@ -1,7 +1,7 @@
 jQuery(function($) {
     function topImage(){
         var all = $("#ele-map-all")
-        var kanto = $("#kanto")
+        var kanto = $("#kanto span")
         var hokkaido = $("#hokkaido")
         var tohoku = $("#tohoku")
         var chubu = $("#chubu")
@@ -9,8 +9,8 @@ jQuery(function($) {
         var kansai = $("#kansai")
         var kyushu = $("#kyushu")
         var shikoku = $("#shikoku")
-        var tokyo = $("#tokyo")
-        var back = $(".backTop")
+        var tokyo = $("#tokyo span")
+        var back = $(".backTop span")
 
         var allArea = $(".ele-areanameWrapper")
         var kantoArea = $("#ele-map-kanto")
@@ -31,9 +31,6 @@ jQuery(function($) {
 
     }
     topImage();
-
-
-
 
     $("#gmap3_1").gmap3({  // 地図の表示 ... （3）
           latitude: 35.6988,
