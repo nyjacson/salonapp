@@ -134,8 +134,8 @@
     position: relative;
     .Sitetitle--sp{
         display: none;
-        top: 14px;
-        left: 60px;
+        top: 7px;
+        left: 55px;
         position: absolute;
         z-index: 10;
         @include mq-sp{
@@ -159,11 +159,14 @@
             text-decoration: none;
             cursor: pointer;
             height: 53px;
-            color: $primary-text;
+            color: $primary;
             padding-right: 30px;
             padding-left: 30px;
             vertical-align: middle;
             display: table-cell;
+            &:first-child {
+                padding-left: 10px;
+            }
             &:hover {
                 text-decoration: underline;
             }
