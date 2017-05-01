@@ -25,6 +25,9 @@
         padding: 10px 10px;
         flex-direction: row;
         width: 32%;
+        &:hover {
+            border: solid 1px darken($border, 10% );
+        }
         @include mq-sp{
             margin-bottom: 10px;
             width: 100%;
@@ -70,7 +73,9 @@
             };
             border: solid 1px $border;
             background: $bk-middle-gray;
-
+            &:hover {
+                border: solid 1px darken($border, 10%);
+            }
         }
     }
     &__name{
