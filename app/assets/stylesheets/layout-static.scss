@@ -43,7 +43,8 @@
     }
     .ele-areanameWrapper {
         position: absolute;
-        top: 60px;
+        top: 55px;
+        padding-top: 5px;
         left: 0px;
         overflow: hidden;
         ul {
@@ -59,16 +60,19 @@
                 text-align: right;
             }
             span {
-                cursor: pointer;
                 display: inline-block;
                 background: $op-button;
-                padding: 7px 10px;
-                border-radius: 3px;
+                border-radius: 12px;
                 &:hover {
-                    background: $op-h-button;
+                    animation: motion-button 0.4s ease-in-out;
+                    a {
+                        text-decoration: none;
+                    }
                 }
                 a {
                     color: inherit;
+                    padding: 7px 10px;
+                    display: block;
                 }
             }
         }
@@ -86,6 +90,7 @@
     .layout-searchtypeWrapper {
         margin-bottom: 20px;
         ul {
+            overflow: hidden;
             list-style-type: none;
             margin: 0;
             padding: 0 10px;
@@ -93,21 +98,122 @@
             @include mq-sp{
                 padding: 0px;
             };
+            .Roll__menu {
+                position: relative;
+                perspective: 500px;
+                -webkit-perspective: 500px;
+                -moz-perspective: 500px;
+                                color: $link-color;
+            }
+
+            .Roll__menu > div {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                border: 1px solid $border;
+                display: inline-block;
+                padding-left: 10px;
+                padding-right: 10px;
+                @include S-font;
+                @include ellipsis;
+                line-height: 40px;
+            }
+
+            .Roll__menu div:nth-child(1) {
+                transform: rotateX(90deg);
+                -webkit-transform: rotateX(90deg);
+                -moz-transform: rotateX(90deg);
+                transition: all 0.2s ease;
+                -webkit-transition: all 0.2s ease;
+                -moz-transition: all 0.2s ease;
+                transform-origin: 50% 50% -25px;
+                -webkit-transform-origin: 50% 50% -25px;
+                -moz-transform-origin: 50% 50% -25px;
+                background: $primary;
+                border: 1px solid $primary;
+                a {
+                color: #ffffff;
+                width: 100%;
+                height: 100%;
+                display: inline-block;
+                }
+            }
+
+            .Roll__menu div:nth-child(2) {
+                transform: rotateX(0deg);
+                -webkit-transform: rotateX(0deg);
+                -moz-transform: rotateX(0deg);
+                transition: all 0.2s ease;
+                -webkit-transition: all 0.2s ease;
+                -moz-transition: all 0.2s ease;
+                transform-origin: 50% 50% -25px;
+                -webkit-transform-origin: 50% 50% -25px;
+                -moz-transform-origin: 50% 50% -25px;
+            }
+
+            .Roll__menu:hover div:nth-child(1) {
+                transition: all 0.2s ease;
+                -webkit-transition: all 0.2s ease;
+                -moz-transition: all 0.2s ease;
+                transform: rotateX(0deg);
+                -webkit-transform: rotateX(0deg);
+                -moz-transform: rotateX(0deg);
+            }
+
+            .Roll__menu:hover div:nth-child(2) {
+                transition: all 0.2s ease;
+                -webkit-transition: all 0.2s ease;
+                -moz-transition: all 0.2s ease;
+                transform: rotateX(-90deg);
+                -webkit-transform: rotateX(-90deg);
+                -moz-transform: rotateX(-90deg);
+            }
+            .ToRight{
+                &__menu{
+                    position: relative;
+                    overflow: hidden;
+                    z-index: 1;
+                    a {
+                        width: 100%;
+                        height: 100%;
+                        border: 1px solid $border;
+                        display: inline-block;
+                        padding-left: 10px;
+                        padding-right: 10px;
+                        @include S-font;
+                        @include ellipsis;
+                        line-height: 40px;
+                    }
+                    &:before {
+                        content: '';
+                        position: absolute;
+                        bottom: 0;
+                        left: 0;
+                        width: 0%;
+                        height: 100%;
+                        background-color: $primary;
+                        transition: all .2s;
+                        z-index: -1;
+                    }
+                    &:hover {
+                        a {
+                            color: #fff;
+                            border: 1px solid $primary;
+                        }
+                        &:before {
+                            width: 100%;
+                        }
+                    }
+                }
+            }
             li {
                 text-align: left;
                 height: 40px;
                 line-height: 40px;
                 margin-bottom: 5px;
                 transition: all 0.2s;
-                &:hover {
-                    background: $bk-middle-gray;
-                }
+                overflow: hidden;
                 a {
-                    width: 100%;
-                    border: 1px solid $border;
-                    // border-radius: 3px;
-                    display: inline-block;
-                    padding-left: 20px;
                     &:hover {
                         text-decoration: none;
                     }
@@ -123,6 +229,8 @@
             padding: 0 0 0 10px;
             li {
                 margin-bottom: 10px;
+                padding-top: 2px;
+                padding-bottom: 2px;
             }
         }
     }

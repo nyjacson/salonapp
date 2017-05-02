@@ -25,6 +25,9 @@
         padding: 10px 10px;
         flex-direction: row;
         width: 32%;
+        &:hover {
+            border: solid 1px darken($border, 10% );
+        }
         @include mq-sp{
             margin-bottom: 10px;
             width: 100%;
@@ -70,12 +73,14 @@
             };
             border: solid 1px $border;
             background: $bk-middle-gray;
-
+            &:hover {
+                border: solid 1px darken($border, 10%);
+            }
         }
     }
     &__name{
-        margin-bottom: 5px;
-        @include L-font;
+        margin-bottom: 10px;
+        font-size: 18px;
     }
     &__company{
         margin-bottom: 5px;
@@ -134,8 +139,8 @@
     position: relative;
     .Sitetitle--sp{
         display: none;
-        top: 14px;
-        left: 60px;
+        top: 7px;
+        left: 55px;
         position: absolute;
         z-index: 10;
         @include mq-sp{
@@ -159,11 +164,14 @@
             text-decoration: none;
             cursor: pointer;
             height: 53px;
-            color: $primary-text;
+            color: $primary;
             padding-right: 30px;
             padding-left: 30px;
             vertical-align: middle;
             display: table-cell;
+            &:first-child {
+                padding-left: 10px;
+            }
             &:hover {
                 text-decoration: underline;
             }
@@ -190,6 +198,12 @@
             height: 22px;
             margin: -11px 0 0 0;
             background-color: #ddd;
+        }
+        &:last-child{
+            .dropdown-menu {
+                right: 0;
+                left: inherit;
+            }
         }
     }
     .dropdown:hover > .dropdown-menu{

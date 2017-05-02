@@ -15,8 +15,8 @@ $bk-middle-gray: #F5F5F5;
 $bk-light-gray: #FAFAFA;
 $bk-white: #ffffff;
 
-$op-button: transparentize($bk-dark-gray, 0);
-$op-h-button: transparentize($bk-dark-gray, 0.4);
+$op-button: transparentize($bk-dark-gray, 0.3);
+$op-h-button: transparentize($bk-dark-gray, 0);
 
 
 //mixins area
@@ -63,25 +63,25 @@ $op-h-button: transparentize($bk-dark-gray, 0.4);
 @mixin caption-font{
 	color: #666666;
 	font-size: 11px;
-	font-size: 1.1rem;
+	// font-size: 1.1rem;
 }
 
 @mixin error-font{
 	color: #BF0000;
 	font-size: 13px;
-	font-size: 1.3rem;
+	// font-size: 1.3rem;
 	font-weight: bold;
 }
 
 @mixin hotel-name{
 	color: #1D54A7;
 	font-size: 16px;
-	font-size: 1.6rem;
+	// font-size: 1.6rem;
 }
 
 @mixin sp-icon-font {
 	font-size: 28px;
-	font-size: 2.8rem;
+	// font-size: 2.8rem;
 }
 
 @mixin mq-sp(){
@@ -98,7 +98,46 @@ $op-h-button: transparentize($bk-dark-gray, 0.4);
 @mixin transition{
     transition: all 0.1s linear;
 }
+@mixin Animation_transition {
+	transition: all 0.5s ease;
+}
 
 @mixin boxshadow {
         box-shadow: 0 2px 5px rgba(0,0,0,.26);
+}
+
+@keyframes motion-button {
+	0%, 100% { 
+		transform: scale(1, 1);
+	}
+	40% { 
+		transform: scale(1.2, 1.2);
+	}
+	75% { 
+		transform: scale(0.9, 0.9);
+	}
+}
+
+@keyframes motion-ripple {
+    from {
+        opacity: 0.5;
+    }
+    to {
+        transform: scale(100);
+        opacity: 0;
+    }
+}
+.js-rippleElement {
+	position: absolute;
+	border-radius: 50%;
+	transform:scale(1);
+	background: $accent;
+	z-index: 10;
+	width: 10px;
+	height: 10px;
+	top: 10px;
+	left: 20px;
+}
+.js-is-show {
+	animation: motion-ripple 0.4s ease-in-out;
 }

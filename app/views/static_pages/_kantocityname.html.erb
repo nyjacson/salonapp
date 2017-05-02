@@ -1,7 +1,7 @@
 <div class="ele-areanameWrapper" id="ele-map-all">
     <ul>
         <li id="hokkaido">
-            <span><%= link_to '北海道', search_hokkaido_path %></span>
+            <span class="motion-button"><%= link_to '北海道', search_hokkaido_path %></span>
         </li>
         <li id="tohoku">
             <span><%= link_to '東北', search_tohoku_path %></span>
@@ -12,7 +12,7 @@
             <span><%= link_to '中部', search_chubu_path %></span>
         </li>
         <li id="kanto">
-            <span>関東</span>
+            <span><a href="javascript:void(0)">関東</a></span>
         </li>
     </ul>
     <ul>
@@ -35,7 +35,7 @@
 
 <div class="ele-areanameWrapper" id="ele-map-kanto">
     <ul>
-        <li id="tokyo"><span>東京</span></li>
+        <li id="tokyo"><span><a href="javascript:void(0)">東京</a></span></li>
         <li id="chiba"><span><%= link_to '千葉', search_chiba_path %></span></li>
     </ul>
     <ul>
@@ -48,7 +48,7 @@
     </ul>
     <ul>
         <li id="saitama"><span><%= link_to '埼玉', search_saitama_path %></span></li>
-        <li class="backTop"><span>戻る</span></li>
+        <li class="backTop"><span><a href="javascript:void(0)">戻る</a></span></li>
     </ul>
 </div>
 <div class="ele-areanameWrapper" id="ele-map-tokyo">
@@ -57,6 +57,6 @@
         <li><span><%= link_to '23区以外', search_tokyo2_path %></span></li>
     </ul>
     <ul>
-        <li class="backTop"><span>戻る</span></li>
+        <li class="backTop"><span><a href="javascript:void(0)">戻る</a></span></li>
     </ul>
 </div>

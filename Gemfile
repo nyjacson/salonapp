@@ -37,6 +37,9 @@ gem 'meta-tags'
 
 gem 'sitemap_generator'
 
+gem "hypernova"
+gem "browserify-rails"
+
 gem 'seed_dump'
 #gem 'sqlite3'
 # 本番ではpostgressを使用する
@@ -56,6 +59,8 @@ group :development do
   gem 'web-console', '~> 2.0'
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
+  gem 'hirb' 
+  gem 'hirb-unicode'
 end
 
 

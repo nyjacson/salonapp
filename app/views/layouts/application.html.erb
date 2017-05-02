@@ -4,8 +4,8 @@
   <title><%= full_title(yield(:title)) %></title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBudW2ULqTKZGDdgSBUv9QVp5clCV4n-lk"></script>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
   <%= display_meta_tags reverse: true %>
 </head>
@@ -15,6 +15,7 @@
 <%= yield %>
 </div>
 <%= render 'layouts/mainfooter' %>
+
 
 </body>
 </html>
