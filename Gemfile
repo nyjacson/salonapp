@@ -36,7 +36,7 @@ gem 'devise'
 gem 'meta-tags'
 
 gem 'sitemap_generator'
-
+gem 'sqlite3'
 gem "hypernova"
 gem "browserify-rails"
 
@@ -48,7 +48,6 @@ gem 'capistrano-bundler'
 gem 'capistrano-rbenv', "~> 2.0"   
 
 group :development, :test do
-  gem 'sqlite3'
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
 end
