@@ -17,8 +17,21 @@ test:
   <<: *default
   database: db/test.sqlite3
 
-production:
-  <<: *default
+staging:
   adapter: postgresql
-  database: db/production.pg
+  database: staging
+  pool: 5
   encoding: utf8
+  username: postgres
+  password: uxxYxv0jtu
+  timeout: 5000
+
+production:
+  adapter: postgresql
+  database: production
+  pool: 5
+  encoding: utf8
+  username: postgres
+  password: uxxYxv0jtu
+  timeout: 5000
+  
