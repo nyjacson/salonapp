@@ -41,6 +41,7 @@ gem "hypernova"
 gem "browserify-rails"
 
 gem 'seed_dump'
+gem 'unicorn'
 #gem 'sqlite3'
 # 本番ではpostgressを使用する
 group :development, :test do
