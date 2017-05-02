@@ -50,7 +50,7 @@ group :development, :test do
   gem 'byebug'
 end
 
-group :production do
+group :staging, :production do
   gem 'pg'
   gem 'rails_12factor', '0.0.2'
 end
