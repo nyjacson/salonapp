@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
   
   # set config
-  listen "localhost:3000"
+  listen "/var/www/rails/salonapp/tmp/sockets/.unicorn.sock"
   pid "tmp/pids/unicorn.pid"
   worker_processes 2
   timeout 15
