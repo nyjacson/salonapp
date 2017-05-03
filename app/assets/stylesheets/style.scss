@@ -1,8 +1,7 @@
-@import "partials/*";
+@import "partials/set";
+@import "partials/component";
 @import "base.scss";
-// @import "common-block.scss";
-@import "bootstrap.scss";
-// @import "module.scss";
+// @import "bootstrap.scss";
 @import "shopinfos.scss";
 @import "shopbranch.scss";
 @import "shopfb.scss";
@@ -10,6 +9,5 @@
 @import "admin.scss";
 @import "article.scss";
 @import "layout-static.scss";
-// @import "ele-static.scss";
 @import "campaign.scss";
 @import "block.scss";
