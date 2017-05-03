@@ -127,17 +127,3 @@ $op-h-button: transparentize($bk-dark-gray, 0);
         opacity: 0;
     }
 }
-.js-rippleElement {
-	position: absolute;
-	border-radius: 50%;
-	transform:scale(1);
-	background: $accent;
-	z-index: 10;
-	width: 10px;
-	height: 10px;
-	top: 10px;
-	left: 20px;
-}
-.js-is-show {
-	animation: motion-ripple 0.4s ease-in-out;
-}

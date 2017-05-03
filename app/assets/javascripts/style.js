@@ -18,25 +18,5 @@ jQuery(document).ready(function($) {
         }
     })
 
-    function motionRipple(){
-        var $rippleElement = $("<span></span>", {class: 'js-rippleElement'});
-        var $clickable = $('.js-Motion-ripple');
-        $rippleElement.appendTo($clickable);
-        $clickable.on('mouseenter', function(e){
-            var _self = this;
-            var $effect = $(_self).find('.js-rippleElement');
-
-            if (!$effect.hasClass('js-is-show')) {
-            $effect.addClass('js-is-show');
-            setTimeout(function() {
-                $effect.removeClass('js-is-show');
-                // console.log("timeout");
-            }, 400);
-        }
-        return false;
-
-        });
-    }
-    motionRipple();
 
 });
