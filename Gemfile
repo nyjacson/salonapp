@@ -39,7 +39,7 @@ gem 'sitemap_generator'
 gem 'sqlite3'
 gem "hypernova"
 gem "browserify-rails"
-
+gem "sprockets-rails"
 gem 'seed_dump'
 gem 'unicorn'
 gem 'capistrano', '~> 3.1.0'
