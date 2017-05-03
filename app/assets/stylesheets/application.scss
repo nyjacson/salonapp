@@ -12,9 +12,16 @@
  *
  */
 
-@import "style.scss";
-@import "drawer.scss";
+// @import "style.scss";
+// @import "drawer.scss";
 // @import "bootstrap.scss";
 
-@import "bootstrap-sprockets";
-@import "bootstrap";
+// @import "bootstrap-sprockets";
+// @import "bootstrap";
+
+/*
+ * = require_self
+ * = require style
+ * = require drawer
+ * = require bootstrap
+ */

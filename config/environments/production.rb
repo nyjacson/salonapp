@@ -39,7 +39,9 @@ Rails.application.configure do
   config.assets.digest = false
 
   # `config.assets.precompile` and `config.assets.version` have moved to config/initializers/assets.rb
-  config.assets.precompile = ['*.js', 'style.scss', 'drawer.scss', 'bootstrap.scss', '*.jpg', '*.svg']
+  config.assets.precompile += %w( application.js )
+    config.assets.precompile += %w( application.scss )
+  # ['application.js', 'application.scss', '*.jpg', '*.svg']
   # Specifies the header that your server uses for sending files.
   # config.action_dispatch.x_sendfile_header = 'X-Sendfile' # for Apache
   # config.action_dispatch.x_sendfile_header = 'X-Accel-Redirect' # for NGINX
