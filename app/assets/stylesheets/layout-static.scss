@@ -5,11 +5,9 @@
     overflow-x: hidden;
     position: relative;
     .layout-top-image {
-        background: image-url("bk2.jpg") no-repeat;
+        background: url("/images/bk2.jpg") no-repeat;
         background-attachment: fixed;
-        // background-size: cover;
         background-position: center -100px;
-        // background-color: #cccccc;
         height: 200px;
         min-width: 1100px;
     }
@@ -34,7 +32,7 @@
 
     .layout-mapWrapper {
         text-align: center;
-        background: image-url("MAP.svg") no-repeat;
+        background: url("/images/MAP.svg") no-repeat;
         background-position: center;
         background-size: 200px auto;
         height: 220px;

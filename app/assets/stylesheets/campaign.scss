@@ -24,7 +24,7 @@
 
     .layout-top {
         padding-top: 30px;
-        background: image-url("bk-floral.svg") no-repeat;
+        background: url("/images/bk-floral.svg") no-repeat;
         background-size: 950px auto;
         height: 100px;
         &>h1 {
@@ -79,7 +79,7 @@
 }
 
 .Tokushu2 {
-    background: image-url("color-dot.svg");
+    background: url("/images/color-dot.svg");
     background-attachment:fixed;
     .container {
         padding: 30px;
