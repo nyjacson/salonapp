@@ -16,8 +16,7 @@ class ArticlesController < ApplicationController
         @article_1_2 = Article.find_by_sql(['select * from articles where category = :cat OR category = :cat2 OR category = :cat3', {cat:'脱毛あれこれ' ,cat2: '脱毛マスター', cat3: '脱毛入門'}])
         @article_3 = Article.find_by_sql(['select * from articles where category = :cat', {cat: 'キャンペーン'}])
         @desc = @article.article[0, 80]
-        prepare_meta_tags(title: @article.title)
-        prepare_meta_tags(description: '脱毛に関する疑問やお悩みは脱毛レスキューにおまかせ下さい。サロン選びに役立つ情報から某サロンの口コミ、キャンペーン情報を豊富に掲載しています。'+ '「' + @article.title + '」 ' + @desc)
+        prepare_meta_tags(title: @article.title, description: '脱毛に関する疑問やお悩みは脱毛レスキューにおまかせ下さい。サロン選びに役立つ情報から某サロンの口コミ、キャンペーン情報を豊富に掲載しています。'+ '「' + @article.title + '」 ' + @desc)
     end
     def new
         @article = Article.new
