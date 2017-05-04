@@ -1,6 +1,6 @@
 module ApplicationHelper
     def full_title(page_title = '')
-        base_title = '美容脱毛比較.net'
+        base_title = '脱毛レスキュー'
         if page_title.empty?
             base_title
         else
