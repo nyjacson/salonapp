@@ -97,77 +97,7 @@
             @include mq-sp{
                 padding: 0px;
             };
-            .Roll__menu {
-                position: relative;
-                perspective: 500px;
-                -webkit-perspective: 500px;
-                -moz-perspective: 500px;
-                                color: $link-color;
-            }
-
-            .Roll__menu > div {
-                position: absolute;
-                width: 100%;
-                height: 100%;
-                border: 1px solid $border;
-                display: inline-block;
-                padding-left: 10px;
-                padding-right: 10px;
-                @include S-font;
-                @include ellipsis;
-                line-height: 40px;
-            }
-
-            .Roll__menu div:nth-child(1) {
-                transform: rotateX(90deg);
-                -webkit-transform: rotateX(90deg);
-                -moz-transform: rotateX(90deg);
-                transition: all 0.2s ease;
-                -webkit-transition: all 0.2s ease;
-                -moz-transition: all 0.2s ease;
-                transform-origin: 50% 50% -25px;
-                -webkit-transform-origin: 50% 50% -25px;
-                -moz-transform-origin: 50% 50% -25px;
-                background: $primary;
-                border: 1px solid $primary;
-                a {
-                color: #ffffff;
-                width: 100%;
-                height: 100%;
-                display: inline-block;
-                }
-            }
-
-            .Roll__menu div:nth-child(2) {
-                transform: rotateX(0deg);
-                -webkit-transform: rotateX(0deg);
-                -moz-transform: rotateX(0deg);
-                transition: all 0.2s ease;
-                -webkit-transition: all 0.2s ease;
-                -moz-transition: all 0.2s ease;
-                transform-origin: 50% 50% -25px;
-                -webkit-transform-origin: 50% 50% -25px;
-                -moz-transform-origin: 50% 50% -25px;
-            }
-
-            .Roll__menu:hover div:nth-child(1) {
-                transition: all 0.2s ease;
-                -webkit-transition: all 0.2s ease;
-                -moz-transition: all 0.2s ease;
-                transform: rotateX(0deg);
-                -webkit-transform: rotateX(0deg);
-                -moz-transform: rotateX(0deg);
-            }
-
-            .Roll__menu:hover div:nth-child(2) {
-                transition: all 0.2s ease;
-                -webkit-transition: all 0.2s ease;
-                -moz-transition: all 0.2s ease;
-                transform: rotateX(-90deg);
-                -webkit-transform: rotateX(-90deg);
-                -moz-transform: rotateX(-90deg);
-            }
-            .ToRight{
+            .ToRight, .ToBottom{
                 &__menu{
                     position: relative;
                     overflow: hidden;
@@ -186,25 +116,45 @@
                     &:before {
                         content: '';
                         position: absolute;
-                        bottom: 0;
+                        top: 0;
                         left: 0;
                         width: 0%;
-                        height: 100%;
+                        height: 0;
                         background-color: $primary;
                         transition: all .2s;
                         z-index: -1;
                     }
-                    &:hover {
-                        a {
-                            color: #fff;
-                            border: 1px solid $primary;
+                    @include mq-pc {
+                        &:hover {
+                            a {
+                                color: #fff;
+                                border: 1px solid $primary;
+                            }
+                            &:before {
+                                width: 100%;
+                                height: 100%;
+                            }
                         }
-                        &:before {
-                            width: 100%;
+                    }
+
+                }
+            }
+            .ToBottom {
+                &__menu {
+                    &:before {
+                        height: 0%;
+                        width: 100%;
+                    }
+                    @include mq-pc {
+                        &:hover {
+                            &:before {
+                                height: 100%;
+                            }
                         }
                     }
                 }
             }
+
             li {
                 text-align: left;
                 height: 40px;

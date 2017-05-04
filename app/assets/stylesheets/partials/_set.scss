@@ -89,6 +89,11 @@ $op-h-button: transparentize($bk-dark-gray, 0);
         @content;
     }
 }
+@mixin mq-pc(){
+    @media only screen and (min-width: 744px){
+        @content;
+    }
+}
 @mixin ellipsis{
 	overflow: hidden;
 	white-space: nowrap;
