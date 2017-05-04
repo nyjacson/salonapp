@@ -29,12 +29,12 @@ module MetaTaggable
         site_name: site,
         type: 'article',
       },
-      twitter: {
-        card: 'summary',
-        site: '@simpliejp',
-        title: title.presence || site,
-        description: description,
-      }
+      # twitter: {
+      #   card: 'summary',
+      #   site: '@simpliejp',
+      #   title: title.presence || site,
+      #   description: description,
+      # }
     }
 
     options.reverse_merge!(defaults)
