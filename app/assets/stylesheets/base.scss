@@ -65,7 +65,7 @@ table {
 a{
     color: $link-color;
     text-decoration: none;
-    -webkit-tap-highlight-color:rgba(0,0,0,0);
+    -webkit-tap-highlight-color:rgba($primary, 0.2);
     @include transition;
     &:hover{
         text-decoration: underline;

@@ -20,7 +20,7 @@
     h1 {
         margin-bottom: 20px;
         position: absolute;
-        top: 90px;
+        top: 70px;
         @include mq-sp{
             top: 70px;
         };
@@ -162,6 +162,9 @@
                 margin-bottom: 5px;
                 transition: all 0.2s;
                 overflow: hidden;
+                @include mq-sp {
+                    margin-bottom: 10px;
+                }
                 a {
                     &:hover {
                         text-decoration: none;
@@ -172,7 +175,9 @@
     }
     .layout-contentslistWrapper {
         margin-bottom: 20px;
-        // height: 220px;
+        @include mq-sp {
+            margin-bottom: 25px;
+        }
         ul {
             list-style: none;
             padding: 0 0 0 10px;
@@ -180,6 +185,9 @@
                 margin-bottom: 10px;
                 padding-top: 2px;
                 padding-bottom: 2px;
+                @include mq-sp {
+                    margin-bottom: 15px;
+                }
             }
         }
     }
