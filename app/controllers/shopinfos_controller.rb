@@ -13,6 +13,7 @@ class ShopinfosController < ApplicationController
     def show
         @shopinfo = Shopinfo.find(params[:id])
         @shopfbs = Shopfb.find(params[:id])
+        prepare_meta_tags(title: @shopinfo.shopname)
     end
     def new
         @shopinfo = Shopinfo.new

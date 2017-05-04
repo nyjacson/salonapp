@@ -13,6 +13,7 @@ class ShopfbsController < ApplicationController
     def show
         @shopinfo = Shopinfo.find(params[:id])
         @shopfb = Shopfb.find_by_sql(['SELECT * FROM shopfbs where shopinfo_id = ?', params[:id]])
+        prepare_meta_tags(title: @shopinfo.shopname + 'の口コミ')
     end
     def new
         @shopfb = Shopfb.new

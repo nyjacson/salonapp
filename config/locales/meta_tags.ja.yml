@@ -1,0 +1,38 @@
+ja:
+  meta_tags:
+    base:
+      site: 脱毛レスキュー
+      description: 脱毛に関する疑問やお悩みは脱毛レスキューにおまかせ下さい。サロン選びに役立つ情報から某サロンの口コミ、キャンペーン情報を豊富に掲載しています。
+      keywords: 
+       - 脱毛
+       - 脱毛サロン
+       - 美容
+       - エステサロン
+       - 東京
+    titles:
+      static_pages:
+        home: あなたに合った脱毛サロンを検索しよう
+        toku1: 話題の脱毛サロンから探す
+        toku2: 老舗の脱毛サロンから探す
+        admin: システム管理
+      search:
+        tokyo1: 東京23区内の脱毛サロン
+        tokyo2: 東京23区外の脱毛サロン
+        ginza: 銀座の脱毛サロン
+        shinjuku: 新宿の脱毛サロン
+        shibuya: 渋谷の脱毛サロン
+        ikebukuro: 池袋の脱毛サロン
+        hokkaido: 北海道の脱毛サロン
+        tohoku: 東北エリアの脱毛サロン
+        kanto: 関東エリアの脱毛サロン
+        chubu: 中部エリアの脱毛サロン
+        kansai: 関西エリアの脱毛サロン
+        chugoku: 中国エリアの脱毛サロン
+        shikoku: 四国エリアの脱毛サロン
+        kyushu: 九州エリアの脱毛サロン
+        chiba: 千葉の脱毛サロン
+        kanagawa: 神奈川の脱毛サロン
+        tochigi: 栃木の脱毛サロン
+        gunma: 群馬の脱毛サロン
+        ibaraki: 茨城の脱毛サロン
+        saitama: 埼玉の脱毛サロン

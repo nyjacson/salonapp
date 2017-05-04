@@ -15,6 +15,7 @@ class ArticlesController < ApplicationController
         @articleAll = Article.all
         @article_1_2 = Article.find_by_sql(['select * from articles where category = :cat OR category = :cat2 OR category = :cat3', {cat:'脱毛あれこれ' ,cat2: '脱毛マスター', cat3: '脱毛入門'}])
         @article_3 = Article.find_by_sql(['select * from articles where category = :cat', {cat: 'キャンペーン'}])
+        prepare_meta_tags(title: @article.title)
     end
     def new
         @article = Article.new

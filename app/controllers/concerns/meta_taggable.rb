@@ -13,15 +13,15 @@ module MetaTaggable
     base = I18n.t('meta_tags.base')
     site = base[:site]
     description = base[:description]
-    title = base[:title]
-    # title = t("meta_tags.titles.#{controller_name}.#{action_name}", default: '')
-    # image = image_url('image.png')
+    keywords = base[:keywords]
+    title = I18n.t("meta_tags.titles.#{controller_name}.#{action_name}", default: '')
+    # image = image_url('image.png') << assets/imagesへ
 
     defaults = {
       site: site,
       title: title,
       description: description,
-      keywords: base[:keywords],
+      keywords: keywords,
       og: {
         url: request.url,
         title: title,

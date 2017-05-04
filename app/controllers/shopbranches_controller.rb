@@ -14,6 +14,7 @@ class ShopbranchesController < ApplicationController
         @shopbranch = Shopbranch.find(params[:id])
         @shopinfo = Shopinfo.find(params[:shopinfo_id])
         @shopfbs = Shopfb.find(params[:shopinfo_id])
+        prepare_meta_tags(title: @shopbranch.branchname + ' - ' + @shopbranch.shopname)
     end
     def new
         @shopinfo = Shopinfo.find(params[:shopinfo_id])
