@@ -22,6 +22,7 @@ module MetaTaggable
       title: title,
       description: description,
       keywords: keywords,
+      canonical: request.original_url,
       og: {
         url: request.url,
         title: title,
