@@ -1,13 +1,4 @@
 module ApplicationHelper
-    def full_title(page_title = '')
-        base_title = '脱毛レスキュー'
-        if page_title.empty?
-            base_title
-        else
-            page_title + ' | ' + base_title
-        end
-    end
-
     def customer_rank(rb_rank)
         if rb_rank == 5
             image_tag('/images/star-5.svg', class: "ele-rankStar")
