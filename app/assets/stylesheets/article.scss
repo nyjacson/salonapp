@@ -43,6 +43,9 @@
         border: solid 1px $border;
         padding: 20px;
         margin-bottom: 30px;
+        @include mq-sp {
+            padding: 10px;
+        }
         // spacial rule for article///////////
         .a-bold {
             font-weight: bold;
@@ -90,6 +93,9 @@
     }
     &__list {
         padding: 3px 3px;
+        @include mq-sp {
+            margin-bottom: 9px;
+        }
     }
 }
 
