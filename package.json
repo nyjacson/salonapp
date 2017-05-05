@@ -9,7 +9,17 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\"",
-    "hypernova": "babel-node hypernova.js --presets es2015,react"
+    "hypernova": "babel-node hypernova.js --presets es2015,react",
+    "build": "webpack --config config/production/webpack.config.js",
+    "dev": "webpack --config config/development/webpack.config.js",
+    "watch": "webpack --watch --config config/development/webpack.config.js",
+    "rails": "rails server",
+    "build:rails": "npm run build & npm run rails",
+    "precom": "bundle exec rake assets:precompile RAILS_ENV=production",
+    "uni-reload": "kill -QUIT `cat tmp/pids/unicorn.pid` & bundle exec unicorn_rails -c /home/oscar/www/salonapp/config/unicorn.rb -D -E production",
+    "ngin-reload": "sudo service nginx restart",
+    "compile": "npm run precom & npm run uni-reload & npm run ngin-reload",
+    "sitemap": "rake sitemap:refresh"
   },
   "repository": {
     "type": "git",
@@ -22,20 +32,26 @@
   },
   "homepage": "https://github.com/nyjacson/salonapp#readme",
   "devDependencies": {
+    "babel": "^6.23.0",
     "babel-cli": "^6.24.1",
+    "babel-core": "^6.24.1",
+    "babel-loader": "^7.0.0",
     "babel-preset-es2015": "^6.24.1",
     "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-2": "^6.24.1",
     "babelify": "^7.3.0",
     "browserify": "^13.0.1",
-    "browserify-incremental": "^3.1.1"
+    "browserify-incremental": "^3.1.1",
+    "jquery": "^3.2.1",
+    "webpack": "^2.5.0"
   },
   "dependencies": {
     "browserify": "^13.3.0",
     "hypernova": "^1.0.0",
     "hypernova-react": "^1.0.0",
     "hypernova-react-redux": "^1.2.0",
-    "react": "^15.1.0",
-    "react-dom": "^15.1.0",
+    "react": "^15.5.4",
+    "react-dom": "^15.5.4",
     "react-redux": "^4.4.5",
     "redux": "^3.6.0"
   }
