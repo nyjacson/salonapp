@@ -1,7 +1,7 @@
 <div class="AdminPage">
 <div class="AdminPage__contents">
 <h2 class="AdminPage__title">ユーザー登録</h2>
-
+<% if admin_signed_in? %>
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= devise_error_messages! %>
 
@@ -30,5 +30,9 @@
 <div class="AdminPage__otherlinks">
 <%= render "devise/shared/links" %>
 </div>
+<% end %>
+<% if !admin_signed_in? %>
+管理者にお問い合わせ下さい。
+<% end %>
 </div>
 </div>
