@@ -26,5 +26,7 @@ module Salonapp
     # browserify-rails with babelify (es2015, react)
     config.browserify_rails.commandline_options = "-t [ babelify --presets [ es2015 react ] ]"
 
+    # config.assets.paths << Rails.root.join('vendor', 'assets', 'node_modules')
+
   end
 end
