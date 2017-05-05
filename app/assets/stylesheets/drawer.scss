@@ -68,6 +68,7 @@
     background: $bk-middle-gray;
     border-bottom: solid 1px $bk-white;
     color: $primary-text;
+    pointer-events: auto;
     &:hover {
       color: $primary-text;
       text-decoration: none;
@@ -80,6 +81,7 @@
     }
 }
 .drawer-dropdown-menu{
+  pointer-events: none;
   .dropdown-header {
     padding-left: 20px;
     display: block;
@@ -88,6 +90,7 @@
   }
     li{
         a{
+            pointer-events: auto;
             padding-left: 20px;
             padding-right: 10px;
             display: block;
@@ -488,6 +491,7 @@
   > li {
     width: 100%;
     list-style: none;
+    pointer-events: none;
   }
 }
 
@@ -509,6 +513,7 @@
 /*! open */
 
 .drawer-dropdown {
+  pointer-events: none;
   &.open > .drawer-dropdown-menu {
     display: block;
   }
