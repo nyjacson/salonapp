@@ -82,11 +82,11 @@
     }
     &__name{
         margin-bottom: 10px;
-        font-size: 18px;
+        @include M-font;
     }
     &__company{
         margin-bottom: 5px;
-        @include M-font;
+        @include S-font;
         @include ellipsis;
     }
     &__text{

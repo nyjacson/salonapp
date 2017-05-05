@@ -67,26 +67,33 @@
     text-decoration: none;
     background: $bk-middle-gray;
     border-bottom: solid 1px $bk-white;
-    &--title{
-        background: $accent;
-        color: $bk-white;
-        @include L-font;
-    }
-  a {
     color: $primary-text;
     &:hover {
       color: $primary-text;
       text-decoration: none;
     }
-  }
-
+    &--title{
+        background: $accent;
+        color: $bk-white;
+        @include L-font;
+        line-height: 45px;
+    }
 }
 .drawer-dropdown-menu{
+  .dropdown-header {
+    padding-left: 20px;
+    display: block;
+    height: 45px;
+    line-height: 45px;
+  }
     li{
         a{
-            color: #333;
-            padding: 10px 10px 10px 20px;
+            padding-left: 20px;
+            padding-right: 10px;
             display: block;
+            height: 45px;
+            line-height: 45px;
+            @include ellipsis;
         }
     }
 }
