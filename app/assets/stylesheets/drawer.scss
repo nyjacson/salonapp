@@ -61,11 +61,12 @@
 .drawer-menu-item {
     font-size: 1rem;
     display: block;
-    padding: .75rem;
+    padding-left: .75rem;
+    height: 45px;
+    line-height: 45px;
     text-decoration: none;
     background: $bk-middle-gray;
     border-bottom: solid 1px $bk-white;
-    -webkit-tap-highlight-color:rgba($primary, 0.2);
     &--title{
         background: $accent;
         color: $bk-white;
@@ -501,7 +502,6 @@
 /*! open */
 
 .drawer-dropdown {
-  display: block;
   &.open > .drawer-dropdown-menu {
     display: block;
   }
