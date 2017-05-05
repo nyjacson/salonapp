@@ -30,6 +30,7 @@
     "browserify-incremental": "^3.1.1"
   },
   "dependencies": {
+    "browserify": "^13.3.0",
     "hypernova": "^1.0.0",
     "hypernova-react": "^1.0.0",
     "hypernova-react-redux": "^1.2.0",
