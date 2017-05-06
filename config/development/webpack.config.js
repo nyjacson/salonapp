@@ -1,5 +1,5 @@
-const path = require('path');
 const webpack = require('webpack');
+const path = require('path');
 const glob = require("glob");
 
 module.exports = {
@@ -9,7 +9,7 @@ module.exports = {
   },
   output: {
     path: path.join(__dirname, "../../public/js"),
-    filename: '[name]-[hash].js',
+    filename: '[name].js',
     publicPath: 'http://localhost:3001/',
   },
   module: {

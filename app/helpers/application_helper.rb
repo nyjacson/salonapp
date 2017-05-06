@@ -26,4 +26,11 @@ module ApplicationHelper
         str.gsub(/\r\n|\r|\n/, "<br />")
     end
 
+    # configuration for webpack
+    def assets_path(path)
+        return "http://localhost:3001/#{path}" if Rails.env.development?
+        manifest = Rails.application.config.assets_manifest
+        path = manifest[path] if manifest && manifest[path].present?
+        "/js/#{path}"
+    end
 end
