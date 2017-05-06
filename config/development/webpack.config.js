@@ -5,7 +5,7 @@ const glob = require("glob");
 module.exports = {
   devtool: 'inline-source-map',
   entry: {
-    main: glob.sync('./src/javascripts/**/*.js'),
+    main: glob.sync('./src/js/**/*.js'),
   },
   output: {
     path: path.join(__dirname, "../../public/js"),
