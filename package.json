@@ -8,17 +8,16 @@
     "test": "test"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\"",
     "hypernova": "babel-node hypernova.js --presets es2015,react",
-    "build": "webpack --config config/production/webpack.config.js",
-    "dev": "webpack --config config/development/webpack.config.js",
+    "clean": "rimraf public/js",
+    "webpack": "NODE_ENV=production webpack --config config/production/webpack.config.js",
+    "build": "npm run clean && npm run webpack",
+    "dev": "NODE_ENV=development webpack-dev-server --config config/development/webpack.config.js  --progress --colors",
     "watch": "webpack --watch --config config/development/webpack.config.js",
-    "rails": "rails server",
-    "build:rails": "npm run build & npm run rails",
+    "build:rails": "npm run build && rails s",
     "precom": "bundle exec rake assets:precompile RAILS_ENV=production",
-    "uni-reload": "kill -QUIT `cat tmp/pids/unicorn.pid` & bundle exec unicorn_rails -c /home/oscar/www/salonapp/config/unicorn.rb -D -E production",
-    "ngin-reload": "sudo service nginx restart",
-    "compile": "npm run precom & npm run uni-reload & npm run ngin-reload",
+    "uni-reload": "kill -QUIT `cat tmp/pids/unicorn.pid` && bundle exec unicorn_rails -c /home/oscar/www/salonapp/config/unicorn.rb -D -E production",
+    "compile": "npm run precom && npm run uni-reload && npm run ngin-reload",
     "sitemap": "rake sitemap:refresh"
   },
   "repository": {
@@ -43,16 +42,20 @@
     "browserify": "^13.0.1",
     "browserify-incremental": "^3.1.1",
     "jquery": "^3.2.1",
-    "webpack": "^2.5.0"
+    "webpack": "^2.5.0",
+    "webpack-dev-server": "^2.4.5"
   },
   "dependencies": {
     "browserify": "^13.3.0",
+    "glob": "^7.1.1",
     "hypernova": "^1.0.0",
     "hypernova-react": "^1.0.0",
     "hypernova-react-redux": "^1.2.0",
     "react": "^15.5.4",
     "react-dom": "^15.5.4",
     "react-redux": "^4.4.5",
-    "redux": "^3.6.0"
+    "redux": "^3.6.0",
+    "webpack-isomorphic-tools": "^3.0.2",
+    "webpack-manifest-plugin": "^1.1.0"
   }
 }

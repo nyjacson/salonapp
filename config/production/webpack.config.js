@@ -1,14 +1,25 @@
-const path = require('path');
+const webpack = require('webpack')
+const path = require('path')
 const glob = require("glob");
+const ManifestPlugin = require('webpack-manifest-plugin');
 
 module.exports = {
   entry: {
-    styles: glob.sync('./src/javascripts/**/*.js'),
+    main: glob.sync('./src/js/**/*.js'),
   },
   output: {
-    path: path.join(__dirname, "../../app/assets/javascripts"),
+    path: path.join(__dirname, "../../public/js"),
     filename: '[name]-[hash].js'
   },
+  plugins: [
+    new webpack.optimize.UglifyJsPlugin({
+      minimize: true,
+      compress: {
+        warnings: false,
+      },
+    }),
+    new ManifestPlugin()
+  ],
   module: {
     loaders: [
       {

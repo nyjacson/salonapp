@@ -1,14 +1,16 @@
 const path = require('path');
+const webpack = require('webpack');
 const glob = require("glob");
 
 module.exports = {
   devtool: 'inline-source-map',
   entry: {
-    styles: glob.sync('./src/javascripts/**/*.js'),
+    main: glob.sync('./src/javascripts/**/*.js'),
   },
   output: {
-    path: path.join(__dirname, "../../app/assets/javascripts"),
-    filename: '[name]-[hash].js'
+    path: path.join(__dirname, "../../public/js"),
+    filename: '[name]-[hash].js',
+    publicPath: 'http://localhost:3001/',
   },
   module: {
     loaders: [
@@ -18,5 +20,18 @@ module.exports = {
         loader: 'babel-loader?presets[]=react,presets[]=es2015,presets[]=stage-2'
       }
     ]
-  }
+  },
+  plugins: [
+    new webpack.HotModuleReplacementPlugin(),
+    new webpack.NoErrorsPlugin()
+  ],
+  resolve: {
+    extensions: ['*', '.js', '.json']
+  },
+  devServer: {
+    contentBase: '../public/dist',
+    hot: true,
+    inline: true,
+    port: 3001  
+  },
 }

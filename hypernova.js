@@ -5,7 +5,7 @@ hypernova({
 
   getComponent(name) {
     if (name === 'MyComponent.js') {
-      return require('./app/assets/javascripts/component/MyComponent.js');
+      return require('./src/javascripts/component/MyComponent.js');
     }
     return null;
   },
