@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import './index.css'
 
 export default class Counter extends Component {
   componentDidMount() {
@@ -14,7 +15,7 @@ export default class Counter extends Component {
   render() {
     const { count, onIncrement, onDecrement } = this.props
     return (
-      <div>
+      <div className="count">
         <p>カウント: {count}回</p>
         <button onClick={onIncrement}>++</button>
         <button onClick={onDecrement}>--</button>

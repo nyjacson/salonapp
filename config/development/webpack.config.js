@@ -5,7 +5,7 @@ const glob = require("glob");
 module.exports = {
   devtool: 'inline-source-map',
   entry: {
-    main: glob.sync('./src/js/**/*.js'),
+    main: glob.sync('./src/js/*.js'),
   },
   output: {
     path: path.join(__dirname, "../../public/js"),
@@ -18,6 +18,11 @@ module.exports = {
         test: /\.js$/,
         exclude: /node_modules/,
         loader: 'babel-loader?presets[]=react,presets[]=es2015,presets[]=stage-2'
+      },
+      {
+        test: /\.css$/,
+        exclude: /node_modules/,
+        loaders: ["style-loader", "css-loader"]
       }
     ]
   },
