@@ -6,7 +6,7 @@ jsdom.env({
   done: function(err, window) {
     var $ = window.$;
     $("h3 a").each(function(){
-      console.log($(this).attr("href"));
+      console.log("'"+$(this).attr("href")+"',");
     })
   }
 })
