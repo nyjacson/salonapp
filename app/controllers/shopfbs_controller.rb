@@ -39,6 +39,10 @@ class ShopfbsController < ApplicationController
             render action: 'edit'
         end
     end
+    def destroy
+        Shopfb.find(params[:id]).destroy
+        redirect_to shopfbs_path
+    end
     def import
         if params[:csv_file].blank?
             redirect_to(static_pages_admin_path, alert: 'インポートするCSVファイルを選択してください')

@@ -1,5 +1,5 @@
 class Article < ActiveRecord::Base
-    
+    validates :title, uniqueness: true
     def self.import(file)
         imported_num = 0
         open(file.path, 'rb:Shift_JIS:utf-8', undef: :replace) do |f|
