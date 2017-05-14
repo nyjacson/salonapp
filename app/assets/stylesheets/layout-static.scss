@@ -28,6 +28,9 @@
     h2 {
         margin: 0 0 15px;
         padding-left: 5px;
+        @include mq-pc {
+            @include M-font;
+        }
     }
 
     .layout-mapWrapper {
@@ -177,6 +180,29 @@
             }
         }
     }
+    //.layout-searchtypeWrapper
+    .PrArea {
+        padding:0px;
+        display: block;
+        overflow: hidden;
+        &__contents {
+            height: 98px;
+            display: block;
+            text-align: center;
+            img{
+                width: 100%;
+                height: auto;
+                margin: 0 auto;
+                @include mq-sp {
+                    width: 320px;
+                }
+            }
+        }
+        @include mq-sp {
+            margin-bottom: 25px;
+        }
+    }
+
     .layout-contentslistWrapper {
         margin-bottom: 20px;
         @include mq-sp {
