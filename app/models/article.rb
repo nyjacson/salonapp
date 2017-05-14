@@ -22,7 +22,7 @@ class Article < ActiveRecord::Base
     end
 
     def self.updatable_attributes
-        ["title", "article", "category", "picthum", "updated_at"]
+        ["title", "article", "category", "picthum", "published_date"]
     end
 
 end

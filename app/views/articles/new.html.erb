@@ -18,6 +18,11 @@
             <%= f.label :picthum %>
             <%= f.text_field :picthum, class: 'form-control' %>
         </div>
+        <div class="form-group">
+            <%= f.label :published_date %>
+            <span>記事の更新日時を入力("2017-05-05 05:57:59")</span>
+            <%= f.text_field :published_date, class: 'form-control' %>
+        </div>
         <br>
         <%= f.submit "情報更新", class: "btn btn-primary" %>
         <% end %>
