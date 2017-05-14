@@ -20,3 +20,4 @@ node_modules/
 vendor/
 public/assets/
 sitemaps/
+development.sqlite3
