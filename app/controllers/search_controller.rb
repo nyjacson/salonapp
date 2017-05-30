@@ -57,27 +57,27 @@ class SearchController < ApplicationController
         @shopinfo = Shopinfo.all
     end
     def chiba
-        @area = Shopbranch.find_by_sql(["select * from shopbranches where prefec = '千葉'"])
+        @area = Shopbranch.find_by_sql(["select * from shopbranches where prefec = '千葉県'"])
         @shopinfo = Shopinfo.all
     end
     def kanagawa
-        @area = Shopbranch.find_by_sql(["select * from shopbranches where prefec = '神奈川'"])
+        @area = Shopbranch.find_by_sql(["select * from shopbranches where prefec = '神奈川県'"])
         @shopinfo = Shopinfo.all
     end
     def tochigi
-        @area = Shopbranch.find_by_sql(["select * from shopbranches where prefec = '栃木'"])
+        @area = Shopbranch.find_by_sql(["select * from shopbranches where prefec = '栃木県'"])
         @shopinfo = Shopinfo.all
     end
     def gunma
-        @area = Shopbranch.find_by_sql(["select * from shopbranches where prefec = '群馬'"])
+        @area = Shopbranch.find_by_sql(["select * from shopbranches where prefec = '群馬県'"])
         @shopinfo = Shopinfo.all
     end
     def ibaraki
-        @area = Shopbranch.find_by_sql(["select * from shopbranches where prefec = '茨城'"])
+        @area = Shopbranch.find_by_sql(["select * from shopbranches where prefec = '茨城県'"])
         @shopinfo = Shopinfo.all
     end
     def saitama
-        @area = Shopbranch.find_by_sql(["select * from shopbranches where prefec = '埼玉'"])
+        @area = Shopbranch.find_by_sql(["select * from shopbranches where prefec = '埼玉県'"])
         @shopinfo = Shopinfo.all
     end
 
