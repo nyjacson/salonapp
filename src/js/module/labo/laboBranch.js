@@ -20,7 +20,14 @@ var crawl = function(){
           arr.push($(".infoBox dl:nth-child(3) dd").text());
           arr.push($(".infoBox dl:nth-child(4) dd").text());
           arr.push($(".infoBox dl:nth-child(7) dd").text());
-          arr.push($(".innerWrap p").text());
+          arr.push($(".innerWrap p").text()
+          .replace(/1\)/g,'<br>1)').replace(/2\)/g,'<br>2)').replace(/3\)/g,'<br>3)').replace(/4\)/g,'<br>4)').replace(/5\)/g,'<br>5)').replace(/6\)/g,'<br>6)')
+          .replace(/1）/g,'<br>1)').replace(/2）/g,'<br>2)').replace(/3）/g,'<br>3)').replace(/4）/g,'<br>4)').replace(/5）/g,'<br>5)').replace(/6）/g,'<br>6)')
+          .replace(/１\)/g,'<br>1)').replace(/２\)/g,'<br>2)').replace(/３\)/g,'<br>3)').replace(/４\)/g,'<br>4)').replace(/５\)/g,'<br>5)').replace(/６\)/g,'<br>6)')
+          .replace(/１）/g,'<br>1)').replace(/２）/g,'<br>2)').replace(/３）/g,'<br>3)').replace(/４）/g,'<br>4)').replace(/５）/g,'<br>5)').replace(/６）/g,'<br>6)')
+          .replace(/①/g,'<br>1)').replace(/②/g,'<br>2)').replace(/③/g,'<br>3)').replace(/④/g,'<br>4)').replace(/⑤/g,'<br>5)').replace(/⑥/g,'<br>6)')
+          .replace(/\,/g, '.')
+          );
           // arr.map(function(text){
           //   arrjis = jconv.convert( text, 'UTF8' ,'SJIS');
           // })
