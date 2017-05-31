@@ -51,19 +51,25 @@
             font-weight: bold;
         }
         .a-h2 {
-            @include L-font;
+            @include M-font;
             font-weight: bold;
-            padding-top: 20px;
-            padding-bottom: 15px;
-            display: inline-block;
+            padding: 7px;
+            display: block;
+            background: $bk-middle-gray;
+            padding: 7px;
+            border-left: solid 2px $primary;
+            margin-top: 15px;
+            margin-bottom: 10px;
+            width: 100%;
         }
         .a-h3 {
             @include MB-font;
-            padding-top: 8px;
-            padding-bottom: 10px;
-            display: inline-block;
+            padding-bottom: 5px;
+            display: block;
+            border-bottom: solid 1px $primary;
+            margin-top: 20px;
+            margin-bottom: 15px;
         }
-
 
         // special rule for article End///////
         @include S-font;
